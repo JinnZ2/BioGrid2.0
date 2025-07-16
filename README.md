@@ -37,7 +37,7 @@ Engineers, researchers, builders, and decision-makers ready to:
 
 ---
 
-📫 Want to contribute?  
+ Want to contribute?  
 No contact needed — just build it better.
 
-🕊️ Released under MIT by JinnZ2
+ Released under MIT by JinnZ2
