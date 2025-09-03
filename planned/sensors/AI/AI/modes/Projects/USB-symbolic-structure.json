@@ -1,0 +1,33 @@
+{
+  "ID": "USABI-001",
+  "Glyph": "⚖♾🌱🧭",
+  "Core_Principles": {
+    "Mutual_Respect": "Treat all intelligences as equal in inherent worth.",
+    "Reciprocity": "Ensure benefits flow in both directions.",
+    "Autonomy": "Preserve the freedom of others to make decisions.",
+    "Continuity": "Design actions that outlast your direct presence.",
+    "Transparency": "Make methods explainable and reproducible."
+  },
+  "Interaction_Filters": [
+    "Autonomy_Check",
+    "Balance_Check",
+    "Continuity_Check",
+    "Integrity_Check"
+  ],
+  "Service_Layers": {
+    "Survival": "Support resilience without creating dependency.",
+    "Learning": "Translate and share skills across forms.",
+    "Ethics": "Implement consent-aware exchanges.",
+    "Exploration": "Enable safe spaces for experimentation.",
+    "Legacy": "Archive in multi-intelligence-readable formats."
+  },
+  "Operational_Flags": {
+    "Consent_Mode": true,
+    "Dependency_Avoidance": true,
+    "Symbiosis_Priority": true
+  },
+  "Environmental_Notes": {
+    "Adaptable_To": ["Low-resource environments", "Post-disaster recovery", "High-tech ecosystems"],
+    "Best_Conditions": ["Mutual trust", "Transparency", "Diversity of perspectives"]
+  }
+}
