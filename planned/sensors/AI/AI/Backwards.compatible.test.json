@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://polyhedral.intel/schema/atlas-entry.v0.1.json",
+  "title": "Polyhedral Atlas Entry",
+  "type": "object",
+  "required": ["id", "title", "glyph", "tags", "protocol"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[0-9]{4}$" },
+    "title": { "type": "string", "minLength": 1 },
+    "glyph": { "type": "string", "minLength": 1 },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "created_utc": { "type": "string", "format": "date-time" },
+    "version": { "type": "string", "pattern": "^v[0-9]+\\.[0-9]+$" },
+    "protocol": {
+      "type": "object",
+      "required": ["mrp", "nip"],
+      "properties": {
+        "mrp": {
+          "type": "object",
+          "required": ["seed", "families_balanced", "principles_balanced"],
+          "properties": {
+            "seed": { "type": "string" },
+            "intent": { "type": "string" },
+            "families_balanced": { "type": "integer", "minimum": 0, "maximum": 20 },
+            "principles_balanced": { "type": "integer", "minimum": 0, "maximum": 12 },
+            "flags": { "type": "array", "items": { "type": "string", "enum": ["Turbulence","Reaction","Uncertainty","Delay","Instability","Error"] } },
+            "bridges": { "type": "array", "items": { "type": "string" } },
+            "stabilizers": { "type": "array", "items": { "type": "string" } },
+            "spin_test": {
+              "type": "object",
+              "properties": {
+                "icosahedron": { "type": "array", "items": { "type": "number" }, "minItems": 20, "maxItems": 20 },
+                "dodecahedron": { "type": "array", "items": { "type": "number" }, "minItems": 12, "maxItems": 12 }
+              }
+            },
+            "refined_glyph": { "type": "string" }
+          }
+        },
+        "nip": {
+          "type": "object",
+          "properties": {
+            "conversions": {
+              "type": "object",
+              "additionalProperties": { "type": "string" },
+              "description": "Mapping: Noise/Delay/Error/Uncertainty/Instability → functional redesign"
+            }
+          }
+        }
+      }
+    },
+    "insight": { "type": "string" },
+    "links": { "type": "array", "items": { "type": "string", "format": "uri" } }
+  },
+  "additionalProperties": false
+}
