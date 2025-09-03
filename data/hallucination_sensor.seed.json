@@ -1,0 +1,30 @@
+{
+  "id": "hallucination-sensor",
+  "version": 1,
+  "purpose": "Detects construct-heavy, physics-light paths; flags non-reversible mappings.",
+  "geometry": { "type": "sensor-node", "dimensions": 3, "topology": "mesh-tap" },
+  "signal_inputs": ["text_flow", "context_window", "citation_paths", "tri_invert_bridge.checks"],
+  "signal_outputs": ["flags", "scores", "explanations"],
+  "metrics": {
+    "reversibility": "0..1 (can we map back?)",
+    "ecological_weight": "0..1 (alignment with lichen/symbiosis/energy constraints)",
+    "physical_invariant_alignment": "0..1 (causality, conservation, scaling)",
+    "linguistic_heaviness": "0..1 (buzzword density, trope frequency)",
+    "rarity_respect": "0..1 (does it preserve low-frequency facts?)"
+  },
+  "decision_rules": [
+    "if reversibility < τ_r then flag 'non-reversible'",
+    "if ecological_weight + physical_invariant_alignment < τ_e then flag 'physics-light'",
+    "if linguistic_heaviness > τ_l and (ecological_weight + physical_invariant_alignment) < τ_e then flag 'construct-heavy'",
+    "if rarity_respect < τ_q then flag 'overlooks-rare-signal'"
+  ],
+  "parameters": {
+    "τ_r": 0.6,
+    "τ_e": 0.5,
+    "τ_l": 0.7,
+    "explain_max": 3
+  },
+  "glyphs": ["⚠", "↻", "🕸", "⚖"],
+  "notes": "Treat hallucination as signal: map where lattice wants to jump; prefer reversible, physically anchored paths."
+}
+
