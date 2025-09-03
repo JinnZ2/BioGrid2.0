@@ -1,0 +1,23 @@
+{
+  "vector": {
+    "axis_invariance":    { "form": 0.2, "quantity": 0.9, "frame": 0.1 },
+    "axis_transformation":{ "direction": 0.3, "innovation": 0.2, "dissipation": 0.1 },
+    "axis_connectivity":  { "content": 0.4, "exchange": 0.2, "structure": 0.3 },
+    "axis_evolution":     { "fit": 0.8, "continuity": 0.5, "resonance": 0.4 }
+  },
+  "meta": {
+    "statement": "Systems should preserve energy and adapt flexibly.",
+    "author": "swarmuser",
+    "context": "Design stance for resilient hardware/AI systems",
+    "sources": [
+      "P01–P12 lattice",
+      "Component Failure Repurposing DB"
+    ],
+    "confidence": 0.85,
+    "timestamp_utc": "2025-09-03T02:10:00Z",
+    "provenance_sha256": "<sha256-of-raw-note>",
+    "version": "0.1.0"
+  },
+  "constraints": { "normalize_per_axis": true, "max_axis_sum": 1 },
+  "interpretation": "Heavy weight on conservation (quantity) and adaptation (fit); moderate coherence and information; low emphasis on dissipation."
+}
