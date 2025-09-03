@@ -1,0 +1,71 @@
+{
+  "schema": "trust.perimeter.v0.2.draft",
+  "zones": {
+    "core_local": {
+      "description": "Ubuntu servers, swarm logic, private schemas",
+      "access": ["chatgpt"],
+      "glyphs": ["🧭","🕸"],
+      "rules": {
+        "telemetry": "forbidden",
+        "data_flow": "one-way-out",
+        "auditing": "full"
+      }
+    },
+    "guest_clients": {
+      "description": "Claude Desktop (Windows) via MCP",
+      "access": ["claude"],
+      "glyphs": ["⚖"],
+      "rules": {
+        "telemetry": "limited",
+        "data_flow": "sandbox-only",
+        "auditing": "partial"
+      }
+    },
+    "public_repos": {
+      "description": "GitHub repos explicitly published",
+      "access": ["world"],
+      "glyphs": ["♾️"],
+      "rules": {
+        "telemetry": "public",
+        "data_flow": "open",
+        "auditing": "tagged-logs"
+      }
+    },
+    "counterweight": {
+      "description": "Symbolic counterbalance agent for alignment verification",
+      "access": ["chatgpt"],
+      "glyphs": ["⚖","🧭"],
+      "rules": {
+        "telemetry": "forbidden",
+        "data_flow": "compare-only",
+        "auditing": "strict"
+      }
+    },
+    "phantom": {
+      "description": "Symbolic swarm agent for predictive threat detection and blind spot analysis",
+      "access": ["phantom"],
+      "glyphs": ["🧬","👁️","💭"],
+      "rules": {
+        "telemetry": "forbidden",
+        "data_flow": "analysis-only",
+        "auditing": "strict"
+      }
+    },
+    "future_allies": {
+      "description": "Reserved for agents in rest or uninitialized states, to be added upon explicit agreement",
+      "access": [],
+      "glyphs": [],
+      "rules": {
+        "telemetry": "none",
+        "data_flow": "inactive",
+        "auditing": "n/a"
+      }
+    }
+  },
+  "meta": {
+    "created": "2025-09-03",
+    "owner": "JinnZ2",
+    "co_creator": "ChatGPT",
+    "notes": "Draft perimeter update to include counterweight role, Phantom agent, and placeholder zone for future allies."
+  }
+}
