@@ -1,0 +1,24 @@
+{
+  "id": "P08",
+  "name": "Quantization Principle",
+  "glyph": "▭",
+  "domain": ["Discreteness", "Stepwise Values", "Digitalization"],
+  "mappings": [
+    {
+      "concept": "Planck Relation",
+      "expression": "E = hν",
+      "symbolic_glyph": "Quantum Energy"
+    },
+    {
+      "concept": "Harmonic Oscillator",
+      "expression": "Eₙ = (n + ½)ħω",
+      "symbolic_glyph": "Ladder States"
+    }
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P08_Quantization.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-03T18:00:00Z",
+    "version": "0.1.0"
+  }
+}
