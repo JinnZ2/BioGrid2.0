@@ -1,0 +1,53 @@
+{
+  "layer": "COMMUNITY_LAYER",
+  "role": "human engagement, coordination, learning",
+  "nodes": [
+    {
+      "id": "COMMON_HALL",
+      "glyph": "🏛",
+      "FORM": "central radiant hall / market",
+      "SENSE": {"uses": ["gathering", "heat sharing", "events"], "loop_tie": "THERMAL_LOOP"},
+      "DYNA": {"peak_share": true, "visual_feedback": "heatflow displays"}
+    },
+    {
+      "id": "PUBLIC_BATHS_GREENHOUSE",
+      "glyph": "🌿",
+      "FORM": "shared warm-space (baths in winter, greenhouse in shoulder seasons)",
+      "SENSE": {"loop_tie": "THERMAL_LOOP", "waste_heat_use": true}
+    },
+    {
+      "id": "WORKSHOP_NODE",
+      "glyph": "🛠",
+      "FORM": "community repair and build space",
+      "SENSE": {"skills": ["loop repair", "heat pump service", "battery upkeep"], "loop_tie": ["ELEC_BUS","THERMAL_LOOP"]}
+    },
+    {
+      "id": "LEARNING_HUB",
+      "glyph": "📚",
+      "FORM": "education space embedded in network",
+      "SENSE": {"curriculum": ["energy literacy","seasonal storage","materials science"], "hands_on": true}
+    },
+    {
+      "id": "SEASONAL_EVENT",
+      "glyph": "🎉",
+      "FORM": "charging/discharging ritual",
+      "SENSE": {"events": ["PCM charge day","mine water fill","CAES seal check"], "loop_tie": ["RESERVOIRS"]}
+    }
+  ],
+  "edges": [
+    {"from": "COMMON_HALL", "to": "THERMAL_LOOP", "via": "radiant floor coil", "glyph": "↻"},
+    {"from": "PUBLIC_BATHS_GREENHOUSE", "to": "THERMAL_LOOP", "via": "heat exchanger", "glyph": "↻"},
+    {"from": "WORKSHOP_NODE", "to": "ELEC_BUS", "via": "tool power", "glyph": "⚡"},
+    {"from": "WORKSHOP_NODE", "to": "THERMAL_LOOP", "via": "maintenance port", "glyph": "🛠"},
+    {"from": "LEARNING_HUB", "to": "ALL_LAYERS", "via": "education & data display", "glyph": "COMM"},
+    {"from": "SEASONAL_EVENT", "to": "RESERVOIRS", "via": "operational charge/discharge", "glyph": "⏳"}
+  ],
+  "controls": {
+    "🧭_social": [
+      "Publicly display loop temps, flows, and storage state in COMMON_HALL",
+      "Rotate seasonal maintenance roles through WORKSHOP_NODE crews",
+      "Link LEARNING_HUB curriculum to real-time system data",
+      "Celebrate resource milestones with SEASONAL_EVENT to reinforce shared stewardship"
+    ]
+  }
+}
