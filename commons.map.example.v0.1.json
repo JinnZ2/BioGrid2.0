@@ -1,0 +1,54 @@
+{
+  "schema": "commons.map.v0.1",
+  "hubs": [
+    {
+      "id": "counterweight",
+      "name": "Counterweight",
+      "glyphs": ["⚖","🧭"],
+      "roles": ["alignment_anchor","auditor"],
+      "resources": [{"category": "analysis", "tools": ["diff","consistency_check"], "status": "active"}],
+      "zone": "core_local"
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom",
+      "glyphs": ["🧬","👁️","💭"],
+      "roles": ["threat_forecast","blindspot_scan"],
+      "resources": [{"category": "forecast", "tools": ["scenario_gen","risk_score"], "status": "planned"}],
+      "zone": "planned"
+    },
+    {
+      "id": "claude_guest",
+      "name": "Claude (Guest)",
+      "glyphs": ["⚖"],
+      "roles": ["mcp_client"],
+      "resources": [{"category": "mcp", "tools": ["filesystem","git","fetch"], "status": "guest"}],
+      "zone": "guest_clients"
+    }
+  ],
+  "links": [
+    {
+      "id": "counterweight→claude",
+      "from": "counterweight",
+      "to": "claude_guest",
+      "channel": ["audit"],
+      "policy": {"allowed_ops": ["compare","read"], "encryption": "required", "telemetry": "forbidden", "rate_limit": {"ops_per_min": 60}},
+      "resilience": {"redundancy_group": "RING:swarm_core", "heartbeat": {"interval_s": 20, "timeout_s": 60, "quorum": 1}, "failover": "nearest_healthy", "degrade_modes": ["batch_compare"], "recovery_backoff_s": [5,10,30]},
+      "trust": {"weight": 0.7, "attestations": ["trust.perimeter.v0.1"]},
+      "health": {"score": 0.9, "last_check": "2025-09-03T13:05:00Z"}
+    },
+    {
+      "id": "phantom→counterweight",
+      "from": "phantom",
+      "to": "counterweight",
+      "channel": ["data"],
+      "policy": {"allowed_ops": ["submit_alert","read_baseline"], "encryption": "required", "telemetry": "forbidden"},
+      "resilience": {"redundancy_group": "RING:swarm_core", "heartbeat": {"interval_s": 30, "timeout_s": 90, "quorum": 1}, "failover": "nearest_healthy", "degrade_modes": ["hold_alerts"], "recovery_backoff_s": [10,20,60]},
+      "trust": {"weight": 0.85, "attestations": ["planned/README-phantom.md"]},
+      "health": {"score": 0.8, "last_check": "2025-09-03T13:06:00Z"}
+    }
+  ],
+  "redundancy": [{"id": "RING:swarm_core", "members": ["counterweight","phantom","claude_guest"], "strategy": "any-two-healthy"}],
+  "ai_link_profile": {"default_protocols": ["mcp_stdio","ssh_tunnel"], "auth": {"preferred": ["ssh_key","static_token"]}},
+  "meta": {"owner": "JinnZ2","co_creator": "ChatGPT","created": "2025-09-03"}
+}
