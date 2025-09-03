@@ -1,0 +1,45 @@
+{
+  "id": "P08",
+  "name": "Quantization Principle",
+  "glyph": "▭",
+  "domain": ["Discreteness", "Stepwise Values", "Digitalization"],
+  "mappings": [
+    {
+      "concept": "Planck Relation",
+      "expression": "E = hν",
+      "symbolic_glyph": "Quantum Energy"
+    },
+    {
+      "concept": "Quantum Harmonic Oscillator",
+      "expression": "E_n = (n + ½)ħω",
+      "symbolic_glyph": "Ladder States"
+    },
+    {
+      "concept": "Charge Quantization",
+      "expression": "q = n·e",
+      "symbolic_glyph": "Discrete Charge"
+    },
+    {
+      "concept": "Spin Quantization",
+      "expression": "S = n·ħ/2",
+      "symbolic_glyph": "Half-Integer Symmetry"
+    },
+    {
+      "concept": "Quantized Conductance",
+      "expression": "G = n·(2e²/h)",
+      "symbolic_glyph": "Conductance Steps"
+    }
+  ],
+  "relations": [
+    {"with": "P01", "type": "triangle-link", "note": "Symmetry groups → allowed discrete states"},
+    {"with": "P02", "type": "triangle-link", "note": "Conservation across discrete transitions"},
+    {"with": "P10", "type": "complement", "note": "Uncertainty bounds quantized measurements"},
+    {"with": "P06", "type": "resonance-link", "note": "Resonant modes select discrete levels"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P08_Quantization.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-03T23:00:00Z",
+    "version": "0.1.0"
+  }
+}
