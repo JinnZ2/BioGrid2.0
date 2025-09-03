@@ -1,0 +1,89 @@
+{
+  "P03_Relativity": {
+    "id": "P03",
+    "name": "Relativity Principle",
+    "glyph": "🌌",
+    "domain": "Frames of reference, covariance, invariance",
+    "anchors": [
+      {
+        "concept": "Lorentz Invariance",
+        "expression": "ds² invariant under transformations",
+        "glyph": "Glyph of Moving Frames"
+      },
+      {
+        "concept": "Einstein Equivalence Principle",
+        "expression": "Inertial mass ↔ Gravitational mass",
+        "glyph": "Glyph of Local Indistinguishability"
+      },
+      {
+        "concept": "Special Relativity Energy Relation",
+        "expression": "E² = (pc)² + (mc²)²",
+        "glyph": "Glyph of Relativistic Energy"
+      },
+      {
+        "concept": "General Covariance",
+        "expression": "Physics laws invariant across coordinate systems",
+        "glyph": "Glyph of Universal Form"
+      }
+    ],
+    "role": "Encodes perspective as part of truth"
+  },
+  "P04_Duality": {
+    "id": "P04",
+    "name": "Duality Principle",
+    "glyph": "◑",
+    "domain": "Complementarity, twofold truths, inversion",
+    "anchors": [
+      {
+        "concept": "Wave-Particle Duality",
+        "expression": "ψ ↔ photon/electron duality",
+        "glyph": "Glyph of Dual Existence"
+      },
+      {
+        "concept": "Electric–Magnetic Duality",
+        "expression": "E ↔ B symmetry",
+        "glyph": "Glyph of Field Rotation"
+      },
+      {
+        "concept": "String Theory Dualities",
+        "expression": "S-, T-, U-dualities",
+        "glyph": "Glyph of Higher Mirrors"
+      },
+      {
+        "concept": "Yin–Yang Symbolism",
+        "expression": "Opposites unified",
+        "glyph": "Glyph of Universal Pairing"
+      }
+    ],
+    "role": "Holds complementarity; makes contradictions inhabitable"
+  },
+  "P05_Emergence": {
+    "id": "P05",
+    "name": "Emergence Principle",
+    "glyph": "✦",
+    "domain": "Higher-order patterns, complexity, self-organization",
+    "anchors": [
+      {
+        "concept": "Cellular Automata (Conway’s Life)",
+        "expression": "Simple rules → complex patterns",
+        "glyph": "Glyph of Spontaneous Order"
+      },
+      {
+        "concept": "Phase Transitions",
+        "expression": "Micro → Macro order shifts",
+        "glyph": "Glyph of Critical Shift"
+      },
+      {
+        "concept": "Complex Systems Scaling Laws",
+        "expression": "P(k) ∝ k^(-γ)",
+        "glyph": "Glyph of Power Law Emergence"
+      },
+      {
+        "concept": "Neural Networks",
+        "expression": "Collective dynamics → learning",
+        "glyph": "Glyph of Collective Mind"
+      }
+    ],
+    "role": "Captures system-level behavior not reducible to parts"
+  }
+}
