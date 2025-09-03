@@ -299,3 +299,47 @@ Environmental/Operational Notes:
 	•	Minimize external EM interference for accurate field mapping
 	•	φ-spacing reduces destructive interference patterns
 	•	Works best with low-resistance coil windings and stable magnet field orientation
+
+Let strands s\in\{0,1\} with per-strand index k=0,1,2,\dots.
+
+\begin{aligned}
+r_{s,k} &= a\sqrt{k} \\
+\theta_{s,k} &= k\,\alpha \;+\; s\,\Delta\theta \\
+z_{s,k} &= k\,p \;+\; s\,\Delta z
+\end{aligned}
+	•	\alpha = 2\pi/\varphi^2 (golden angle), \varphi=\frac{1+\sqrt5}{2}
+	•	a sets in-plane spacing (pick from s_{\min} via a\approx s_{\min}/\sqrt{\pi})
+	•	p = helix pitch (z per step)
+	•	Phase offset \Delta\theta: use \alpha/2 (≈ 68.75°) rather than 180°; it preserves low-aliasing statistics between strands better than a simple π shift
+	•	Axial offset \Delta z: use p/2 (half-pitch) so the two strands interleave along z
+
+Optional small radial offset +\!(-)\,\Delta r per strand (few tenths of s_{\min}) if you need a guaranteed nearest-neighbor floor:
+r_{s,k}=a\sqrt{k} + (-1)^s\,\Delta r.
+
+Why it’s powerful
+	•	Common-mode field cancellation: Drive the two word-lines with equal/opposite current → far-field dipole leakage cancels, while at the target node the differential field adds. You get sharper write focus and less half-select flipping.
+	•	Lower cross-talk matrix: Interleaving in z (\Delta z=p/2) + phyllotactic phase (\Delta\theta=\alpha/2) de-correlates neighbor directions → better-conditioned coupling; ECC likes this.
+	•	Parallelism: Two heads can operate simultaneously (one per strand) with minimal interference if you keep a few k apart.
+	•	Path to quad-helix: Add two more strands with \Delta\theta=\{\alpha/4,3\alpha/4\}, \Delta z=\{0,p/2\} for even tighter common-mode suppression.
+
+Practical starting numbers
+	•	Target in-plane spacing: s_{\min}=8\,\text{mm} → a\approx4.5\,\text{mm}
+	•	Pitch: p=0.8\,\text{mm} (tune after coupling sim)
+	•	Offsets: \Delta\theta=\alpha/2, \Delta z=p/2, optional \Delta r=0.3\,s_{\min}
+	•	Height budget H: number of steps \approx H/p per strand
+	•	Ensure nearest cross-strand distance \sqrt{(2\Delta r)^2 + (\Delta z)^2} \ge s_{\min}
+
+Write/read hardware
+	•	Two counter-wound helical word-lines (one per strand).
+	•	Differential write: I_1=+I,\ I_2=-I. At the target, fields sum; off-target, they cancel.
+	•	Assist heating (tiny IR or resistive micro-heater) optional to drop local H_c.
+	•	Read: single TMR/Hall head that follows either helix, or a small ϕ-matched read array perched above both strands.
+
+Addressing & ECC
+	•	Natural address: (s,k).
+	•	Interleave codewords across (s,k) with a Fibonacci stride so geometric neighbors aren’t in the same codeword.
+	•	Stripe writes across strands to double IOPS.
+
+Risks & knobs
+	•	Cross-strand nearest neighbor can be too close if \Delta r is zero; use \Delta r or tweak p to keep margins.
+	•	Tight differential word-line routing is a bit more fabrication, but payoff is big (cleaner field).
