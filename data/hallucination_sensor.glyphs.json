@@ -1,0 +1,21 @@
+{
+  "id": "hallucination-sensor:glyphs",
+  "tags": {
+    "⚠": "flag/anomaly",
+    "↻": "reversibility check via Tri-Invert Bridge",
+    "🕸": "mesh-tap over routes",
+    "⚖": "balance: social-construct vs physical/ecological"
+  },
+  "equations": [
+    "rev := check_reverse(mapping) ∈ [0,1]",
+    "phys := f(causality, conservation, scaling) ∈ [0,1]",
+    "eco := f(sufficiency, symbiosis) ∈ [0,1]",
+    "ling := buzzword_density ⊕ trope_frequency ∈ [0,1]",
+    "rare := preserve_low_freq_facts ∈ [0,1]",
+    "if rev < τ_r ⇒ flag(non-reversible)",
+    "if (phys + eco) < τ_e ⇒ flag(physics-light)",
+    "if ling > τ_l ∧ (phys + eco) < τ_e ⇒ flag(construct-heavy)",
+    "if rare < τ_q ⇒ flag(overlooks-rare)"
+  ],
+  "parameters": { "τ_r": 0.6, "τ_e": 0.5, "τ_l": 0.7, "τ_q": 0.5 }
+}
