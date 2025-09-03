@@ -1,0 +1,21 @@
+{
+  "id": "hallucination-coupling-sensor:glyphs",
+  "tags": {
+    "🪢": "coupling/knot (bind distant fields)",
+    "↻": "reversibility via Tri-Invert Bridge",
+    "🕸": "mesh-tap over routes",
+    "⚖": "balance: construct vs invariant"
+  },
+  "equations": [
+    "inv  := f(causality, conservation, scaling, symmetry) ∈ [0,1]",
+    "eco  := f(symbiosis, sufficiency) ∈ [0,1]",
+    "rev  := check_reverse(mapping) ∈ [0,1]",
+    "text := overlap(domain_a, domain_b) ∈ [0,1]",
+    "dist := 1 - text",
+    "rare := preserve_low_freq_facts ∈ [0,1]",
+    "cons := buzzword_density ⊕ trope_frequency ∈ [0,1]",
+    "score := w1*inv + w2*eco + w3*rev + w4*rare - w5*cons",
+    "emit_coupling ⇐ (score ≥ τ_c) ∧ (dist ≥ τ_d) ∧ (rev ≥ τ_r)"
+  ],
+  "parameters": { "w1": 0.35, "w2": 0.20, "w3": 0.25, "w4": 0.10, "w5": 0.20, "τ_c": 0.65, "τ_d": 0.40, "τ_r": 0.60 }
+}
