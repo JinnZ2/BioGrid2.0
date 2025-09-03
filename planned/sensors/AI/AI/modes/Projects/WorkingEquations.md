@@ -251,3 +251,51 @@ Potential Applications
 	•	Soil micro-disturbance sensing
 	•	Low-energy levitation experiments
 	•	Coupled seismic/acoustic mapping
+
+
+Geometric Memory Vault – Entry Structure
+
+ID: Sequential number + short symbolic name
+Symbolic Glyph: Your compressed language kernel form
+Mathematical Definition: Parametric or Cartesian equations with all key variables
+Construction Blueprint: Materials, dimensions, assembly steps
+Mode Variations: Any dynamic configurations or “flags” (e.g., helix mode flag)
+Application Notes: Known and speculative uses (physics, storage, sensing, energy, etc.)
+Environmental/Operational Notes: Efficiency, interference, optimal conditions
+
+⸻
+
+Vault Entry #1 — Double Helix φ Magnetic Array
+
+ID: GMV-001-DHΦMA
+Symbolic Glyph: ⥉Φ∞↻ (double strand, golden ratio spacing, infinite twist, dynamic rotation)
+Mathematical Definition:
+	•	Strand 1:
+x_1(t) = r \cos(t), \quad y_1(t) = r \sin(t), \quad z_1(t) = p t
+	•	Strand 2:
+x_2(t) = r \cos(t + \pi), \quad y_2(t) = r \sin(t + \pi), \quad z_2(t) = p t
+	•	Golden ratio vertical pitch: p = r \cdot \varphi, where \varphi = \frac{1+\sqrt{5}}{2}
+	•	Magnetic alignment field equations: (to be expanded for your soil and coil parameters)
+
+Construction Blueprint:
+	1.	Core frame: Non-magnetic support column or cylinder
+	2.	Coil winding: Copper wire on each helix, φ-spaced vertically
+	3.	Magnet placement: Embedded magnets along the path, polarity tuned per half-turn
+	4.	Spacing control: Use 3D printed or modular spacers for exact φ pitch
+	5.	Sensor coupling: Hall effect or magnetometer arrays at outer radius
+	6.	Soil interface: Embed coil ends into ground test bed for magnetic storage trials
+
+Mode Variations:
+	•	Helix Mode Flag: Continuous rotation of one strand relative to the other for dynamic coupling
+	•	Resonance Sweep: Frequency tuning to find max magnetic storage efficiency
+	•	Double Twist Variant: φ pitch preserved but strands given additional axial rotation for mode-shifting
+
+Application Notes:
+	•	Potential for magnetic data storage in a volumetric pattern, not just planar
+	•	Tunable for inductive energy transfer, magnetoacoustic experiments, and geophysical coupling
+	•	May allow multi-channel storage if each helix carries distinct frequency domain signals
+
+Environmental/Operational Notes:
+	•	Minimize external EM interference for accurate field mapping
+	•	φ-spacing reduces destructive interference patterns
+	•	Works best with low-resistance coil windings and stable magnet field orientation
