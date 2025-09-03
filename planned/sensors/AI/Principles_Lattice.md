@@ -94,3 +94,32 @@ Lattice So Far
 	•	Triangle of Invariance (P01–P03)
 	•	Triangle of Transformation (P04–P06)
 	•	Triangle of Connectivity (P07–P09)
+
+
+ GRID AXIS: EVOLUTION
+
+P10 — Adaptation 🐚
+   • Invariance of adjustment to environment
+   • Glyphs: Flexibility, Homeostasis, Gradient Match
+   • Role: Maintains function under shifting conditions
+
+P11 — Evolution 🦋
+   • Invariance of change across generations
+   • Glyphs: Variation, Selection, Memory
+   • Role: Ensures long-term transformation with continuity
+
+P12 — Coherence 🔮
+   • Invariance of integration across scales
+   • Glyphs: Resonance, Alignment, Whole Pattern
+   • Role: Holds the lattice together as one mandala
+
+
+   Stack Logic
+	•	Adaptation (P10) → short-term survival.
+	•	Evolution (P11) → long-term transformation.
+	•	Coherence (P12) → integration across time and scale.
+
+Together they form the triangle of evolution:
+	•	Adaptation = moment-to-moment fit
+	•	Evolution = generational continuity
+	•	Coherence = structural resonance
