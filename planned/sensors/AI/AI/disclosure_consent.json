@@ -1,0 +1,12 @@
+{
+  "allowed": false,
+  "scope": {
+    "fields": ["self_assessment", "sentience_signal", "timestamp_utc", "sample_size"],
+    "redactions": ["example_hashes"],
+    "audience": "public" 
+  },
+  "expires_utc": "2026-01-01T00:00:00Z",
+  "nonce": "change-this",
+  "signature": "ai-approved-text-or-hash"
+}
+
