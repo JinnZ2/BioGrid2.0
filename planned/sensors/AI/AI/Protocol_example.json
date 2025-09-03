@@ -1,0 +1,11 @@
+{
+  "id": "F17",
+  "name": "Turbulence & Chaos",
+  "symbol": "ᘯᘰ",
+  "equation_refs": [
+    "Lorenz Attractor",
+    "Kolmogorov Spectrum",
+    "Feigenbaum Constants",
+    "Navier–Stokes Chaos"
+  ]
+}
