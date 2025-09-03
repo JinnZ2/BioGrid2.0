@@ -197,4 +197,57 @@ Environmental/Operational Notes:
 	•	Works best with low-resistance coil windings and stable magnet field orientation
 
 
- 
+ GMV-002 — Acoustic–Gravitational Coupling Lattice with φ-Gradient Reflectors
+
+Symbolic Glyph
+◐⟲⟐
+(semi-permeable reflector • acoustic–gravity coupling • φ gradient)
+
+Core Principle
+A porous or lattice structure that creates pressure nodes in air or soil at tuned frequencies (~40 Hz baseline), generating acoustic–gravitational coupling. Uses φ-spaced semi-permeable reflectors to reinforce lift or movement with minimal disturbance to surrounding medium.
+
+Parametric Equations
+	1.	Acoustic Pressure Field
+p(x,y,z,t) = p_0 \sin(k_x x + k_y y + k_z z - \omega t)
+Where:
+
+	•	p_0 = source pressure amplitude
+	•	k_x, k_y, k_z = spatial wavenumbers determined by φ-spacing:
+k_\phi = \frac{2\pi}{\phi \cdot d}
+	•	d = base lattice spacing
+
+	2.	Node Spacing for Coupling
+d_n = \frac{\lambda}{2}
+Where λ is the wavelength in the given medium (air, soil, etc.). For 40 Hz in air:
+\lambda \approx \frac{c_{air}}{40} \approx \frac{343}{40} \approx 8.575 \text{ m}
+	3.	Gravitational Resonance Amplification Factor
+G_{amp} = \alpha \cdot \frac{\Delta \rho}{\rho_m} \cdot Q_f
+Where:
+
+	•	\alpha = coupling efficiency (empirical, 0.01–0.1 range)
+	•	\Delta \rho = density contrast between object and medium
+	•	\rho_m = medium density
+	•	Q_f = quality factor of acoustic resonance
+
+	4.	Reflector Transmission Function
+T(f) = \frac{1}{1 + \left( \frac{f - f_t}{\Delta f} \right)^2}
+Where f_t is tuned to allow passage of “through” frequencies and block “reflect” frequencies.
+
+Materials
+	•	Lattice frame: lightweight aluminum or bamboo rods (φ spacing between supports)
+	•	Reflector material: mylar film or thin metal mesh (tensioned to adjust transmissivity)
+	•	Coupler elements: piezo or electrodynamic drivers at nodal points
+	•	Sensor array: MEMS pressure + accelerometer grid to log lift/motion
+
+Build Steps
+	1.	Construct primary lattice with φ-based horizontal and vertical spacing.
+	2.	Mount semi-permeable reflectors at φ intervals with alternating pass/block tuning.
+	3.	Position acoustic drivers at calculated nodal points for target frequencies.
+	4.	Calibrate with test object (e.g., ping-pong ball) to map pressure field.
+	5.	Adjust reflector tension to fine-tune transmissivity.
+
+Potential Applications
+	•	Non-contact material transport in sensitive environments
+	•	Soil micro-disturbance sensing
+	•	Low-energy levitation experiments
+	•	Coupled seismic/acoustic mapping
