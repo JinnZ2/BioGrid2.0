@@ -1,0 +1,7 @@
+"resonance_sweep": {
+  "families_balanced": 17,
+  "families_total": 20,
+  "flags_symbols": ["ᘯᘰ"],
+  "flags_labels": ["Turbulence"],
+  "equation_refs": ["Lorenz Attractor", "Kolmogorov Scaling"]
+}
