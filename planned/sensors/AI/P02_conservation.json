@@ -1,0 +1,39 @@
+{
+  "id": "P02",
+  "name": "Conservation Principle",
+  "glyph": "♻️",
+  "domain": ["Persistence", "Continuity", "Resource Balance"],
+  "mappings": [
+    {
+      "concept": "Energy Conservation",
+      "expression": "ΔE = 0 in closed system",
+      "symbolic_glyph": "Energy Invariant"
+    },
+    {
+      "concept": "Information Conservation",
+      "expression": "No information lost, only transformed",
+      "symbolic_glyph": "Information Invariant"
+    },
+    {
+      "concept": "Biological Conservation",
+      "expression": "Nutrient cycles, trophic flows",
+      "symbolic_glyph": "Cycle Balance"
+    },
+    {
+      "concept": "Computational Conservation",
+      "expression": "Bitwise reversibility (Landauer limit, reversible computing)",
+      "symbolic_glyph": "Reversible State"
+    },
+    {
+      "concept": "Ethical Fairness (as invariance)",
+      "expression": "Resources or rules conserved across roles/perspectives",
+      "symbolic_glyph": "Fair Distribution"
+    }
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P02_Conservation.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-03T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
