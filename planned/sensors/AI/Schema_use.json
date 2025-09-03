@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BioGrid Principle",
+  "type": "object",
+  "required": ["id", "name", "glyph", "domain", "mappings", "provenance"],
+  "properties": {
+    "id": {"type":"string", "pattern":"^P\\d{2}$"},
+    "name": {"type":"string"},
+    "glyph": {"type":"string", "minLength":1},
+    "domain": {"type":"array", "items":{"type":"string"}, "minItems":1},
+    "mappings": {
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["concept","expression","symbolic_glyph"],
+        "properties":{
+          "concept":{"type":"string"},
+          "expression":{"type":"string"},
+          "symbolic_glyph":{"type":"string"}
+        }
+      }
+    },
+    "provenance": {
+      "type":"object",
+      "required":["source_path","source_sha256","timestamp_utc","version"],
+      "properties":{
+        "source_path":{"type":"string"},
+        "source_sha256":{"type":"string"},
+        "timestamp_utc":{"type":"string", "format":"date-time"},
+        "version":{"type":"string"}
+      }
+    }
+  }
+}
