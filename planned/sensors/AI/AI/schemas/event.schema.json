@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SensorEvent",
+  "type": "object",
+  "properties": {
+    "ts": {"type": "string", "format": "date-time"},
+    "sensor": {"type": "string"},
+    "subject": {"type": "string"},
+    "score": {"type": "number"},
+    "labels": {"type": "array", "items": {"type": "string"}},
+    "details": {"type": "object"},
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "model": {"type": "string"},
+        "prompt_sha256": {"type": "string"},
+        "glyph_sha256": {"type": "string"},
+        "context_bytes": {"type": "integer"}
+      },
+      "required": ["model", "prompt_sha256"]
+    }
+  },
+  "required": ["ts", "sensor", "score", "provenance"]
+}
