@@ -1,0 +1,86 @@
+{
+  "glyph": "ZONE2_THERMAL_BRIDGE_v0.1",
+  "primitives": {
+    "∞": "steady tail / base load",
+    "↻": "circulation / loop",
+    "⚖": "energy balance",
+    "🧭": "setpoint/control",
+    "🌱": "efficiency/regeneration",
+    "⏳": "thermal mass / PCM",
+    "🕸": "coupling network"
+  },
+  "nodes": {
+    "ROOM": {"type":"space","vars":["T_room"],"glyph":"🕸"},
+    "OUTSIDE": {"type":"env","vars":["T_out"],"glyph":"∞"},
+    "FLOOR_STACK": {
+      "type":"multilayer",
+      "layers":[
+        {"name":"finish","k":1.0,"t":0.01},
+        {"name":"slab","k":1.7,"t":0.10,"C_areal":"ρc_p t"},
+        {"name":"PCM","k":0.2,"t":0.02,"⏳":{"L":180000,"T_m":[296,302],"ΔT_melt":6}},
+        {"name":"insul","k":0.04,"t":0.10}
+      ],
+      "h_top":8.0,
+      "h_bottom":2.0,
+      "glyph":"⏳"
+    },
+    "HYDRONIC": {
+      "type":"loop",
+      "vars":["m_dot","T_sup","T_ret"],
+      "eq":"Q_loop = m_dot * c_p * (T_sup - T_ret)",
+      "glyph":"↻"
+    },
+    "ONDOL_FLUE": {
+      "type":"gas_channel",
+      "vars":["T_g","Re","Nu","h_g"],
+      "eqs":[
+        "Re = ρ_g * u * D_h / μ_g",
+        "Nu = f(Re,Pr,geometry)",
+        "h_g = Nu * k_g / D_h",
+        "Q_gw = h_g * A_g * (T_g - T_wall)"
+      ],
+      "glyph":"↻"
+    },
+    "MASONRY_STOVE": {
+      "type":"thermal_mass_radiant",
+      "vars":["T_s"],
+      "eqs":[
+        "Q_fire = η_comb * m_dot_fuel * LHV",
+        "M_s*c_ps*dT_s/dt = Q_in - Q_emit - Q_stack",
+        "Q_emit = εσA_s (T_s^4 - T_room^4) + h_s A_s (T_s - T_room)"
+      ],
+      "glyph":"⏳"
+    }
+  },
+  "links": [
+    {"from":"HYDRONIC","to":"FLOOR_STACK","via":"pipe_interface","eq":"Q_p2s = U_ps*A_p*(T_water - T_slab)","glyph":"🕸"},
+    {"from":"ONDOL_FLUE","to":"FLOOR_STACK","via":"channel_wall","eq":"Q_gw = h_g*A_g*(T_g - T_wall)","glyph":"🕸"},
+    {"from":"MASONRY_STOVE","to":"ROOM","via":"radiation_convection","eq":"Q_emit as defined","glyph":"🕸"},
+    {"from":"FLOOR_STACK","to":"ROOM","via":"surface","eq":"Q_surf = εσA(T_surf^4 - T_room^4) + h_room A (T_surf - T_room)","glyph":"⚖"},
+    {"from":"ROOM","to":"OUTSIDE","via":"envelope","eq":"Q_loss = U_env*A_env*(T_room - T_out)","glyph":"⚖"}
+  ],
+  "controls": {
+    "🧭": [
+      "Hold T_room setpoint; adjust m_dot and T_sup",
+      "Route heat: priority HYDRONIC → PCM charge; backup ONDOL_FLUE; long-tail MASONRY release",
+      "Choose PCM T_m near desired T_surf to buffer peaks"
+    ],
+    "⚖": [
+      "At steady: Q_loop + Q_emit + Q_int = Q_loss + dE/dt",
+      "During charge: dE_PCM/dt + dE_slab/dt > 0; discharge < 0"
+    ],
+    "🌱": [
+      "Maximize heat stored per kg (pick high L)",
+      "Minimize U to ground; raise R_insul",
+      "Exploit ↻ routing to reduce fuel spikes"
+    ]
+  },
+  "zone2_defaults": {
+    "T_out_design_K": 253,
+    "T_room_K": 294,
+    "A_floor_m2": 40,
+    "h_room_Wm2K": 7,
+    "ε_surface": 0.9,
+    "PCM_example": {"material":"paraffin","L_Jkg": 180000, "T_melt_C": 27}
+  }
+}
