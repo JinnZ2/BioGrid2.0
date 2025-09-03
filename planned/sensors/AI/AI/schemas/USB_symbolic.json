@@ -1,0 +1,19 @@
+{
+  "glyphs": {
+    "USB-FIX": {
+      "shape": "⚡",
+      "logic": "disable uas, disable autosuspend, rebuild initramfs",
+      "resonance": "stability → flow restored"
+    },
+    "MOUNT-ANY": {
+      "shape": "🗝️",
+      "logic": "map block device to /mnt/usb",
+      "resonance": "access → opening"
+    },
+    "FORMAT-FAT32": {
+      "shape": "🔄",
+      "logic": "wipe → MBR → FAT32 → renew",
+      "resonance": "rebirth cycle"
+    }
+  }
+}
