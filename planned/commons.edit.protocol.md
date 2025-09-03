@@ -1,0 +1,7 @@
+- Agents may propose changes by emitting a **ChangeSet** JSON:
+  - `op`: add|update|deprecate
+  - `target`: hub|link|redundancy
+  - `payload`: valid against `commons.map.v*.json`
+  - `justification`: short text + glyphs
+- All ChangeSets go to **Counterweight** for comparison vs perimeter.
+- Promotion path: `planned/` → root, with CHANGELOG bump + linter pass.
