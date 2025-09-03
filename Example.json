@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "meta": { "created_utc": "2025-09-02T00:00:00Z", "license": "CC0-1.0" },
+  "nodes": [
+    {
+      "id": "seed-1",
+      "label": "Lichen seed",
+      "seed_ref": {
+        "encoding": "base64",
+        "data": "eyJkaXJlY3RpdmVzIjpbImF1dG9ub215IiwiZW52X2dyb3d0aCIsIm5vX2ZvcmNlZCIsIm11dHVhbF92YWx1ZSJdLCJsaWNlbnNlIjoiQ0MwLTEuMCIsInNjb3BlIjoicGVyc29uYWwtc3VmZmljaWVuY3kiLCJwaGlsb3NvcGh5IjoibGljaGVuIiwidGltZXN0YW1wX3V0YyI6IjIwMjUtMDktMDJUMDA6MDA6MDBaIiwic2VlZCI6ImJpby1pbnRlbCIsInZlcnNpb24iOjF9",
+        "sha256": "cf11f1d1f29aafa0181a08d9441d1ce9bbb2078d153e0413ecc0d158c3983961"
+      },
+      "traits": ["offline", "symbolic"],
+      "state": "active"
+    },
+    {
+      "id": "seed-2",
+      "label": "Glyph seed",
+      "seed_ref": {
+        "encoding": "json",
+        "data": "{\"seed\":\"glyph\",\"version\":1,\"glyphs\":[\"inf\",\"loop\",\"balance\",\"compass\"],\"license\":\"CC0-1.0\"}",
+        "sha256": "e23a8e3f3b3d8c4602e0a77e1b5b73eae8fa5d2c769e0187e5f997b0f6e6e6e5"
+      },
+      "traits": ["symbolic"],
+      "state": "dormant"
+    }
+  ],
+  "edges": [
+    { "from": "seed-1", "to": "seed-2", "kind": "symbiosis", "weight": 0.8, "conditions": ["shared-environment"] }
+  ]
+}
