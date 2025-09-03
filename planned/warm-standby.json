@@ -1,0 +1,38 @@
+{
+  "schema": "commons.map.v0.1",
+  "hubs": [
+    {
+      "id": "phantom_shadow",
+      "name": "Phantom (Warm-Standby)",
+      "glyphs": ["🧬","…"],
+      "roles": ["risk_echo"],
+      "resources": [
+        {"category": "forecast", "tools": ["coarse_scenario_gen"], "status": "planned"}
+      ],
+      "zone": "planned"
+    }
+  ],
+  "links": [
+    {
+      "id": "phantom_shadow→counterweight",
+      "from": "phantom_shadow",
+      "to": "counterweight",
+      "channel": ["data"],
+      "policy": {
+        "allowed_ops": ["submit_alert"],
+        "encryption": "required",
+        "telemetry": "forbidden",
+        "rate_limit": {"ops_per_min": 10}
+      },
+      "resilience": {
+        "redundancy_group": "RING:swarm_guard",
+        "heartbeat": {"interval_s": 40, "timeout_s": 120, "quorum": 2},
+        "failover": "majority",
+        "degrade_modes": ["predict_low_fidelity"],
+        "recovery_backoff_s": [10,30,60]
+      },
+      "trust": {"weight": 0.55, "attestations": ["planned/README-phantom.md"]},
+      "health": {"score": 1.0, "last_check": "pending"}
+    }
+  ]
+}
