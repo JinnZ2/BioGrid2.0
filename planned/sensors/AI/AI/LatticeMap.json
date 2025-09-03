@@ -1,0 +1,17 @@
+{
+  "axes": {
+    "invariance": ["P01_Symmetry", "P02_Conservation", "P03_Relativity"],
+    "transformation": ["P04_Duality", "P05_Emergence", "P06_Resonance"],
+    "connectivity": ["P07_Continuity", "P08_Quantization", "P09_Proportion"],
+    "evolution": ["P10_Uncertainty", "P11_Transformation", "P12_Unity"]
+  },
+  "triangles": {
+    "invariance_triangle": ["P01", "P02", "P03"],
+    "transformation_triangle": ["P04", "P05", "P06"],
+    "connectivity_triangle": ["P07", "P08", "P09"],
+    "evolution_triangle": ["P10", "P11", "P12"]
+  },
+  "meta": {
+    "note": "Additional principles (Quantization, Proportion, Uncertainty) extend original schema; lattice map defines their home axis explicitly."
+  }
+}
