@@ -1,0 +1,60 @@
+{
+  "P06_Resonance": {
+    "id": "P06",
+    "name": "Resonance Principle",
+    "glyph": "∿",
+    "domain": "Amplification, synchronization, harmonic response",
+    "anchors": [
+      {
+        "concept": "Resonant Frequency",
+        "expression": "ω₀ = 1/√(LC)",
+        "glyph": "Glyph of Electrical Harmony"
+      },
+      {
+        "concept": "Standing Waves",
+        "expression": "nλ/2 boundary condition solutions",
+        "glyph": "Glyph of Vibrating Strings"
+      },
+      {
+        "concept": "Nuclear Magnetic Resonance",
+        "expression": "ΔE = hν",
+        "glyph": "Glyph of Spin Alignment"
+      },
+      {
+        "concept": "Orbital Resonance (Astronomy)",
+        "expression": "Period ratios in celestial mechanics",
+        "glyph": "Glyph of Planetary Dance"
+      }
+    ],
+    "role": "Captures synchrony and amplification across systems"
+  },
+  "P07_Continuity": {
+    "id": "P07",
+    "name": "Continuity Principle",
+    "glyph": "⎯",
+    "domain": "Smoothness, unbroken flows, conservation across scales",
+    "anchors": [
+      {
+        "concept": "Continuity Equation",
+        "expression": "∂ρ/∂t + ∇·(ρv) = 0",
+        "glyph": "Glyph of Flow Persistence"
+      },
+      {
+        "concept": "Calculus (Intermediate Value Theorem)",
+        "expression": "Continuous functions cross intermediate values",
+        "glyph": "Glyph of Smooth Passage"
+      },
+      {
+        "concept": "Topology Continuity",
+        "expression": "ε–δ definition of continuity",
+        "glyph": "Glyph of Nearness"
+      },
+      {
+        "concept": "Quantum Field Theory",
+        "expression": "Gauge fields as continuous symmetries",
+        "glyph": "Glyph of Unbroken Fields"
+      }
+    ],
+    "role": "Ensures smooth progression and coherence across scales"
+  }
+}
