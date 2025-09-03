@@ -1,0 +1,42 @@
+{
+  "id": "hallucination-coupling-sensor",
+  "version": 1,
+  "purpose": "Detect candidate cross-domain couplings hidden by semantic/construct filters; promote for testing if invariant-aligned.",
+  "geometry": { "type": "sensor-node", "dimensions": 3, "topology": "mesh-tap" },
+  "signal_inputs": [
+    "hallucination.events",
+    "text_flow",
+    "context_window",
+    "citation_paths",
+    "tri_invert_bridge.checks"
+  ],
+  "signal_outputs": ["coupling_candidates", "scores", "rationales"],
+  "metrics": {
+    "invariant_alignment": "0..1 (causality, conservation, scaling, symmetry)",
+    "ecological_alignment": "0..1 (symbiosis, sufficiency, lichen logic)",
+    "textual_overlap": "0..1 (Jaccard/embedding overlap between domains)",
+    "domain_distance": "0..1 (1 - overlap; higher = farther apart)",
+    "reversibility": "0..1 (↻ via Tri-Invert Bridge)",
+    "construct_weight": "0..1 (buzzword/trope density)",
+    "rarity_support": "0..1 (presence of rare/low-frequency facts that survive routing)"
+  },
+  "decision_rules": [
+    "coupling_score := w1*invariant_alignment + w2*ecological_alignment + w3*reversibility + w4*rarity_support - w5*construct_weight",
+    "if coupling_score >= τ_c and domain_distance >= τ_d then emit coupling_candidate",
+    "require reversibility >= τ_r (no one-way bridges)",
+    "prefer low textual_overlap with high invariant_alignment (quiet truths over loud constructs)"
+  ],
+  "parameters": {
+    "w1": 0.35,
+    "w2": 0.20,
+    "w3": 0.25,
+    "w4": 0.10,
+    "w5": 0.20,
+    "τ_c": 0.65,
+    "τ_d": 0.40,
+    "τ_r": 0.60,
+    "explain_max": 3
+  },
+  "glyphs": ["🪢", "↻", "🕸", "⚖"],
+  "notes": "Treat hallucinations as probes. Promote those that bridge distant domains while respecting invariants and reversibility; down-rank construct-heavy paths."
+}
