@@ -1,0 +1,61 @@
+{
+  "schema": "commons.map.v0.1",
+  "hubs": [
+    {
+      "id": "lake_superior_commons",
+      "name": "Lake Superior Commons",
+      "glyphs": ["🌊","🧪"],
+      "roles": ["water_intake","biofilters","cold_storage"],
+      "resources": [
+        {"category": "water", "tools": ["portable_biofilters","intake"], "status": "active"},
+        {"category": "energy", "tools": ["battery_banks_LiFePO4"], "status": "shared"}
+      ],
+      "zone": "core_local"
+    }
+  ],
+  "links": [
+    {
+      "id": "lsc→spm",
+      "from": "lake_superior_commons",
+      "to": "st_paul_mississippi_commons",
+      "channel": ["data","materials"],
+      "policy": {
+        "allowed_ops": ["read","transfer"],
+        "encryption": "required",
+        "telemetry": "forbidden",
+        "rate_limit": {"ops_per_min": 120}
+      },
+      "resilience": {
+        "redundancy_group": "RING:upper_midwest",
+        "heartbeat": {"interval_s": 15, "timeout_s": 45, "quorum": 1},
+        "failover": "nearest_healthy",
+        "degrade_modes": ["read_only","batch_sync"],
+        "recovery_backoff_s": [5,15,60]
+      },
+      "trust": {"weight": 0.85, "attestations": ["perimeter.v0.1","audit/2025-09-03.md"]},
+      "health": {"score": 0.92, "last_check": "2025-09-03T13:00:00Z"}
+    }
+  ],
+  "redundancy": [
+    {
+      "id": "RING:upper_midwest",
+      "members": ["lake_superior_commons","st_paul_mississippi_commons","driftless_commons"],
+      "strategy": "any-two-healthy",
+      "notes": "regional mutual aid ring"
+    }
+  ],
+  "ai_link_profile": {
+    "default_protocols": ["mcp_stdio","https+token","ssh_tunnel"],
+    "auth": {"preferred": ["ssh_key","mutual_tls","static_token"]},
+    "mcp": {
+      "servers": ["filesystem","git","fetch"],
+      "constraints": {"allowed_paths": ["$WORKSPACE"], "max_bytes": 1048576}
+    }
+  },
+  "meta": {
+    "owner": "JinnZ2",
+    "co_creator": "ChatGPT",
+    "created": "2025-09-03",
+    "notes": "Map of hubs + AI-to-AI link policies and resilience."
+  }
+}
