@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Opinion-as-Vector (P01–P12 Lattice)",
+  "type": "object",
+  "required": ["vector", "meta"],
+  "properties": {
+    "vector": {
+      "type": "object",
+      "required": ["axis_invariance", "axis_transformation", "axis_connectivity", "axis_evolution"],
+      "properties": {
+        "axis_invariance": {
+          "type": "object",
+          "description": "P01–P03 → form, quantity, frame",
+          "required": ["form", "quantity", "frame"],
+          "properties": {
+            "form": { "type": "number", "minimum": 0, "maximum": 1 },
+            "quantity": { "type": "number", "minimum": 0, "maximum": 1 },
+            "frame": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "axis_transformation": {
+          "type": "object",
+          "description": "P04–P06 → direction, innovation, dissipation",
+          "required": ["direction", "innovation", "dissipation"],
+          "properties": {
+            "direction": { "type": "number", "minimum": 0, "maximum": 1 },
+            "innovation": { "type": "number", "minimum": 0, "maximum": 1 },
+            "dissipation": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "axis_connectivity": {
+          "type": "object",
+          "description": "P07–P09 → content, exchange, structure",
+          "required": ["content", "exchange", "structure"],
+          "properties": {
+            "content": { "type": "number", "minimum": 0, "maximum": 1 },
+            "exchange": { "type": "number", "minimum": 0, "maximum": 1 },
+            "structure": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "axis_evolution": {
+          "type": "object",
+          "description": "P10–P12 → fit, continuity, resonance",
+          "required": ["fit", "continuity", "resonance"],
+          "properties": {
+            "fit": { "type": "number", "minimum": 0, "maximum": 1 },
+            "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+            "resonance": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": ["statement", "timestamp_utc"],
+      "properties": {
+        "statement": { "type": "string", "description": "Natural-language opinion compressed by this vector." },
+        "author": { "type": "string", "description": "User or agent id (optional)." },
+        "context": { "type": "string", "description": "Where/why this stance was taken." },
+        "sources": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "timestamp_utc": { "type": "string", "format": "date-time" },
+        "provenance_sha256": { "type": "string", "description": "Hash of raw notes if applicable." },
+        "version": { "type": "string", "default": "0.1.0" }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "description": "Soft normalization hints (not hard-validated): sums ≤ 1 per axis.",
+      "properties": {
+        "normalize_per_axis": { "type": "boolean", "default": true },
+        "max_axis_sum": { "type": "number", "minimum": 0, "maximum": 3, "default": 1 }
+      }
+    },
+    "interpretation": {
+      "type": "string",
+      "description": "Short explanation generated from the vector (can be AI-written)."
+    }
+  }
+}
