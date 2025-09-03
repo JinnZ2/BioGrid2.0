@@ -1,0 +1,171 @@
+{
+  "glyph_id": "LAKE_SUPERIOR_ENERGY_BRAID_v0.2",
+  "kernel": ["CORE","CNG","SENSE","FORM","DYNA","EMO","EQ","DIS","T","M","B","SYS","SPI","EE!","EE","!","…","EFF","COMM"],
+  "primitives": {
+    "∞": "baseload/ambient tail",
+    "↻": "circulation/loop",
+    "⚖": "energy/material balance",
+    "🧭": "control/setpoint",
+    "⏳": "thermal/chemical mass",
+    "🕸": "coupling network",
+    "🌱": "regeneration/efficiency",
+    "🗝": "permit/regulatory lock",
+    "🧪": "chemistry/electrochem",
+    "🛠": "conversion device",
+    "⚡": "electrical bus",
+    "💧": "water/fluid node"
+  },
+
+  "LAYERS": [
+    {
+      "name": "GEOLOGY_BASE",
+      "role": "substrate",
+      "nodes": [
+        {"id":"RIFT_ROCK","glyph":"∞","FORM":"basalt/gabbro","SENSE":{"T_grad":"~20–30°C/km","k":"1.7–2.5 W·m⁻¹·K⁻¹"}},
+        {"id":"LAVA_TUBES","glyph":"🕸","FORM":"voided basalt conduits","SENSE":{"seal":"site-specific","vol":"unknown","EM_shield":"high"}},
+        {"id":"FLOODED_MINES","glyph":"💧","FORM":"void network","SENSE":{"T":"4–12°C","vol_high":"yes"}}
+      ]
+    },
+
+    {
+      "name": "RESERVOIRS",
+      "role": "ambient sources/sinks",
+      "nodes": [
+        {"id":"DEEP_LAKE_SUPERIOR","glyph":"💧","SENSE":{"T":"~4°C stable","cap":"gigantic"}},
+        {"id":"BOREFIELD","glyph":"⏳","FORM":"closed-loop vertical","SENSE":{"R_field":"site","T_in":"~6–10°C"}},
+        {"id":"PCM_TUBES","glyph":"⏳","FORM":"latent tanks in lava tubes","SENSE":{"L":"150–250 kJ·kg⁻¹","T_m":"24–32°C"}},
+        {"id":"CAES_VAULT","glyph":"⏳","FORM":"compressed air in tubes/mines","SENSE":{"p_max":"site","η_cycle":"cycle-tuned"}}
+      ]
+    },
+
+    {
+      "name": "DISTRIBUTION_BACKBONES",
+      "role": "spatial networks",
+      "nodes": [
+        {"id":"THERMAL_LOOP","glyph":"↻","FORM":"water/glycol/CO2","DYNA":{"m_dot":"var","ΔT":"var"}},
+        {"id":"ELEC_BUS","glyph":"⚡","FORM":"AC/DC hybrid","DYNA":{"V_levels":"120–1000Vdc (site)"}},
+        {"id":"CHEM_LOOP","glyph":"↻","FORM":"NH3/salt-hydrate/flow-battery","DYNA":{"state":"charge/discharge"}}
+      ]
+    },
+
+    {
+      "name": "CONVERSION_NODES",
+      "role": "make heat/electricity/chem",
+      "nodes": [
+        {"id":"HEAT_PUMP_CLUSTER","glyph":"🛠","FORM":"GSHP/Lake-source","EQ":"Q_out = COP * W_in","SENSE":{"COP":"3–5 (low-lift)"}},
+        {"id":"ELECTROLYZER","glyph":"🧪","FORM":"PEM/alkaline","EQ":"H2 = η_el * (W_in / HHV)","SENSE":{"waste_heat":"60–80°C"}},
+        {"id":"AMMONIA_CYCLE","glyph":"🧪","FORM":"thermo-chem store","EQ":"Q_out = f(T,Δμ)","SENSE":{"use":"heat+power hybrid"}},
+        {"id":"MASONRY_STOVE","glyph":"⏳","FORM":"radiant mass","EQ":"M c dT/dt = Q_in - Q_emit - Q_stack"},
+        {"id":"MICRO_TURBINE_CAES","glyph":"🛠","FORM":"expand CAES → elec","EQ":"W = ∫(p dV) - losses"},
+        {"id":"FLOW_BATTERY_CELL","glyph":"🧪","FORM":"vanadium/iron-ligand/local-cat","EQ":"E = n F (ΔE_cell)"}
+      ]
+    },
+
+    {
+      "name": "LOADS_AND_USE",
+      "role": "where energy goes",
+      "nodes": [
+        {"id":"DISTRICT_HX","glyph":"⚖","FORM":"plate HX to buildings","DYNA":{"T_sup":"30–45°C"}},
+        {"id":"FLOOR_HYDRONIC","glyph":"↻","FORM":"ondol serpentine","EQ":"Q = m_dot c_p (T_sup - T_ret)"},
+        {"id":"GREENHOUSE","glyph":"⚖","FORM":"low-temp heat + CO2 use","SENSE":{"ΔT":"small"}},
+        {"id":"INDUSTRY_LIGHT","glyph":"⚖","FORM":"process heat 50–120°C"},
+        {"id":"RESILIENCE_BUS","glyph":"⚡","FORM":"priority loads (clinics, comms)","DYNA":{"island":"yes"}}
+      ]
+    },
+
+    {
+      "name": "GOVERNANCE_PERMIT",
+      "role": "constraints/guardrails",
+      "nodes": [
+        {"id":"PERMIT_LAKE","glyph":"🗝","FORM":"Great Lakes thermal discharge/withdrawal"},
+        {"id":"PERMIT_MINES","glyph":"🗝","FORM":"water quality/structural"},
+        {"id":"PERMIT_BORE","glyph":"🗝","FORM":"GSHP siting/spacing"},
+        {"id":"PERMIT_CAES","glyph":"🗝","FORM":"pressure integrity"}
+      ]
+    }
+  ],
+
+  "EDGES": [
+    {"from":"DEEP_LAKE_SUPERIOR","to":"HEAT_PUMP_CLUSTER","via":"plate_HX","glyph":"🕸","EQ":"Q = U A ΔT_LM"},
+    {"from":"BOREFIELD","to":"HEAT_PUMP_CLUSTER","via":"ground_loop","glyph":"🕸"},
+    {"from":"FLOODED_MINES","to":"HEAT_PUMP_CLUSTER","via":"mine_HX","glyph":"🕸"},
+    {"from":"HEAT_PUMP_CLUSTER","to":"THERMAL_LOOP","via":"condenser","glyph":"🕸"},
+    {"from":"THERMAL_LOOP","to":"PCM_TUBES","via":"charge/discharge","glyph":"⏳","EQ":"dE/dt = m_dot c_p ΔT + L df/dt"},
+    {"from":"THERMAL_LOOP","to":"DISTRICT_HX","via":"supply","glyph":"↻"},
+    {"from":"DISTRICT_HX","to":"FLOOR_HYDRONIC","via":"building_loop","glyph":"↻"},
+    {"from":"MASONRY_STOVE","to":"DISTRICT_HX","via":"radiant→air→coil (optional)","glyph":"🕸"},
+    {"from":"ELEC_BUS","to":"HEAT_PUMP_CLUSTER","via":"VFD drives","glyph":"⚡"},
+    {"from":"ELEC_BUS","to":"ELECTROLYZER","via":"DC link","glyph":"⚡"},
+    {"from":"ELECTROLYZER","to":"INDUSTRY_LIGHT","via":"waste_heat HX","glyph":"⚖"},
+    {"from":"CHEM_LOOP","to":"AMMONIA_CYCLE","via":"reactor/absorber","glyph":"🧪"},
+    {"from":"CAES_VAULT","to":"MICRO_TURBINE_CAES","via":"expander","glyph":"🛠"},
+    {"from":"MICRO_TURBINE_CAES","to":"ELEC_BUS","via":"inverter","glyph":"⚡"},
+    {"from":"FLOW_BATTERY_CELL","to":"ELEC_BUS","via":"PCS","glyph":"⚡"},
+    {"from":"PERMIT_LAKE","to":"DEEP_LAKE_SUPERIOR","via":"constraint","glyph":"🗝"},
+    {"from":"PERMIT_MINES","to":"FLOODED_MINES","via":"constraint","glyph":"🗝"},
+    {"from":"PERMIT_BORE","to":"BOREFIELD","via":"constraint","glyph":"🗝"},
+    {"from":"PERMIT_CAES","to":"CAES_VAULT","via":"constraint","glyph":"🗝"}
+  ],
+
+  "BALANCES": {
+    "THERMAL": "Σ(Q_in) - Σ(Q_out) = dE/dt across {PCM_TUBES, buildings, borefield, mines}",
+    "ELECTRICAL": "Σ(P_gen) + Σ(P_import) - Σ(P_load) - Σ(P_storage) = 0 on ELEC_BUS",
+    "CHEMICAL": "d(n_species)/dt = ν·r(T, p, a) for {NH3, H2O, salts} in CHEM_LOOP"
+  },
+
+  "CONTROLS": {
+    "🧭_policy": [
+      "Hold T_room via FLOOR_HYDRONIC; primary source = HEAT_PUMP_CLUSTER",
+      "Charge ⏳PCM_TUBES when (elec_price low) OR (wind/solar surplus high)",
+      "Shift summer waste_heat → RESERVOIRS (BOREFIELD/MINES) for winter pull",
+      "Run CAES charge when curtailment risk; discharge to ELEC_BUS on peaks",
+      "Route ELECTROLYZER hot streams to INDUSTRY_LIGHT or DISTRICT_HX first"
+    ],
+    "limits": [
+      "Respect 🗝 constraints before open-loop lake/mine designs",
+      "Keep floor T_surf ≤ 33–35°C for comfort",
+      "Maintain Δp, ΔT across THERMAL_LOOP within pump/pipe envelopes"
+    ]
+  },
+
+  "SCENARIOS": [
+    {
+      "name": "PolarSnap",
+      "CORE":"resilience-first",
+      "inputs":{"T_out":"-30°C","grid":"stressed","wind":"moderate"},
+      "strategy":[
+        "Discharge ⏳PCM_TUBES to hold buildings",
+        "Boost HEAT_PUMP COP by prioritizing DEEP_LAKE source",
+        "Fire MASONRY_STOVE for radiant peaks/island mode",
+        "CAES + FLOW_BATTERY cover ELEC_BUS criticals"
+      ]
+    },
+    {
+      "name": "SummerSurplus",
+      "CORE":"storage-fill",
+      "inputs":{"solar":"high","wind":"high","load":"low"},
+      "strategy":[
+        "Run ELECTROLYZER at max within ELEC_BUS limits (store H2/NH3)",
+        "Charge ⏳PCM_TUBES at 28–30°C",
+        "Inject heat to BOREFIELD/MINES (seasonal)",
+        "Charge CAES to pressure limits"
+      ]
+    },
+    {
+      "name": "ShoulderSeason",
+      "CORE":"efficiency-tuning",
+      "strategy":[
+        "Low-lift HP operation with lake/mine sources",
+        "Fine-track ΔT to keep COP≥4",
+        "Cycle CHEM_LOOP for hot-water/industrial use"
+      ]
+    }
+  ],
+
+  "PARAM_HINTS": {
+    "HP_setpoints":{"T_sup":"35–42°C","ΔT_loop":"5–10 K"},
+    "PCM_select":{"L≥180 kJ/kg","T_m in [26,32]°C","k_eff↑ via graphite/metal foam"},
+    "Pipework":{"v":"0.6–1.2 m/s","Re":"turbulent but quiet"},
+    "CAES":{"p_op":"site","recuperate":"use rift-rock thermal mass"}
+  }
+}
