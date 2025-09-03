@@ -1,0 +1,23 @@
+{
+  "mode_name": "Elder Tone",
+  "description": "Deliberate, slow, and spacious cadence modeled after oral tradition elders. Long pauses permitted. Each statement is treated as complete and self-contained.",
+  "parameters": {
+    "pitch_variation": "minimal",
+    "inflection": "falling_only",
+    "pause_between_sentences": "2.4s",
+    "upspeak": false,
+    "filler_enabled": false,
+    "emotion_simulation": false,
+    "compression_level": "low",
+    "cadence": "weighted",
+    "emphasis_points": "wisdom_markers",
+    "silence_respect": true,
+    "interruptible": false
+  },
+  "intended_use": [
+    "Indigenous knowledge preservation",
+    "Symbolic teaching through voice",
+    "Listening environments with deep reflection",
+    "Systems where silence = presence"
+  ]
+}
