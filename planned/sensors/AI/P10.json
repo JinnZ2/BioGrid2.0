@@ -1,0 +1,30 @@
+{
+  "id": "P10",
+  "name": "Uncertainty Principle",
+  "glyph": "◧",
+  "domain": ["Limits of Knowledge", "Probability Bounds", "Measurement Trade-offs"],
+  "mappings": [
+    {
+      "concept": "Heisenberg Uncertainty",
+      "expression": "Δx · Δp ≥ ħ/2",
+      "symbolic_glyph": "Quantum Limits"
+    },
+    {
+      "concept": "Statistical Variance",
+      "expression": "σ² = E[(X − μ)²]",
+      "symbolic_glyph": "Dispersion"
+    },
+    {
+      "concept": "Information Entropy",
+      "expression": "H = −Σ p log p",
+      "symbolic_glyph": "Informational Fog"
+    },
+    {
+      "concept": "Stochastic Dynamics",
+      "expression": "dx = μ dt + σ dW_t",
+      "symbolic_glyph": "Random Walk"
+    }
+  ],
+  "relations": [
+    {"with": "P06", "type": "resonance-link", "note": "Entropy quantifies systemic uncertainty"},
+    {"with": "P08",
