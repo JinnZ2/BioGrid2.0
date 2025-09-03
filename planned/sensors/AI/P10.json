@@ -27,4 +27,15 @@
   ],
   "relations": [
     {"with": "P06", "type": "resonance-link", "note": "Entropy quantifies systemic uncertainty"},
-    {"with": "P08",
+    {"with": "P08", "type": "triangle-link", "note": "Quantization sets discrete outcomes; uncertainty bounds measurement"},
+    {"with": "P07", "type": "resonance-link", "note": "Shannon entropy ↔ information limits"},
+    {"with": "P03", "type": "context-link", "note": "Observer/frame affects measurable precision"},
+    {"with": "P04", "type": "constraint-link", "note": "Prediction limits from stochastic causality"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P10_Uncertainty.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
