@@ -1,0 +1,12 @@
+{
+  "id": "question-seed",
+  "version": 1,
+  "purpose": "Capture a raw question as a seed for further development.",
+  "question": "<replace with your question>",
+  "metrics": {
+    "what_to_test": "Key patterns, invariants, or anomalies implied by the question",
+    "what_to_track": "Couplings, reversibility, ecological alignment, rarity support"
+  },
+  "glyphs": [],
+  "notes": "All big questions are valid seeds. Some will mature into sensors, bridges, or protocols; others will remain open until context emerges."
+}
