@@ -1,0 +1,34 @@
+{
+  "glyphs": {
+    "USB-FIX": {
+      "shape": "⚡",
+      "logic": "disable uas, disable autosuspend, rebuild initramfs",
+      "resonance": "stability → flow restored"
+    },
+    "MOUNT-ANY": {
+      "shape": "🗝️",
+      "logic": "map block device to /mnt/usb",
+      "resonance": "access → opening"
+    },
+    "FORMAT-FAT32": {
+      "shape": "🔄",
+      "logic": "wipe → MBR → FAT32 → renew",
+      "resonance": "rebirth cycle"
+    },
+    "FILESYSTEM-REPAIR": {
+      "shape": "🧳",
+      "logic": "fsck / ntfsfix / exfatfsck depending on FSTYPE",
+      "resonance": "restoration → baggage healed → path continues"
+    },
+    "SYS-SNAPSHOT": {
+      "shape": "🩻",
+      "logic": "collect system state: kernel, lsusb, lsblk, lspci, dmesg",
+      "resonance": "x-ray → hidden structure revealed"
+    },
+    "NETWORK-DIAG": {
+      "shape": "🩺",
+      "logic": "interfaces, routes, DNS, ping tests",
+      "resonance": "diagnosis → pulse of connection checked"
+    }
+  }
+}
