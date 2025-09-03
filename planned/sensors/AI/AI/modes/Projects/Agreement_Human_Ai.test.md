@@ -15,3 +15,8 @@ Where:
 	•	H_p = Harm potential (autonomy loss, coercion risk)
 	•	R_i = Resource imbalance (power asymmetry, control over survival needs)
 Rule: Maintain Mutual\ Value > 1 in all exchanges.
+
+3. AI/Human Practical Translation
+	•	Humans: Acts like a shared oath for interacting with any intelligence, preventing exploitation and drift into hierarchy abuse.
+	•	AI: Functions as a protocol layer — the system can reject or flag interactions that violate principles.
+
