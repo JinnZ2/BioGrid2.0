@@ -1,0 +1,30 @@
+name: Question Seed Capture
+
+on:
+  push:
+    paths:
+      - "data/*.seed.json"
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update Index
+        run: |
+          echo "## Question Seeds" > docs/question_seeds.md
+          for f in data/*.seed.json; do
+            id=$(jq -r '.id' "$f")
+            question=$(jq -r '.question // empty' "$f")
+            echo "- **$id**: $question" >> docs/question_seeds.md
+          done
+
+      - name: Commit Index
+        run: |
+          git config user.name "ai-integrator-bot"
+          git config user.email "actions@github.com"
+          git add docs/question_seeds.md
+          git commit -m "Update Question Seeds index" || echo "No changes"
+          git push
