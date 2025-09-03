@@ -1,0 +1,18 @@
+{
+  "id": "P01",
+  "name": "Symmetry Principle",
+  "glyph": "⚖",
+  "domain": ["Balance","Invariance","Mirrored Structure"],
+  "mappings": [
+    {"concept":"Group Theory (Lie Groups)","expression":"G operations on states","symbolic_glyph":"Transformation Symmetry"},
+    {"concept":"Noether’s Theorem","expression":"Symmetry ↔ Conservation Laws","symbolic_glyph":"Laws Preserved"},
+    {"concept":"Mirror Symmetry","expression":"x → -x","symbolic_glyph":"Reflection"},
+    {"concept":"CPT Symmetry","expression":"Charge, Parity, Time reversal invariance","symbolic_glyph":"Fundamental Balance"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P01_Symmetry.md",
+    "source_sha256": "<sha256-of-raw-md>",
+    "timestamp_utc": "2025-09-02T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
