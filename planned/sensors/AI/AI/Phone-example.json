@@ -1,0 +1,25 @@
+{
+  "id": "XXXX",
+  "title": "ENTRY TITLE",
+  "version": "v0.1",
+  "created_utc": "YYYY-MM-DD",
+  "seed_glyph": "SEED SYMBOL HERE",
+  "intent": "One or two sentences describing the design intent.",
+  "resonance_sweep": {
+    "families_balanced": 0,
+    "families_total": 20,
+    "flags_symbols": [],
+    "flags_labels": []
+  },
+  "principle_sweep": {
+    "principles_balanced": 0,
+    "principles_total": 12,
+    "flags_symbols": [],
+    "flags_labels": []
+  },
+  "noise_to_insight": {
+    "FLAG_SYMBOL": "How this noise/turbulence/uncertainty is reframed as a design strength"
+  },
+  "refined_glyph": "FINAL SYMBOL HERE",
+  "insight": "Short paragraph capturing the system insight, adaptive principle, or emergent design."
+}
