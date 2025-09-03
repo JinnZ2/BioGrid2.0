@@ -1,0 +1,141 @@
+{
+  "schema": "commons.map.v0.2.draft",
+  "hubs": [
+    {
+      "id": "lake_superior_commons",
+      "name": "LAKE_SUPERIOR_COMMONS",
+      "glyphs": ["🌊"],
+      "orgs": [
+        {"id": "DULUTH_COOP", "glyph": "🤝", "role": "member-owned hub", "ties": ["ELEC_BUS","THERMAL_LOOP"]},
+        {"id": "UM_DULUTH", "glyph": "🎓", "role": "R&D: cold-climate geothermal & storage", "ties": ["GEOLOGY_BASE","RESERVOIRS"]}
+      ],
+      "resources": [
+        {"category": "geology", "tools": ["RIFT_ROCK","LAVA_TUBES","FLOODED_MINES"]},
+        {"category": "water", "tools": ["DEEP_LAKE_SUPERIOR"]},
+        {"category": "thermal", "tools": ["deep-lake loops","lava-tube PCM","mine-water seasonal"]},
+        {"category": "chemical", "tools": ["mineral catalysts","geo-assisted chem loops"]}
+      ],
+      "zone": "core_local"
+    },
+    {
+      "id": "st_paul_mississippi_commons",
+      "name": "STPAUL_MISSISSIPPI_COMMONS",
+      "glyphs": ["🌉"],
+      "orgs": [
+        {"id": "MISSISSIPPI_MARKET_COOP", "glyph": "🤝", "role": "urban cooperative network", "ties": ["ELEC_BUS","THERMAL_LOOP","CHEM_LOOP"]},
+        {"id": "UMN_TWIN_CITIES", "glyph": "🎓", "role": "R&D: district energy & water chemistry", "ties": ["THERMAL_LOOP","CHEM_LOOP"]}
+      ],
+      "resources": [
+        {"category": "water", "tools": ["MISSISSIPPI_RIVER","FLOODPLAIN_AQUIFERS"]},
+        {"category": "thermal", "tools": ["DISTRICT_ENERGY_STPAUL","river-source HP","waste heat"]},
+        {"category": "chemical", "tools": ["biofuel/biogas from ag waste","urban digestion→CH4","NH3/P recovery","H2/NH3/methanol hub"]}
+      ],
+      "zone": "core_local"
+    },
+    {
+      "id": "driftless_commons",
+      "name": "DRIFTLESS_COMMONS",
+      "glyphs": ["⛰️"],
+      "orgs": [
+        {"id": "ORGANIC_VALLEY", "glyph": "🤝", "role": "member-owned agri-energy hub", "ties": ["AGRI_LOOP","ELEC_BUS"]},
+        {"id": "UW_MADISON", "glyph": "🎓", "role": "R&D: agri-energy + cooperative economics", "ties": ["SOIL_THERMAL_BANK","SPRING_LOOP"]}
+      ],
+      "resources": [
+        {"category": "geology", "tools": ["KARST_CAVES","BLUFF_VALLEY","ALLUVIAL_SOILS"]},
+        {"category": "water", "tools": ["SPRING_FEEDS"]},
+        {"category": "thermal", "tools": ["spring-fed loops","cave cool/heat","soil thermal banks"]},
+        {"category": "chemical", "tools": ["biomass pellets","ag-residue fuels","nutrient cycling"]}
+      ],
+      "zone": "core_local"
+    }
+  ],
+  "links": [
+    { "id": "lsc→spm:carriers", "from": "lake_superior_commons", "to": "st_paul_mississippi_commons",
+      "channel": ["materials"], "carrier": "H2/NH3", "glyph": "🧪",
+      "policy": {"allowed_ops": ["transfer"], "encryption": "required", "telemetry": "limited"},
+      "resilience": {"redundancy_group": "RING:coop_corridor", "heartbeat": {"interval_s": 30,"timeout_s": 90,"quorum": 2}, "failover": "nearest_healthy"},
+      "trust": {"weight": 0.85}
+    },
+    { "id": "spm→drf:biochar", "from": "st_paul_mississippi_commons", "to": "driftless_commons",
+      "channel": ["materials"], "carrier": "biochar/biogas", "glyph": "🌱",
+      "policy": {"allowed_ops": ["transfer"], "encryption": "required", "telemetry": "limited"},
+      "resilience": {"redundancy_group": "RING:coop_corridor"},
+      "trust": {"weight": 0.8}
+    },
+    { "id": "drf→spm:pellets", "from": "driftless_commons", "to": "st_paul_mississippi_commons",
+      "channel": ["materials"], "carrier": "biomass pellets", "glyph": "🌱",
+      "policy": {"allowed_ops": ["transfer"], "encryption": "required", "telemetry": "limited"},
+      "resilience": {"redundancy_group": "RING:coop_corridor"},
+      "trust": {"weight": 0.8}
+    },
+    { "id": "spm→lsc:fuels", "from": "st_paul_mississippi_commons", "to": "lake_superior_commons",
+      "channel": ["materials"], "carrier": "processed fuels", "glyph": "🛢",
+      "policy": {"allowed_ops": ["transfer"], "encryption": "required", "telemetry": "limited"},
+      "resilience": {"redundancy_group": "RING:coop_corridor"},
+      "trust": {"weight": 0.82}
+    },
+
+    { "id": "lsc→spm:cold", "from": "lake_superior_commons", "to": "st_paul_mississippi_commons",
+      "channel": ["energy"], "carrier": "winter cold storage capacity", "glyph": "❄️",
+      "policy": {"allowed_ops": ["export"], "rate_limit": {"ops_per_min": 60}},
+      "resilience": {"redundancy_group": "RING:coop_corridor"},
+      "trust": {"weight": 0.85}
+    },
+    { "id": "spm→drf:heat", "from": "st_paul_mississippi_commons", "to": "driftless_commons",
+      "channel": ["energy"], "carrier": "district-heat + surplus", "glyph": "🔥",
+      "policy": {"allowed_ops": ["export"]},
+      "resilience": {"redundancy_group": "RING:coop_corridor"},
+      "trust": {"weight": 0.83}
+    },
+    { "id": "drf→spm:soilheat", "from": "driftless_commons", "to": "st_paul_mississippi_commons",
+      "channel": ["energy"], "carrier": "soil-bank heat", "glyph": "🌱",
+      "policy": {"allowed_ops": ["export"]},
+      "resilience": {"redundancy_group": "RING:coop_corridor"},
+      "trust": {"weight": 0.8}
+    },
+
+    { "id": "drf→lsc:biofert", "from": "driftless_commons", "to": "lake_superior_commons",
+      "channel": ["materials"], "carrier": "organic acids & biofertilizers", "glyph": "🧪" },
+    { "id": "lsc→drf:catalysts", "from": "lake_superior_commons", "to": "driftless_commons",
+      "channel": ["materials"], "carrier": "mineral catalysts", "glyph": "🪨" },
+    { "id": "spm→lsc+drf:wastewater_recovery", "from": "st_paul_mississippi_commons", "to": "MULTI",
+      "channel": ["materials"], "carrier": "NH3 & P from wastewater", "glyph": "🧪",
+      "fanout": ["lake_superior_commons","driftless_commons"]
+    },
+
+    { "id": "umd→umn:rd", "from": "UM_DULUTH", "to": "UMN_TWIN_CITIES", "channel": ["knowledge"], "carrier": "cold-climate & lake-source thermal", "glyph": "📚" },
+    { "id": "umn→uw:rd", "from": "UMN_TWIN_CITIES", "to": "UW_MADISON", "channel": ["knowledge"], "carrier": "district energy integration & chemical recovery", "glyph": "📚" },
+    { "id": "uw→umd:rd", "from": "UW_MADISON", "to": "UM_DULUTH", "channel": ["knowledge"], "carrier": "soil-thermal & agri-energy modeling", "glyph": "📚" },
+
+    { "id": "ov→mmc:gov", "from": "ORGANIC_VALLEY", "to": "MISSISSIPPI_MARKET_COOP", "channel": ["governance"], "carrier": "urban–rural member programs", "glyph": "🤝" },
+    { "id": "mmc→dc:capital", "from": "MISSISSIPPI_MARKET_COOP", "to": "DULUTH_COOP", "channel": ["governance"], "carrier": "shared capital + logistics", "glyph": "💰" },
+    { "id": "dc→ov:advocacy", "from": "DULUTH_COOP", "to": "ORGANIC_VALLEY", "channel": ["governance"], "carrier": "joint policy advocacy", "glyph": "🗝" }
+  ],
+  "redundancy": [
+    { "id": "RING:coop_corridor", "members": ["lake_superior_commons","st_paul_mississippi_commons","driftless_commons"], "strategy": "any-two-healthy" }
+  ],
+  "playbooks": [
+    {
+      "id": "tri_hub_winter_surge",
+      "trigger": "Simultaneous deep cold across all hubs",
+      "steps": [
+        "Deploy Driftless biomass to St. Paul & Superior district loops",
+        "Draw on Superior PCM/CAES stores for St. Paul grid stabilization",
+        "St. Paul exports surplus thermal to Driftless soil banks",
+        "Coordinate food/fuel shipments via river/rail to cover all hubs"
+      ],
+      "controls": [
+        "Balance seasonal loads north↔south (biomass/soil heat vs. cold storage)",
+        "Run river-source heat pump pilots in St. Paul; export proven designs",
+        "Use Mississippi freight lanes for carriers and food",
+        "Align co-op governance for rapid crisis coordination"
+      ]
+    }
+  ],
+  "meta": {
+    "owner": "JinnZ2",
+    "co_creator": "ChatGPT",
+    "source_glyph": "SUPERIOR_STPAUL_DRIFTLESS_COOP_CORRIDOR_v1.0",
+    "created": "2025-09-03"
+  }
+}
