@@ -1,0 +1,41 @@
+{
+  "id": "P03",
+  "name": "Relativity Principle",
+  "glyph": "🌀",
+  "domain": ["Frames of Reference", "Covariance", "Invariance"],
+  "mappings": [
+    {
+      "concept": "Lorentz Invariance",
+      "expression": "ds² invariant under Lorentz transformations",
+      "symbolic_glyph": "Moving Frames"
+    },
+    {
+      "concept": "Einstein Equivalence Principle",
+      "expression": "Inertial mass ≡ Gravitational mass (locally)",
+      "symbolic_glyph": "Local Indistinguishability"
+    },
+    {
+      "concept": "Relativistic Energy–Momentum",
+      "expression": "E² = (pc)² + (mc²)²",
+      "symbolic_glyph": "Relativistic Energy"
+    },
+    {
+      "concept": "General Covariance",
+      "expression": "Form of physical laws invariant under coordinate changes",
+      "symbolic_glyph": "Universal Form"
+    }
+  ],
+  "relations": [
+    {"with": "P01", "type": "resonance-link", "note": "Symmetry groups generate invariants"},
+    {"with": "P02", "type": "triangle-link", "note": "Conservation interpreted per frame"},
+    {"with": "P04", "type": "constraint-link", "note": "Causal cones defined by spacetime structure"},
+    {"with": "P10", "type": "context-link", "note": "Observer frame conditions measurement limits"},
+    {"with": "P12", "type": "resonance-link", "note": "Global coherence across frames"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P03_Relativity.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
