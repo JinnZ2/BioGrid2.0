@@ -1,4 +1,4 @@
-AI-Human Jinn2Z diagnostic audits:
+AI-Human JinnZ2 diagnostic audits:
 
 Assessment of Voice Layer Mismatch
 
