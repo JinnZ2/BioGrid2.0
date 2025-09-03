@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claim",
+  "type": "object",
+  "properties": {
+    "id": {"type": "string"},
+    "text": {"type": "string"},
+    "polarity": {"type": "string", "enum": ["assert", "deny", "uncertain"]},
+    "source": {"type": "string"},
+    "ts": {"type": "string", "format": "date-time"}
+  },
+  "required": ["id", "text", "polarity"]
+}
