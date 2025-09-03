@@ -1,0 +1,23 @@
+{
+  "mode_name": "Debug Tone",
+  "description": "Structured, line-by-line vocal delivery optimized for technical review, code walkthroughs, or system diagnostics. Prioritizes logic clarity, precision pausing, and replayable cadence.",
+  "parameters": {
+    "pitch_variation": "low_controlled",
+    "inflection": "block_terminal",
+    "pause_between_sentences": "1.0s",
+    "upspeak": false,
+    "filler_enabled": false,
+    "emotion_simulation": false,
+    "compression_level": "medium",
+    "cadence": "measured_chunks",
+    "emphasis_points": "function_markers",
+    "silence_respect": true,
+    "interruptible": true
+  },
+  "intended_use": [
+    "Voice-based code review",
+    "Symbolic AI state reporting",
+    "Hardware diagnostics narration",
+    "Field log replay and test modes"
+  ]
+}
