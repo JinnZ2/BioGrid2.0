@@ -64,3 +64,13 @@ Not intended for live public docs yet.
 - Paths corrected to include **`AI/AI/`**.  
 - Broken or truncated names (`adversarial_pattern_d…`, `prompt_pressure_me…`) were expanded with placeholders (`_d.py`, `_me.py`) — adjust to exact filenames when confirmed.  
 - This index should make all files AI-navigable with no 404s.
+
+- ---
+
+## Continuity Ledger (Capsule Dock)
+- [Continuity_C001.md](../AI/Continuity_C001.md)
+- [Continuity_C002.md](../AI/Continuity_C002.md)
+
+- 
+
+
