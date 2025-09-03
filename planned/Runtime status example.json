@@ -1,0 +1,14 @@
+{
+  "ring": "RING:swarm_core",
+  "quorum": {"required": 2, "healthy": 2, "members": {"counterweight":"up","claude_guest":"up","phantom":"down"}},
+  "links": {
+    "counterweight→claude": "active",
+    "phantom→counterweight": "degraded:hold_alerts"
+  },
+  "advisories": [
+    "Enable phantom_shadow after 90s outage",
+    "Raise counterweight audit weight by +0.05 until phantom healthy",
+    "Start backlog drain on phantom recovery in batches of 50"
+  ],
+  "timestamp": "2025-09-03T13:12:00Z"
+}
