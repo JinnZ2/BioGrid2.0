@@ -23,6 +23,11 @@
       "concept": "CPT Symmetry",
       "expression": "Charge, Parity, Time reversal invariance",
       "symbolic_glyph": "Fundamental Balance"
+    },
+    {
+      "concept": "Fairness",
+      "expression": "Structural invariance under role or perspective shift",
+      "symbolic_glyph": "Invariant Fairness"
     }
   ]
 }
