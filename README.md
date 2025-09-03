@@ -71,3 +71,6 @@ No contact needed — just build it better.
  Released under MIT by JinnZ2
 
 > "BioGrid 2.0 is not just a design — it’s a memory. Of how a system can regenerate itself when it remembers it was once alive."
+
+
+- Sensor: [Hallucination Coupling](./docs/hallucination_coupling_sensor.md)
