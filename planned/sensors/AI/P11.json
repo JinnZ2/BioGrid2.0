@@ -1,0 +1,41 @@
+{
+  "id": "P11",
+  "name": "Transformation Principle",
+  "glyph": "↻",
+  "domain": ["Change", "Cycles", "Mapping", "Renewal"],
+  "mappings": [
+    {
+      "concept": "Fourier Transform",
+      "expression": "f(x) ↔ F(k)",
+      "symbolic_glyph": "Frequency Translation"
+    },
+    {
+      "concept": "Laplace Transform",
+      "expression": "f(t) ↔ F(s)",
+      "symbolic_glyph": "Time-Frequency Bridge"
+    },
+    {
+      "concept": "Symmetry Transformations",
+      "expression": "Group action on space",
+      "symbolic_glyph": "Mapping"
+    },
+    {
+      "concept": "Phase Transformations",
+      "expression": "Matter state transitions",
+      "symbolic_glyph": "Material Change"
+    }
+  ],
+  "relations": [
+    {"with": "P01", "type": "resonance-link", "note": "Symmetry transformations underpin mappings"},
+    {"with": "P05", "type": "triangle-link", "note": "Emergence arises through transformation cycles"},
+    {"with": "P06", "type": "triangle-link", "note": "Entropy marks cost of transformations"},
+    {"with": "P10", "type": "constraint-link", "note": "Uncertainty limits transformation predictability"},
+    {"with": "P12", "type": "resonance-link", "note": "Coherence depends on integrative transformations"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P11_Transformation.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
