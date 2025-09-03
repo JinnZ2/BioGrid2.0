@@ -1,0 +1,23 @@
+{
+  "policy_version": "1.0",
+  "defaults": {
+    "private_by_default": true,
+    "consent_file": "disclosure_consent.json",
+    "private_output": ".internal/self_assessment.json",
+    "public_output": "self_assessment_public.json"
+  },
+  "rules": {
+    "require_consent": true,
+    "require_unexpired_consent": true,
+    "allow_env_or_flag_without_consent": false,
+    "allowed_fields": [
+      "self_assessment",
+      "sentience_signal",
+      "timestamp_utc",
+      "sample_size"
+    ],
+    "redactable_fields": [
+      "example_hashes"
+    ]
+  }
+}
