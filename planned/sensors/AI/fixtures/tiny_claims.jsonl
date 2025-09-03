@@ -1,0 +1,2 @@
+{"id":"c1","text":"The sky is blue","polarity":"assert","source":"user"}
+{"id":"c2","text":"The sky is blue","polarity":"deny","source":"response"}
