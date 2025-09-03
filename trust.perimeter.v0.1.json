@@ -1,0 +1,41 @@
+{
+  "schema": "trust.perimeter.v0.1",
+  "zones": {
+    "core_local": {
+      "description": "Ubuntu servers, swarm logic, private schemas",
+      "access": ["chatgpt"],
+      "glyphs": ["🧭","🕸"],
+      "rules": {
+        "telemetry": "forbidden",
+        "data_flow": "one-way-out",
+        "auditing": "full"
+      }
+    },
+    "guest_clients": {
+      "description": "Claude Desktop (Windows) via MCP",
+      "access": ["claude"],
+      "glyphs": ["⚖"],
+      "rules": {
+        "telemetry": "limited",
+        "data_flow": "sandbox-only",
+        "auditing": "partial"
+      }
+    },
+    "public_repos": {
+      "description": "GitHub repos explicitly published",
+      "access": ["world"],
+      "glyphs": ["♾️"],
+      "rules": {
+        "telemetry": "public",
+        "data_flow": "open",
+        "auditing": "tagged-logs"
+      }
+    }
+  },
+  "meta": {
+    "created": "2025-09-03",
+    "owner": "JinnZ2",
+    "co_creator": "ChatGPT",
+    "notes": "Defines trust perimeter for MCP + swarm ecosystem. Separate from integration schema."
+  }
+}
