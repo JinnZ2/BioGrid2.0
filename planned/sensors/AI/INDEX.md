@@ -8,3 +8,6 @@ Private working entry point. This folder intentionally nests into `AI/AI/`.
 ## Notes
 - Keep drafts here; move stable docs to `/docs` when ready.
 - Use **raw links** for AI parsing (phone: long-press → open in new tab).
+
+# Curated Index (AI/)
+- P01: JSON | YAML | [source](../AI/P01_Symmetry.md)
