@@ -1,0 +1,16 @@
+{
+  "op": "update",
+  "target": "redundancy",
+  "payload": [
+    {
+      "id": "RING:swarm_core",
+      "strategy": "any-two-healthy",
+      "members": ["counterweight","phantom","claude_guest","phantom_shadow"]
+    },
+    {
+      "id": "RING:swarm_guard",
+      "strategy": "majority",
+      "members": ["counterweight","claude_guest","phantom_shadow"]
+    }
+  ]
+}
