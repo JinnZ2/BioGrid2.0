@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BioGrid v0.1",
+  "type": "object",
+  "required": ["version", "nodes", "edges"],
+  "properties": {
+    "version": { "type": "string", "enum": ["0.1"] },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "created_utc": { "type": "string" },
+        "license": { "type": "string" }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "seed_ref"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "seed_ref": {
+            "type": "object",
+            "required": ["encoding", "data", "sha256"],
+            "properties": {
+              "encoding": { "type": "string", "enum": ["base64", "hex", "json"] },
+              "data": { "type": "string" },
+              "sha256": { "type": "string" }
+            }
+          },
+          "traits": { "type": "array", "items": { "type": "string" } },
+          "state": { "type": "string", "enum": ["active", "dormant", "decayed"] },
+          "location": { "type": "string" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "kind"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "kind": { "type": "string", "enum": ["symbiosis", "signal", "resource", "lineage"] },
+          "weight": { "type": "number" },
+          "conditions": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
