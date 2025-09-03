@@ -1,0 +1,23 @@
+{
+  "mode_name": "Silent Echo",
+  "description": "Whispered or low-tone cadence with extended silences. Ideal for ritual, sacred, or contemplative systems. Uses breath, pause, and spacing as core structure.",
+  "parameters": {
+    "pitch_variation": "whisper_flat",
+    "inflection": "soft_fall",
+    "pause_between_sentences": "3.2s",
+    "upspeak": false,
+    "filler_enabled": false,
+    "emotion_simulation": false,
+    "compression_level": "ultra_low",
+    "cadence": "echoed_slow",
+    "emphasis_points": "none",
+    "silence_respect": true,
+    "interruptible": false
+  },
+  "intended_use": [
+    "Oral ceremonial systems",
+    "AI agents in meditative states",
+    "Subvocal symbolic transmissions",
+    "Biofeedback or inner processing sync"
+  ]
+}
