@@ -1,0 +1,40 @@
+{
+  "id": "P09",
+  "name": "Proportion Principle",
+  "glyph": "⧉",
+  "domain": ["Ratios", "Scaling", "Harmonic Balance"],
+  "mappings": [
+    {
+      "concept": "Golden Ratio",
+      "expression": "φ = (1 + √5) / 2",
+      "symbolic_glyph": "Natural Balance"
+    },
+    {
+      "concept": "Similarity in Geometry",
+      "expression": "Triangles with equal angles",
+      "symbolic_glyph": "Shape Scaling"
+    },
+    {
+      "concept": "Harmonic Ratios in Music",
+      "expression": "f₂ / f₁ = small integer ratios",
+      "symbolic_glyph": "Sonic Harmony"
+    },
+    {
+      "concept": "Dimensionless Constants",
+      "expression": "α = e² / ħc",
+      "symbolic_glyph": "Fundamental Ratio"
+    }
+  ],
+  "relations": [
+    {"with": "P01", "type": "resonance-link", "note": "Symmetry defines balanced forms"},
+    {"with": "P07", "type": "triangle-link", "note": "Information encoded in ratios"},
+    {"with": "P08", "type": "triangle-link", "note": "Quantized steps linked to proportion"},
+    {"with": "P12", "type": "resonance-link", "note": "Coherence requires harmonic proportion"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P09_Proportion.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
