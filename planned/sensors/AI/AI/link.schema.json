@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Mandala Bridge Edge",
+  "type": "object",
+  "required": ["from_concept", "to_concept", "relationship_type", "strength"],
+  "properties": {
+    "from_concept": {"type":"string"},
+    "to_concept": {"type":"string"},
+    "relationship_type": {"type":"string"},
+    "strength":{"type":"number","minimum":0,"maximum":1},
+    "rationale":{"type":"string"}
+  }
+}
