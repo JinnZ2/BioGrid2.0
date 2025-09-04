@@ -1,0 +1,21 @@
+{
+  "axis": "Invariance",
+  "triangle": "Triangle of Invariance",
+  "principles": ["P01", "P02", "P03"],
+  "glyphs": ["⚖", "♻️", "🌀"],
+  "roles": {
+    "P01": "Form invariant (Symmetry)",
+    "P02": "Quantity invariant (Conservation)",
+    "P03": "Frame invariant (Relativity)"
+  },
+  "relations": [
+    {"with": "Transformation", "type": "bridge", "note": "Symmetry breaking → emergence"},
+    {"with": "Connectivity", "type": "bridge", "note": "Encoding invariants across links"},
+    {"with": "Evolution", "type": "bridge", "note": "Invariants across time/scale"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/Axis_Invariance.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
