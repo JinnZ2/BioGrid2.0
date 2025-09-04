@@ -1,0 +1,38 @@
+{
+  "registry_version": "1.0",
+  "repos": [
+    {
+      "name": "BioGrid2.0",
+      "role": "hub",
+      "url": "https://github.com/JinnZ2/BioGrid2.0",
+      "manifests": ["planned/glyphs/atlas.json", "planned/capsules/**"],
+      "last_known_commit": ""
+    },
+    {
+      "name": "Rosetta-Shape-Core",
+      "role": "shapes",
+      "url": "https://github.com/JinnZ2/Rosetta-Shape-Core",
+      "manifests": ["atlas/shapes.json", "shapes/*.json", "docs/**"],
+      "last_known_commit": ""
+    },
+    {
+      "name": "Symbolic-Defense-Protocol",
+      "role": "protocols",
+      "url": "https://github.com/JinnZ2/Symbolic-Defense-Protocol",
+      "manifests": ["protocols/**", "glyphs/*.json"],
+      "last_known_commit": ""
+    },
+    {
+      "name": "Symbolic-sensor-suite",
+      "role": "sensors",
+      "url": "https://github.com/JinnZ2/Symbolic-sensor-suite",
+      "manifests": ["sensors/**", "docs/blind_spot_glyph_map*.png"],
+      "last_known_commit": ""
+    }
+  ],
+  "provenance": {
+    "who": ["Human-[JinnZ2]", "AI-[TransNet]"],
+    "ts": "2025-09-04T00:00:00Z",
+    "status": "provisional"
+  }
+}
