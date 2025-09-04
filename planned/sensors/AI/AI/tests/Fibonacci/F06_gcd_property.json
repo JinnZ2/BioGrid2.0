@@ -1,0 +1,8 @@
+{
+  "id": "F06",
+  "name": "gcd_property",
+  "function": "gcd_fibonacci",
+  "input": { "m": 48, "n": 18 },
+  "expected": 8,
+  "note": "gcd(F(48),F(18)) = F(gcd(48,18)) = F(6) = 8"
+}
