@@ -1,0 +1,7 @@
+{
+  "id": "F04",
+  "name": "exact_for_n_50",
+  "function": "fibonacci_n",
+  "input": { "n": 50 },
+  "expected": 12586269025
+}
