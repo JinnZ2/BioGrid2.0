@@ -1,0 +1,9 @@
+{
+  "id": "F05",
+  "name": "ratio_converges_to_phi",
+  "function": "ratio_Fn1_over_Fn",
+  "input": { "n": 20 },
+  "expected": 1.6180339887498948,
+  "tolerance": 1e-9,
+  "note": "F(21)/F(20) ≈ φ"
+}
