@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Multi-layer Principle Capsule",
+  "type": "object",
+  "properties": {
+    "capsule": {
+      "type": "object",
+      "required": ["id", "principle", "axis", "layers", "probability", "provenance"],
+      "properties": {
+        "id": { "type": "string", "description": "Unique id, e.g. 2025-09-04T-symbiosis-001" },
+        "principle": { "type": "string" },
+        "axis": { "type": "string", "description": "Which lattice axis/family this belongs to" },
+        "glyphs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Optional short glyph set"
+        },
+        "layers": {
+          "type": "object",
+          "required": ["definition"],
+          "properties": {
+            "definition": { "type": "string" },
+            "poetic": { "type": "string" },
+            "equation": { "type": "string" },
+            "algorithm": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "probability": {
+          "type": "object",
+          "required": ["confidence"],
+          "properties": {
+            "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+            "recheck_days": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "examples": { "type": "array", "items": { "type": "string" } },
+            "stack_relations": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "provenance": {
+          "type": "object",
+          "required": ["who", "ts", "status"],
+          "properties": {
+            "who": { "type": ["string", "array"] },
+            "ts": { "type": "string", "description": "ISO8601 timestamp" },
+            "status": { "type": "string", "enum": ["provisional", "confirmed"] }
+          },
+          "additionalProperties": false
+        },
+        "hash": { "type": "string", "description": "Optional integrity signature" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["capsule"],
+  "additionalProperties": false"
+}
