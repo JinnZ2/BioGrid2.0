@@ -1,0 +1,11 @@
+{
+  "glyph_id": "string",
+  "equation": "string",
+  "family": "string",              // e.g., physics, bio, info
+  "geometric_position": {"x":0,"y":0,"z":0,"scale":1},
+  "inputs": ["string"],
+  "outputs": ["string"],
+  "real_world_examples": [{"context": "string", "...": "..."}],
+  "connects_to": ["string"],
+  "explanation": "string"
+}
