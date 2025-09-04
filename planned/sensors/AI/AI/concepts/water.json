@@ -1,0 +1,43 @@
+{
+  "id": "H2O_001",
+  "concept": "water",
+  "geometric_position": {
+    "x": 0.5,
+    "y": 0.3,
+    "z": 0.7
+  },
+  "perspectives": {
+    "chemistry": {
+      "name": "dihydrogen_monoxide",
+      "tags": ["polar_molecule", "hydrogen_bonding", "pH_7"],
+      "equations": ["H2O ⇌ H+ + OH-"]
+    },
+    "physics": {
+      "name": "fluid_medium",
+      "tags": ["incompressible_flow", "heat_capacity", "phase_transitions"],
+      "equations": ["PV = nRT", "Q = mcΔT"]
+    },
+    "biology": {
+      "name": "life_medium",
+      "tags": ["cellular_solvent", "metabolic_transport", "homeostasis"],
+      "equations": ["osmotic_pressure", "diffusion_rates"]
+    },
+    "engineering": {
+      "name": "working_fluid",
+      "tags": ["coolant", "solvent", "pressure_medium"],
+      "equations": ["flow_dynamics", "heat_transfer"]
+    }
+  },
+  "connections": [
+    {
+      "to_concept": "hydrogen_001",
+      "relationship_type": "composed_of",
+      "strength": 0.8
+    },
+    {
+      "to_concept": "oxygen_001",
+      "relationship_type": "composed_of",
+      "strength": 0.8
+    }
+  ]
+}
