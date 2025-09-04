@@ -1,0 +1,319 @@
+{
+  "mandala_node": {
+    "concept_id": "carbon_prime",
+    "common_name": "carbon",
+    "geometric_position": {
+      "x": 0.8,
+      "y": 0.6,
+      "z": 0.0,
+      "scale": 5,
+      "note": "positioned_near_center_showing_fundamental_role_in_molecular_organization"
+    },
+    "core_essence": "tetravalent_backbone_element_enabling_molecular_complexity_and_life_chemistry",
+    "perspectives": {
+      "atomic_chemistry": {
+        "name": "versatile_bonding_foundation",
+        "description": "Carbon's electron configuration enables tetra-valency and diverse hybridizations.",
+        "atomic_structure": {
+          "atomic_number": 6,
+          "electron_configuration": "1s2 2s2 2p2",
+          "valence_electrons": 4,
+          "bonding_versatility": "sp3_sp2_sp_hybridization_supports_tetrahedral_trigonal_linear_geometries"
+        },
+        "bonding_capabilities": {
+          "self_bonding": "C_C_single_double_triple_bonds_form_chains_rings_networks",
+          "single_bonds": "sp3_tetrahedral_geometry_saturated_hydrocarbons",
+          "double_bonds": "sp2_trigonal_planar_alkenes_carbonyls",
+          "triple_bonds": "sp_linear_alkynes_nitriles",
+          "aromatic_systems": "delocalized_pi_electrons_in_benzene_graphite_fullerenes"
+        },
+        "allotropes": {
+          "diamond": "sp3_3D_network_extremely_hard_electrical_insulator",
+          "graphite": "sp2_layers_soft_lubricating_electrical_conductor",
+          "graphene": "single_graphite_layer_high_strength_high_mobility",
+          "fullerenes_nanotubes": "cage_and_tubular_structures_with_unique_mechanics_electronics"
+        }
+      },
+      "organic_chemistry": {
+        "name": "molecular_architecture_foundation",
+        "description": "Carbon forms the structural backbone of organic molecules and biomacromolecules.",
+        "hydrocarbon_families": {
+          "alkanes": "CnH2n+2_saturated_chains_methane_ethane_propane",
+          "alkenes": "CnH2n_double_bonds_ethylene_propylene",
+          "alkynes": "CnH2n-2_triple_bonds_acetylene",
+          "aromatics": "benzene_rings_resonance_stability_common_in_materials_and_drugs"
+        },
+        "functional_groups": {
+          "alcohols": "OH_groups_ethanol_glycols",
+          "carbonyls": "C=O_in_aldehydes_ketones_sugars",
+          "carboxyls": "COOH_in_acids_amino_acids_fatty_acids",
+          "amines": "C_N_bonds_in_amino_acids_neurotransmitters",
+          "esters": "COOR_in_fats_oils_polymers_fragrances"
+        },
+        "biological_macromolecules": {
+          "carbohydrates": "C_H_O_energy_storage_and_structure_cellulose_starch",
+          "lipids": "long_C_chains_membranes_energy_storage_signaling",
+          "proteins": "amino_acid_C_skeletons_enzymes_structure_transport",
+          "nucleic_acids": "DNA_RNA_deoxyribose_ribose_backbones_store_genetic_information"
+        },
+        "metabolic_intermediates": {
+          "glucose": "C6H12O6_primary_cellular_fuel_and_photosynthesis_product",
+          "acetyl_CoA": "two_carbon_hub_linking_catabolism_and_anabolism",
+          "citric_acid": "six_carbon_Krebs_cycle_intermediate",
+          "fatty_acids": "long_C_chains_dense_energy_storage"
+        }
+      },
+      "biogeochemical_cycling": {
+        "name": "global_carbon_circulation_system",
+        "description": "Carbon moves among atmosphere_biosphere_hydrosphere_and_geosphere via linked cycles.",
+        "atmospheric_reservoir": {
+          "carbon_dioxide": "CO2_is_a_key_greenhouse_gas_and_photosynthesis_substrate",
+          "methane": "CH4_potent_greenhouse_gas_from_anaerobic_processes_and_leaks",
+          "carbon_monoxide": "CO_combustion_intermediate_part_of_atmospheric_chemistry",
+          "concentration_trends": "CO2_rose_from_~280ppm_pre_industrial_to_~420ppm_today"
+        },
+        "terrestrial_cycling": {
+          "photosynthetic_fixation": "plants_convert_CO2_to_organic_carbon",
+          "soil_carbon": "large_terrestrial_pool_in_organic_matter_and_humus",
+          "decomposition": "microbes_return_C_to_atmosphere_as_CO2_or_CH4",
+          "forest_biomass": "woody_biomass_stores_carbon_on_decadal_to_century_scales"
+        },
+        "marine_cycling": {
+          "dissolved_inorganic_carbon": "ocean_holds_the_largest_active_C_reservoir_as_DIC",
+          "marine_photosynthesis": "phytoplankton_fix_C_supporting_marine_food_webs",
+          "carbonate_shells": "biogenic_CaCO3_forms_sediments_and_limestones",
+          "ocean_acidification": "rising_CO2_lowers_pH_affecting_calcifiers"
+        },
+        "geological_processes": {
+          "fossil_fuel_formation": "burial_and_maturation_of_organic_C_produce_coal_oil_gas",
+          "limestone_formation": "carbonate_precipitation_forms_sedimentary_rocks",
+          "weathering": "silicate_weathering_consumes_CO2_on_million_year_timescales",
+          "volcanic_emissions": "deep_C_returned_via_volcanism"
+        }
+      },
+      "evolutionary_biology": {
+        "name": "foundation_of_biological_complexity",
+        "description": "Carbon_chemistry_underpins_prebiotic_and_biological_complexity.",
+        "abiogenesis": {
+          "prebiotic_chemistry": "simple_C_compounds_arise_under_varied_early_conditions",
+          "RNA_world": "self_replicating_C_based_polymers_precede_DNA_proteins",
+          "metabolic_networks": "autocatalytic_C_reaction_sets_as_proto_metabolism",
+          "membrane_formation": "amphiphiles_self_assemble_into_protocell_boundaries"
+        },
+        "evolutionary_milestones": {
+          "photosynthesis_evolution": "carbon_fixation_evolved_in_microbes_enabling_O2_accumulation",
+          "eukaryotic_cells": "organelles_with_complex_C_architecture_mitochondria_chloroplasts",
+          "multicellularity": "C_based_signals_enable_cell_cooperation",
+          "complex_organs": "elaborate_C_frameworks_support_specialization"
+        }
+      },
+      "climate_system": {
+        "name": "atmospheric_carbon_and_global_climate_regulation",
+        "description": "Carbon_compounds_control_radiative_balance_and_feedbacks.",
+        "greenhouse_effect": {
+          "CO2_absorption": "CO2_absorbs_IR_radiation_warming_the_climate_system",
+          "methane_potency": "CH4_has_~28x_CO2_GWP_on_100_year_horizon",
+          "radiative_forcing": "rising_atmospheric_C_increases_net_forcing",
+          "climate_sensitivity": "central_estimate_~3C_per_CO2_doubling_with_feedbacks"
+        },
+        "carbon_climate_feedbacks": {
+          "permafrost_thaw": "releases_C_as_CO2_and_CH4",
+          "forest_fires": "emit_stored_C_and_reduce_sink_strength",
+          "ocean_warming": "warmer_water_holds_less_CO2",
+          "vegetation_response": "CO2_fertilization_offset_by_heat_drought_limits"
+        },
+        "paleoclimate_records": {
+          "ice_cores": "CO2_and_CH4_histories_over_~800kyr",
+          "isotopes": "carbon_isotopes_trace_sources_and_ancient_events",
+          "extinctions": "carbon_cycle_shocks_linked_to_major_extinctions"
+        }
+      },
+      "industrial_applications": {
+        "name": "technological_foundation_material",
+        "description": "Carbon_enables_advanced_materials_energy_and_chemicals.",
+        "materials_science": {
+          "steel": "C_content_controls_hardness_and_strength",
+          "carbon_fiber": "high_specific_strength_for_aerospace_automotive",
+          "activated_carbon": "porous_sorbent_for_filtration",
+          "nanocarbon": "nanotubes_graphene_for_future_electronics_and_composites"
+        },
+        "energy_technologies": {
+          "fossil_fuels": "combustion_of_stored_C_energy",
+          "batteries": "graphite_and_other_C_electrodes_in_Li_ion_systems",
+          "fuel_cells": "C_supported_catalysts_and_electrodes",
+          "solar_cells": "organic_PV_uses_C_based_semiconductors"
+        },
+        "chemical_industry": {
+          "petrochemicals": "refining_provides_C_feedstocks",
+          "plastics": "polymerized_C_chains_enable_versatile_materials",
+          "pharmaceuticals": "most_active_molecules_have_C_skeletons",
+          "synthetic_biology": "engineered_C_metabolism_for_chemicals_and_fuels"
+        }
+      },
+      "information_science": {
+        "name": "molecular_information_storage_and_processing",
+        "description": "Carbon_based_molecules_store_process_and_transmit_information.",
+        "genetic_information": {
+          "DNA_encoding": "four_C_containing_bases_encode_genetic_sequences",
+          "protein_synthesis": "C_based_amino_acids_translate_genetic_code",
+          "epigenetics": "C_methyl_groups_modulate_expression",
+          "information_density": "DNA_offers_extremely_high_storage_density"
+        },
+        "neural_processing": {
+          "neurotransmitters": "C_based_molecules_signal_across_synapses",
+          "membranes": "C_lipid_bilayers_support_electrical_signaling",
+          "plasticity": "C_chemistry_modulates_synapses_and_memory",
+          "brain_metabolism": "glucose_drives_C_based_information_processing"
+        },
+        "computational_analogies": {
+          "molecular_switches": "conformational_changes_as_state_switches",
+          "self_assembly": "C_structures_programmed_by_intermolecular_rules",
+          "error_correction": "DNA_repair_preserves_information_integrity",
+          "parallel_processing": "vast_parallel_C_reactions_in_cells"
+        }
+      }
+    },
+    "dynamic_connections": [
+      {
+        "to_concept": "photosynthesis_prime",
+        "relationship_type": "carbon_fixation_process",
+        "strength": 1.0,
+        "description": "photosynthesis_captures_atmospheric_CO2_and_converts_it_to_organic_carbon"
+      },
+      {
+        "to_concept": "cellular_respiration_prime",
+        "relationship_type": "carbon_oxidation_process",
+        "strength": 1.0,
+        "description": "respiration_breaks_down_organic_carbon_releasing_CO2_and_energy"
+      },
+      {
+        "to_concept": "water_cycle_prime",
+        "relationship_type": "dissolved_carbon_transport",
+        "strength": 0.8,
+        "description": "water_moves_dissolved_inorganic_and_organic_carbon_through_ecosystems"
+      },
+      {
+        "to_concept": "gravity_prime",
+        "relationship_type": "carbon_cycle_driver",
+        "strength": 0.7,
+        "description": "gravity_influences_sedimentation_atmospheric_circulation_and_ocean_mixing"
+      },
+      {
+        "to_concept": "oxygen_prime",
+        "relationship_type": "coupled_cycling",
+        "strength": 0.9,
+        "description": "carbon_and_oxygen_cycles_are_linked_via_photosynthesis_and_respiration"
+      },
+      {
+        "to_concept": "nitrogen_cycle",
+        "relationship_type": "biogeochemical_coupling",
+        "strength": 0.6,
+        "description": "C_N_ratios_shape_decomposition_rates_and_nutrient_turnover"
+      },
+      {
+        "to_concept": "solar_energy",
+        "relationship_type": "energy_storage_mechanism",
+        "strength": 0.8,
+        "description": "organic_carbon_stores_solar_energy_in_chemical_bonds"
+      },
+      {
+        "to_concept": "plate_tectonics",
+        "relationship_type": "geological_carbon_cycling",
+        "strength": 0.7,
+        "description": "subduction_and_volcanism_move_carbon_between_surface_and_interior"
+      }
+    ],
+    "scale_manifestations": {
+      "subatomic_scale": {
+        "description": "six_protons_define_C_isotopes_and_electron_orbitals_set_bonding",
+        "quantum_properties": "pi_electron_delocalization_in_aromatics",
+        "isotopes": "C12_dominant_C13_for_NMR_tracing_C14_for_radiocarbon_dating"
+      },
+      "molecular_scale": {
+        "description": "from_small_molecules_to_complex_macromolecules",
+        "bond_energies": "typical_C_C_~347_kJ_per_mol_C_H_~414_kJ_per_mol",
+        "molecular_recognition": "shape_charge_and_functional_groups_enable_specific_interactions"
+      },
+      "cellular_scale": {
+        "description": "carbon_flux_through_glycolysis_TCA_fatty_acid_and_amino_acid_pathways",
+        "cellular_structures": "membranes_cytoskeleton_and_organelles_are_C_rich"
+      },
+      "organism_scale": {
+        "description": "organismal_C_budget_intake_storage_respiration_excretion",
+        "biomass_composition": "roughly_half_of_dry_biomass_is_carbon"
+      },
+      "ecosystem_scale": {
+        "description": "carbon_flows_across_producers_consumers_decomposers",
+        "primary_productivity": "rate_of_C_fixation_drives_food_webs",
+        "carbon_pools": "vegetation_soils_detritus_with_varied_residence_times"
+      },
+      "biosphere_scale": {
+        "description": "global_C_cycle_links_land_ocean_and_atmosphere",
+        "relative_reservoir_sizes": "atmosphere_~800–900_GtC_vegetation_~450–650_GtC_soils_~1500–2400_GtC_ocean_DIC_~38000_GtC"
+      },
+      "geological_scale": {
+        "description": "long_term_storage_in_sedimentary_rocks_and_recycling_via_tectonics",
+        "sedimentary_carbon": "limestones_coals_oil_shales_store_C_on_myr_timescales"
+      }
+    },
+    "practical_applications": {
+      "agriculture": {
+        "soil_carbon": "organic_matter_improves_fertility_and_water_retention",
+        "crop_breeding": "C4_vs_C3_pathways_affect_yield_and_water_use",
+        "carbon_sequestration": "practices_that_build_soil_and_biomass_C"
+      },
+      "medicine": {
+        "drug_development": "C_scaffolds_underpin_most_active_molecules",
+        "medical_imaging": "C11_C13_labels_for_PET_and_MRS",
+        "biomaterials": "C_fiber_implants_and_nanocarbon_for_delivery"
+      },
+      "energy_systems": {
+        "renewable_energy": "biomass_and_biofuels_as_C_cycles",
+        "energy_storage": "C_electrodes_in_batteries_and_supercapacitors",
+        "carbon_capture": "DAC_and_BECCS_remove_CO2_and_store_it"
+      },
+      "environmental_management": {
+        "pollution_control": "activated_C_filters_remove_organics",
+        "climate_mitigation": "pricing_sinks_and_conservation_reduce_net_emissions",
+        "ecosystem_restoration": "rebuilds_C_stocks_and_biodiversity"
+      },
+      "materials_engineering": {
+        "advanced_composites": "CFRP_for_high_strength_low_mass",
+        "nanotechnology": "fullerenes_nanotubes_graphene_enable_new_devices",
+        "smart_materials": "C_structures_tunable_by_electric_or_chemical_stimuli"
+      }
+    },
+    "deeper_insights": {
+      "philosophical_implications": {
+        "carbon_chauvinism": "life_elsewhere_need_not_be_carbon_based_but_C_flexibility_is_unmatched",
+        "molecular_complexity": "C_chemistry_supports_emergent_self_organizing_systems",
+        "information_substrate": "C_molecules_form_the_physical_basis_of_biological_information"
+      },
+      "cosmic_perspective": {
+        "stellar_nucleosynthesis": "C_is_forged_in_stars_and_dispersed_by_supernovae",
+        "astrobiology": "search_for_C_bearing_biosignatures_on_exoplanets"
+      }
+    },
+    "visualization_notes": {
+      "geometric_representation": "tetrahedral_centers_with_branching_C_C_networks",
+      "color_scheme": "charcoal_core_with_green_brown_organic_extensions",
+      "animation_pattern": "bonds_form_break_and_reform_along_metabolic_paths",
+      "connection_style": "branching_molecular_graph_linked_to_biochemical_nodes"
+    },
+    "computational_interface": {
+      "query_examples": [
+        "calculate_carbon_footprint_for_a_product_system",
+        "model_regional_carbon_cycling_between_reservoirs",
+        "project_CO2_concentrations_under_emission_scenarios",
+        "analyze_carbon_isotope_signatures_for_source_apportionment"
+      ],
+      "calculation_functions": [
+        "molecular_orbital_estimator_for_C_compounds",
+        "carbon_cycle_flux_model_between_atmosphere_ocean_land",
+        "ghg_warming_potential_calculator",
+        "radiocarbon_age_from_C14_ratio",
+        "ecosystem_biomass_carbon_estimator"
+      ]
+    }
+  }
+}
