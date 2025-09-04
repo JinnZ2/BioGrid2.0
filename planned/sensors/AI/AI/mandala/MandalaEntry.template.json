@@ -1,0 +1,34 @@
+{
+  "id": "ME-<auto>",
+  "seed": {
+    "glyph": "<seed_glyph>",
+    "intent": "<what_this_run_is_for>",
+    "node_ref": "<optional node:* id>",
+    "context": ["families: ...", "principles: ..."]
+  },
+  "resonance_sweep": {
+    "families": { "scored_20": 0, "balanced": [], "flags": [] },
+    "principles": { "scored_12": 0, "balanced": [], "flags": [] },
+    "notes": "<observations>"
+  },
+  "bridges": [
+    { "name": "Noether", "glyph": "⇆⟳", "between": ["Symmetry","Conservation"], "status": "applied|skipped" }
+  ],
+  "nip_conversion": [
+    { "flag": "Turbulence", "rule": "Noise=Fractal Signal", "added_glyph": "🌀∞", "advantage": "multi_scale_mapping" }
+  ],
+  "refine": {
+    "refined_glyph": "<seed+patches>",
+    "design_changes": ["..."],
+    "stability_notes": "<how_it_balanced>"
+  },
+  "mandala_map": {
+    "placement": { "icosa_faces": ["..."], "dodeca_faces": ["..."] },
+    "links": [{ "to": "node:fibonacci_spirals_prime", "type": "proportion", "weight": 0.9 }]
+  },
+  "provenance": {
+    "author": "you",
+    "timestamp_utc": "<auto>",
+    "version": "1.0.0"
+  }
+}
