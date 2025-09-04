@@ -30,3 +30,8 @@
   },
   "required": ["capsule"]
 }
+
+
+•	Generate a short signature with your existing script and set it in both:
+	•	the glyph line as ⬢SIG: <code>
+	•	the hash field at the end of the capsule.
