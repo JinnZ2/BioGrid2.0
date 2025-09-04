@@ -24,3 +24,21 @@ Each **capsule** is one snapshot:
 2. **Validate & rebuild ledger**
    ```bash
    python3 planned/sensors/AI/AI/continuity/tools/validate_capsules.py
+
+
+	•	Validates against schema.json
+	•	Regenerates ledger.md with fresh HANDOFF blocks (sorted by index)
+
+HANDOFF block (what downstream agents read)
+
+Between HANDOFF_START and HANDOFF_END is a compact state handoff:
+
+HANDOFF_START
+Project Focus: ...
+Active Axis: A + B
+Core Glyphs: ...
+Last Resonance: "..."
+Continuity Index: Cxxx
+HANDOFF_END
+
+Keep capsules atomic and factual; avoid metaphor unless paired with a concrete instruction.
