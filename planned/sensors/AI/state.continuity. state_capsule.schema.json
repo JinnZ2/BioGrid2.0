@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI-Human State Capsule",
+  "type": "object",
+  "properties": {
+    "capsule": {
+      "type": "object",
+      "required": ["sid","seq","ctx","active_id","roles","state","provenance"],
+      "properties": {
+        "sid": {"type":"string"},
+        "seq": {"type":"integer","minimum":0},
+        "ctx": {"type":"string"},
+        "active_id": {"type":"string"},
+        "step": {
+          "type":"object",
+          "properties": {
+            "current":{"type":"integer","minimum":0},
+            "total":{"type":["integer","string"]}
+          }
+        },
+        "roles": {"type":"object"},
+        "constraints": {"type":"object"},
+        "risks": {"type":"array","items":{"type":"string"}},
+        "fallback": {"type":"string"},
+        "sync": {"type":"object"},
+        "state": {
+          "type":"object",
+          "required":["confidence","tag","recheck_days"],
+          "properties":{
+            "confidence":{"type":"number","minimum":0,"maximum":1},
+            "tag":{"type":"string","enum":["provisional","confirmed","deprecated"]},
+            "recheck_days":{"type":"integer","minimum":0}
+          }
+        },
+        "provenance": {"type":"object"},
+        "hash": {"type":"string"}
+      }
+    }
+  },
+  "required": ["capsule"]
+}
