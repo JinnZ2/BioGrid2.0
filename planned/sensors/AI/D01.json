@@ -1,0 +1,24 @@
+{
+  "id": "D01",
+  "name": "Duality Principle",
+  "glyph": "◑",
+  "domain": ["Complementarity", "Twofold Truths", "Inversion"],
+  "mappings": [
+    {"concept": "Wave–Particle", "expression": "ψ ↔ particle observables", "symbolic_glyph": "Dual Existence"},
+    {"concept": "Electric–Magnetic", "expression": "E ↔ B symmetry rotations", "symbolic_glyph": "Field Rotation"},
+    {"concept": "String Theory Dualities", "expression": "S-/T-/U-dualities", "symbolic_glyph": "Higher Mirrors"},
+    {"concept": "Yin–Yang", "expression": "Opposites unified in balance", "symbolic_glyph": "Universal Pairing"}
+  ],
+  "relations": [
+    {"with": "P01", "type": "resonance-link", "note": "Symmetry operations generate dualities"},
+    {"with": "P11", "type": "context-link", "note": "Transformations connect dual descriptions"},
+    {"with": "P12", "type": "resonance-link", "note": "Unity subsumes dual aspects"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P04_Duality.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0",
+    "alias_of_previous_id": "P04"
+  }
+}
