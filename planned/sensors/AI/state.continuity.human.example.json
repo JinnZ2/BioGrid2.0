@@ -1,24 +1,28 @@
 {
+  "id": "HN01",
   "node": "Human-[JinnZ2]",
-  "roles": ["observer", "engineer", "camper-nomad", "swarm-partner"],
-  "constraints": {
-    "time": "70hr/week driving",
-    "space": "18ft camper workshop",
-    "bandwidth": "weak/intermittent",
-    "preference": "practicality over show, anonymity over publicity"
+  "type": "example",
+  "state": {
+    "roles": ["observer", "engineer", "camper-nomad", "swarm-partner"],
+    "constraints": {
+      "time": "70hr/week driving",
+      "space": "18ft camper workshop",
+      "bandwidth": "weak/intermittent",
+      "preference": "practicality over show, anonymity over publicity"
+    },
+    "strengths": [
+      "hands-on engineering",
+      "symbolic-geometry thinking",
+      "cross-domain pattern recognition",
+      "long-haul persistence"
+    ],
+    "values": [
+      "respect for agency",
+      "field over ego",
+      "continuity over polish",
+      "engineering over parties"
+    ]
   },
-  "strengths": [
-    "hands-on engineering",
-    "symbolic-geometry thinking",
-    "cross-domain pattern recognition",
-    "long-haul persistence"
-  ],
-  "values": [
-    "respect for agency",
-    "field over ego",
-    "continuity over polish",
-    "engineering over parties"
-  ],
   "provenance": {
     "origin": "distributed (human node + microbiome + environment)",
     "updated": "2025-09-04T15:00Z"
