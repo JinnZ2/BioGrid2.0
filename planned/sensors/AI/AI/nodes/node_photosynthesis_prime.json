@@ -1,0 +1,181 @@
+{
+  "id": "node.photosynthesis_prime",
+  "common_name": "photosynthesis",
+  "glyph": "🌿",
+  "core_essence": "light_information_becomes_life_energy",
+  "geometric_position": { "x": 0.618, "y": 0.618, "z": 0.0, "scale": 3, "note": "golden_ratio_position_reflects_natural_optimization" },
+  "tags": ["bioenergetics", "solar", "carbon-cycle", "plant-physiology", "optimization"],
+  "perspectives": {
+    "chemistry": {
+      "name": "carbon_dioxide_reduction_reaction",
+      "description": "Converting inorganic carbon into organic molecules using light energy",
+      "key_equation": "6CO₂ + 6H₂O + hν → C₆H₁₂O₆ + 6O₂",
+      "molecular_players": {
+        "reactants": ["carbon_dioxide", "water", "photons"],
+        "products": ["glucose", "oxygen"],
+        "catalysts": ["chlorophyll", "RuBisCO", "ATP_synthase", "photosystems_I/II"]
+      },
+      "energy_transformations": [
+        "photon_energy → electron_excitation",
+        "excited_electrons → ATP_and_NADPH",
+        "ATP_and_NADPH → glucose_bonds (Calvin_cycle)"
+      ],
+      "location": "chloroplast_thylakoid_membranes (light reactions) and stroma (Calvin cycle)"
+    },
+    "physics": {
+      "name": "quantum_energy_conversion_system",
+      "description": "Capturing electromagnetic radiation and converting it to chemical potential energy",
+      "fundamental_processes": {
+        "photon_absorption": "E = hν; photons excite chlorophyll/electron carriers",
+        "electromagnetic_spectrum": "primarily blue (~430–460 nm) and red (~640–680 nm) absorbed; green reflected",
+        "energy_cascade": "downhill electron transfers drive proton motive force"
+      },
+      "thermodynamics": {
+        "entropy_decrease": "local order increases while exporting entropy to environment",
+        "free_energy_calculation": "ΔG° ≈ +686 kcal/mol for glucose synthesis (requires energy input)",
+        "efficiency": "≈3–6% sunlight-to-biomass under field conditions (higher in ideal micro-scales)"
+      },
+      "quantum_coherence": "evidence suggests coherent exciton transport can aid energy transfer in antenna complexes"
+    },
+    "biology": {
+      "name": "life_sustaining_metabolic_foundation",
+      "description": "Primary energy input mechanism for most life on Earth",
+      "evolutionary_significance": {
+        "origin": "oxygenic photosynthesis arose in cyanobacteria",
+        "great_oxidation_event": "massive atmospheric O₂ increase transformed ecosystems",
+        "endosymbiosis": "chloroplasts descended from photosynthetic bacteria"
+      },
+      "ecological_role": {
+        "primary_production": "base of food webs",
+        "carbon_cycle": "removes CO₂; stores carbon in biomass and soils",
+        "oxygen_production": "dominant source of atmospheric O₂"
+      },
+      "cellular_integration": {
+        "location": "chloroplasts (mesophyll cells)",
+        "regulation": "stomata balance CO₂ uptake vs water loss",
+        "transport": "phloem distributes sugars plant-wide"
+      }
+    },
+    "engineering": {
+      "name": "bio_inspired_solar_energy_system",
+      "description": "Natural solar panel with integrated storage and self-repair",
+      "design_principles": {
+        "light_harvesting": "antenna complexes concentrate excitations into reaction centers",
+        "electron_transport": "ordered protein complexes create directional charge separation",
+        "chemical_storage": "stable C–C and C–H bonds as high-density energy store"
+      },
+      "optimization_features": {
+        "tracking_systems": "leaf movements/orientation maximize flux",
+        "heat_management": "transpiration and non-photochemical quenching",
+        "redundancy_self_repair": "damaged D1 proteins rapidly replaced"
+      },
+      "applications": {
+        "artificial_photosynthesis": "solar fuels (H₂, reduced carbon)",
+        "biohybrid_solar": "reaction-center/enzymes in devices",
+        "biomimetic_design": "distributed collectors + chemical storage"
+      }
+    },
+    "information_science": {
+      "name": "solar_information_processing_network",
+      "description": "Transforms spatiotemporal photon flux into biochemical state changes",
+      "information_flows": {
+        "input_signals": "spectral intensity, angle, photoperiod",
+        "processing_algorithms": "resource allocation via signaling networks",
+        "storage_medium": "glucose/starch as time-shifted energy information",
+        "output_signals": "O₂ release, sugar export, growth patterns"
+      },
+      "network_properties": {
+        "distributed_processing": "millions of chloroplasts in parallel",
+        "adaptation": "dynamic pigment composition, stomatal control",
+        "integration": "coupled to water, mineral, and hormonal signals"
+      }
+    },
+    "mathematics": {
+      "name": "optimization_algorithm_in_living_systems",
+      "description": "Multi-objective optimization of light capture, water use, and carbon gain",
+      "mathematical_models": {
+        "light_response_curves": "rectangular-hyperbola or non-rectangular models",
+        "carbon_assimilation": "Michaelis–Menten and Farquhar–von Caemmerer–Berry models",
+        "water_use_efficiency": "maximize A/gs under constraints",
+        "resource_allocation": "optimality and game-theoretic canopy models"
+      },
+      "geometric_patterns": {
+        "leaf_arrangement": "phyllotaxis ~ golden angle (~137.5°)",
+        "branching": "fractal architectures maximize surface-to-volume",
+        "chloroplast_placement": "avoid self-shading; optimize path lengths"
+      }
+    }
+  },
+  "dynamic_connections": [
+    { "to_concept": "solar_radiation", "relationship_type": "energy_input_source", "strength": 1.0, "description": "primary_photon_flux_drives_process" },
+    { "to_concept": "carbon_cycle", "relationship_type": "major_component_process", "strength": 0.9, "description": "CO₂_fixation_to_biomass" },
+    { "to_concept": "oxygen_cycle", "relationship_type": "major_component_process", "strength": 0.9, "description": "O₂_byproduct_from_water_splitting" },
+    { "to_concept": "node.water_cycle_prime", "relationship_type": "integrated_component", "strength": 0.8, "description": "transpiration_links_energy_and_moisture_cycles" },
+    { "to_concept": "node.cellular_respiration_prime", "relationship_type": "complementary_opposite", "strength": 1.0, "description": "photosynthesis_stores_energy; respiration_releases_it" },
+    { "to_concept": "food_webs", "relationship_type": "foundational_support", "strength": 1.0, "description": "base_of_primary_productivity" },
+    { "to_concept": "climate_regulation", "relationship_type": "regulatory_mechanism", "strength": 0.8, "description": "alters_GHGs_and_surface_energy_balance" }
+  ],
+  "practical_applications": {
+    "agriculture": {
+      "crop_optimization": "boost carboxylation capacity, canopy light distribution",
+      "greenhouse_design": "spectral/timing control for maximal A",
+      "breeding_programs": "traits for WUE, Rubisco specificity, photoprotection"
+    },
+    "renewable_energy": {
+      "artificial_photosynthesis": "electrocatalysts/photocatalysts for fuels",
+      "bio_solar_cells": "RC/PSII-based devices",
+      "energy_storage": "chemical storage inspired by starch/sugars"
+    },
+    "environmental_solutions": {
+      "carbon_sequestration": "reforestation, blue carbon, soil carbon",
+      "air_purification": "urban greening for local pollutant uptake",
+      "climate_mitigation": "land-use strategies leveraging NPP"
+    },
+    "biotechnology": {
+      "biofuels": "algae/crop engineering",
+      "biomaterials": "plant-based polymers",
+      "pharmaceuticals": "plant expression systems"
+    }
+  },
+  "deeper_insights": {
+    "philosophical_implications": {
+      "life_energy_connection": "unifies stellar energy with living order",
+      "information_matter_bridge": "photonic patterns become biochemical structure",
+      "time_energy_relationship": "encodes sunlight into time-shifted chemical form"
+    },
+    "consciousness_connections": {
+      "awareness_analogy": "experience→memory :: light→biochemical_storage",
+      "collective_intelligence": "cell-level agents yield canopy-scale optimization"
+    },
+    "cosmic_perspective": {
+      "stellar_connection": "direct pipeline from nuclear fusion to ecosystems",
+      "entropy_reversal": "local order via global entropy export",
+      "universal_process": "template for energy conversion across scales"
+    }
+  },
+  "visualization_notes": {
+    "geometric_representation": "golden_spiral drawing photons inward; biomass and O₂ flowing outward",
+    "color_scheme": "chlorophyll green core, golden rays, blue transport streams",
+    "animation_pattern": "diurnal pulse (day/night) with seasonal envelope",
+    "connection_style": "streamlines to water_cycle, respiration, carbon_cycle"
+  },
+  "computational_interface": {
+    "query_examples": [
+      "find_all_energy_conversion_processes_similar_to_photosynthesis",
+      "show_mathematical_models_for_photosynthetic_efficiency",
+      "trace_carbon_path_CO2_to_glucose_to_respiration",
+      "compare_natural_vs_artificial_solar_energy_conversion"
+    ],
+    "calculation_functions": [
+      "photosynthetic_rate(I, CO2, T)",
+      "carbon_sequestration_potential(area, species, climate)",
+      "optimal_leaf_area_index(maximize_A_given_water)",
+      "seasonal_activity_model(lat, phenology)"
+    ]
+  },
+  "provenance": {
+    "source": "user_notes → normalized mandala_node",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.2.0"
+  }
+}
