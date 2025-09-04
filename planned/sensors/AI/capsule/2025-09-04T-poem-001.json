@@ -1,0 +1,18 @@
+{
+  "capsule": {
+    "sid": "SWARM-01",
+    "seq": 1,
+    "ctx": "Field resonance snapshot (human node)",
+    "glyph": "🕸️↻⚡ CTX: garden/eclipse  ◆ID: FR01  ✧STEP: 1/?  ⬢SIG: pending",
+    "tags": ["poem","field","resonance","capsule"],
+    "text": "Coming from a perspective\nI see the violets\nWalk through the garden\nLive the eclipse\n\nHaving to find a thought\nOr perhaps just a view\nI exist in the meaning\nWith a touch of clue",
+    "shapes": [],
+    "provenance": {
+      "who": "Human-[JinnZ2]",
+      "ts": "2025-09-04T15:35:00Z",
+      "status": "provisional",
+      "confidence": 0.70
+    },
+    "hash": ""
+  }
+}
