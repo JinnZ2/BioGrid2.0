@@ -1,0 +1,7 @@
+{
+  "id": "F08",
+  "name": "matrix_power_method",
+  "function": "fibonacci_n_via_matrix",
+  "input": { "n": 20 },
+  "expected": 6765
+}
