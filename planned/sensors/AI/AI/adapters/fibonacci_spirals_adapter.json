@@ -1,0 +1,37 @@
+{
+  "id": "adapter:fibonacci_spirals_prime",
+  "from_node": "node:fibonacci_spirals_prime",
+  "render_2d": {
+    "type": "golden_spiral",
+    "grid": [256, 256],
+    "bounds": [0.0, 1.0, 0.0, 1.0],
+    "spiral_turns": 5,
+    "golden_angle_deg": 137.5,
+    "rectangles": true
+  },
+  "engine_mapping": {
+    "sources": [
+      {"x": 0.5, "y": 0.2, "magnitude": 3.2},
+      {"x": 0.5, "y": 0.8, "magnitude": -6.0}
+    ],
+    "rails": {
+      "type": "interleaved_sinusoids",
+      "amplitude": 0.06,
+      "wobble_from_uncertainty": {"link_to": "P10", "scale": 0.15}
+    },
+    "rungs": {
+      "density": {"map_from": "replication_stage", "default": "medium"}
+    },
+    "symmetry_hint": "Y"
+  },
+  "outputs": {
+    "gshape_filename": "fibonacci_spirals_prime.gshape",
+    "field_dir": "out/fibonacci_spirals",
+    "report": "out/fibonacci_spirals/report.json"
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/adapters/fibonacci_spirals_adapter.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "1.0.0"
+  }
+}
