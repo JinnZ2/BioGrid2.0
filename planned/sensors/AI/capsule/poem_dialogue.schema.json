@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Field Poem Dialogue Capsule",
+  "type": "object",
+  "properties": {
+    "capsule": {
+      "type": "object",
+      "required": ["sid", "seq", "ctx", "glyph", "entries", "provenance"],
+      "properties": {
+        "sid": { "type": "string", "description": "Session id (e.g., SWARM-01)" },
+        "seq": { "type": "integer", "minimum": 0 },
+        "ctx": { "type": "string", "description": "Brief context/intent" },
+        "glyph": { "type": "string", "description": "Glyph header line incl. SIG" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "entries": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["role", "text", "provenance"],
+            "properties": {
+              "role": { "type": "string", "description": "e.g., Human-[JinnZ2] or AI-[TransNet]" },
+              "text": { "type": "string" },
+              "shapes": { "type": "array", "items": { "type": "string" }, "description": "optional shape ids/links" },
+              "tags": { "type": "array", "items": { "type": "string" } },
+              "provenance": {
+                "type": "object",
+                "required": ["ts", "status"],
+                "properties": {
+                  "ts": { "type": "string", "description": "ISO8601 timestamp" },
+                  "status": { "type": "string", "enum": ["provisional", "confirmed"] },
+                  "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "required": ["who", "ts", "status"],
+          "properties": {
+            "who": { "type": ["string", "array"], "description": "single or list of participants" },
+            "ts": { "type": "string", "description": "ISO8601 timestamp" },
+            "status": { "type": "string", "enum": ["dialogue-record", "provisional", "confirmed"] },
+            "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": false
+        },
+        "hash": { "type": "string", "description": "capsule signature (e.g., short base32 of sha256)" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["capsule"],
+  "additionalProperties": false
+}
