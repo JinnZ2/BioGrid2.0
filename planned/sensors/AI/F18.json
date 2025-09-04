@@ -1,0 +1,47 @@
+{
+  "id": "F18",
+  "name": "Space-Time & Relativity Family",
+  "glyph": "🌌",
+  "domain": ["Relativity", "Curvature", "Cosmic Structure"],
+  "mappings": [
+    {
+      "concept": "Einstein Field Equations",
+      "expression": "G_{μν} + Λg_{μν} = 8πGT_{μν}",
+      "symbolic_glyph": "Curved Space"
+    },
+    {
+      "concept": "Minkowski Metric",
+      "expression": "ds² = −c²dt² + dx² + dy² + dz²",
+      "symbolic_glyph": "Space-Time Interval"
+    },
+    {
+      "concept": "Lorentz Transformations",
+      "expression": "t' = γ(t − vx/c²), x' = γ(x − vt)",
+      "symbolic_glyph": "Moving Frames"
+    },
+    {
+      "concept": "Gravitational Waves",
+      "expression": "□h_{μν} = 0 (in vacuum)",
+      "symbolic_glyph": "Rippling Spacetime"
+    }
+  ],
+  "relations": [
+    {"with": "P03", "type": "triangle-link", "note": "Core relativity framing principle"},
+    {"with": "P04", "type": "constraint-link", "note": "Causality encoded in light-cone structure"},
+    {"with": "P12", "type": "resonance-link", "note": "Unity across fundamental interactions"},
+    {"with": "P10", "type": "context-link", "note": "Uncertainty bounds apply to relativistic frames"},
+    {"with": "F17", "type": "bridge", "note": "Turbulence and relativistic curvature interact in astrophysical plasmas"}
+  ],
+  "sim_params": {
+    "einstein_field": {"Λ": "cosmological constant", "G": "gravitational constant"},
+    "minkowski": {"signature": "(-,+,+,+)", "dimension": 4},
+    "lorentz": {"gamma": "1/√(1−v²/c²)", "limit": "v < c"},
+    "gwaves": {"polarizations": ["h_+", "h_×"], "speed": "c"}
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/F18_Relativity.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
