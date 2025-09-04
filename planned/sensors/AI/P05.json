@@ -1,0 +1,40 @@
+{
+  "id": "P05",
+  "name": "Emergence Principle",
+  "glyph": "🌱",
+  "domain": ["Higher-Order Patterns", "Complexity", "Self-Organization"],
+  "mappings": [
+    {
+      "concept": "Cellular Automata",
+      "expression": "Simple local rules → complex global patterns",
+      "symbolic_glyph": "Spontaneous Order"
+    },
+    {
+      "concept": "Phase Transitions",
+      "expression": "Order parameters shift at critical points",
+      "symbolic_glyph": "Critical Shift"
+    },
+    {
+      "concept": "Scaling Laws",
+      "expression": "P(k) ∝ k^(−γ) in complex systems",
+      "symbolic_glyph": "Power Law Emergence"
+    },
+    {
+      "concept": "Neural Collectives",
+      "expression": "Distributed dynamics → representation & learning",
+      "symbolic_glyph": "Collective Mind"
+    }
+  ],
+  "relations": [
+    {"with": "P04", "type": "triangle-link", "note": "Causal scaffolding enables emergent organization"},
+    {"with": "P06", "type": "triangle-link", "note": "Entropy gradients drive phase structure"},
+    {"with": "P01", "type": "resonance-link", "note": "Symmetry breaking → new macroscopic order"},
+    {"with": "P12", "type": "resonance-link", "note": "Coherence integrates emergent layers"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P05_Emergence.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
