@@ -1,0 +1,12 @@
+{
+  "id": "F11",
+  "name": "phyllotaxis_polar_position_k100",
+  "function": "phyllotaxis_polar_coordinates",
+  "input": { "k": 100, "scale_c": 1.0, "normalize_angle": true },
+  "expected": {
+    "radius": 10.0,
+    "angle_rad": 1.23528130004108
+  },
+  "tolerance": { "radius": 1e-9, "angle_rad": 1e-12 },
+  "note": "r = c*sqrt(k), θ = k*golden_angle (mod 2π)"
+}
