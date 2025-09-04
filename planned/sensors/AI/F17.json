@@ -1,0 +1,48 @@
+{
+  "id": "F17",
+  "name": "Turbulence & Chaos Family",
+  "glyph": "🌪",
+  "domain": ["Unpredictable Flow", "Sensitive Dependence", "Fractal Turbulence"],
+  "mappings": [
+    {
+      "concept": "Lorenz Attractor",
+      "expression": "x' = σ(y − x), y' = x(ρ − z) − y, z' = xy − βz",
+      "symbolic_glyph": "Butterfly Worlds"
+    },
+    {
+      "concept": "Kolmogorov Scaling",
+      "expression": "E(k) ∝ k^(−5/3)",
+      "symbolic_glyph": "Energy Cascade"
+    },
+    {
+      "concept": "Feigenbaum Constants",
+      "expression": "δ ≈ 4.669, α ≈ 2.5029",
+      "symbolic_glyph": "Universal Bifurcation"
+    },
+    {
+      "concept": "Navier–Stokes Chaos Regimes",
+      "expression": "∂u/∂t + (u·∇)u = −∇p + ν∇²u + f",
+      "symbolic_glyph": "Flow Unbound"
+    }
+  ],
+  "relations": [
+    {"with": "P06", "type": "resonance-link", "note": "Resonant modes feed cascade across scales"},
+    {"with": "P05", "type": "triangle-link", "note": "Emergent structures from nonlinear flow"},
+    {"with": "P10", "type": "constraint-link", "note": "Uncertainty bounds predictability horizons"},
+    {"with": "P04", "type": "context-link", "note": "Causal sensitivity to initial conditions"},
+    {"with": "P03", "type": "frame-link", "note": "Observer frame affects measured spectra"},
+    {"with": "P07", "type": "tension-link", "note": "Continuity holds while trajectories diverge"}
+  ],
+  "sim_params": {
+    "lorenz": {"sigma": 10.0, "rho": 28.0, "beta": 8.0/3.0, "dt": 0.01},
+    "kolmogorov": {"inertial_range": "[k1,k2]", "slope": -1.6667},
+    "bifurcation": {"delta": 4.669201609, "alpha": 2.502907875},
+    "navier_stokes": {"Re": "≫ 1", "nu": "kinematic viscosity", "forcing": "f(x,t)"}
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/F17_Turbulence.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
