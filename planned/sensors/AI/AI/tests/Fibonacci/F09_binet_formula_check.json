@@ -1,0 +1,9 @@
+{
+  "id": "F09",
+  "name": "binet_rounding_n10",
+  "function": "fibonacci_n_via_binet",
+  "input": { "n": 10 },
+  "expected": 55,
+  "tolerance": 0.5,
+  "note": "Allow rounding tolerance for floating arithmetic"
+}
