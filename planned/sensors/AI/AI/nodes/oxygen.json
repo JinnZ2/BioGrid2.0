@@ -1,0 +1,314 @@
+{
+  "mandala_node": {
+    "concept_id": "oxygen_prime",
+    "common_name": "oxygen",
+    "geometric_position": {
+      "x": -0.8,
+      "y": 0.6,
+      "z": 0.2,
+      "scale": 5,
+      "note": "positioned_to_show_complementary_dance_with_carbon_enabling_energy_flows"
+    },
+    "core_essence": "universal_electron_acceptor_enabling_high_energy_metabolism_and_complex_life",
+    "perspectives": {
+      "atomic_chemistry": {
+        "name": "reactive_oxidizing_foundation",
+        "description": "Oxygen's electron configuration confers strong oxidizing capacity and extensive hydrogen bonding.",
+        "atomic_structure": {
+          "atomic_number": 8,
+          "electron_configuration": "1s2 2s2 2p4",
+          "valence_electrons": 6,
+          "electron_affinity": "high_tendency_to_gain_electrons_to_complete_octet"
+        },
+        "bonding_characteristics": {
+          "electronegativity": "3.44_on_Pauling_scale_second_to_fluorine",
+          "double_bonds": "O2_is_diatomic_with_a_triplet_ground_state_paramagnetic",
+          "hydrogen_bonds": "lone_pairs_enable_strong_H_bonding_crucial_for_water_properties",
+          "coordination": "typically_two_covalent_bonds_can_coordinate_to_metals_in_complexes"
+        },
+        "allotropes": {
+          "molecular_oxygen": "O2_about_21_percent_of_atmosphere_essential_for_respiration",
+          "ozone": "O3_stratospheric_UV_shield_ground_level_pollutant",
+          "atomic_oxygen": "highly_reactive_common_in_upper_atmosphere",
+          "singlet_oxygen": "excited_state_O2_more_reactive_used_in_photodynamic_therapy"
+        },
+        "oxidation_states": {
+          "negative_two": "most_common_in_oxides_and_water",
+          "negative_one": "peroxides_e.g._H2O2_implicated_in_signaling",
+          "zero": "elemental_O2",
+          "positive": "rare_in_compounds_with_fluorine_e.g._OF2"
+        }
+      },
+      "atmospheric_evolution": {
+        "name": "great_oxygenation_event_and_atmospheric_transformation",
+        "description": "Biological oxygen production reshaped Earth's redox state and enabled complex life.",
+        "early_earth_atmosphere": {
+          "reducing_conditions": "CH4_NH3_H2S_with_negligible_free_O2",
+          "anaerobic_life": "early_metabolisms_were_anaerobic_e.g._fermentation",
+          "banded_iron_formations": "Fe2+_oxidized_and_precipitated_as_Fe_oxides_with_rising_O2"
+        },
+        "cyanobacterial_revolution": {
+          "photosynthetic_evolution": "oxygenic_photosynthesis_water_splitting_emerged_in_cyanobacteria",
+          "oxygen_production": "6CO2+6H2O+light->C6H12O6+6O2",
+          "environmental_impact": "free_O2_was_initially_toxic_to_many_anaerobes"
+        },
+        "atmospheric_oxygenation": {
+          "gradual_accumulation": "oxygen_rose_over_hundreds_of_millions_of_years_after_iron_sinks_saturated",
+          "ozone_layer_formation": "O3_screen_enabled_terrestrial_colonization",
+          "modern_levels": "stabilized_near_21_percent_with_geologic_biologic_feedbacks"
+        },
+        "evolutionary_consequences": {
+          "aerobic_respiration": "O2_enabled_high_yield_catabolism_~30–32_ATP_per_glucose",
+          "eukaryotic_cells": "mitochondrial_endosymbiosis_supported_complex_cell_architecture",
+          "multicellularity": "higher_energy_budgets_supported_large_multicellular_organisms"
+        }
+      },
+      "respiratory_physiology": {
+        "name": "cellular_energy_production_enabler",
+        "description": "Oxygen_is_the_terminal_electron_acceptor_in_aerobic_respiration.",
+        "oxygen_transport": {
+          "hemoglobin_binding": "Fe2+_heme_reversibly_binds_O2_four_sites_per_tetramer",
+          "cooperative_binding": "sigmoidal_O2_dissociation_curve_facilitates_loading_unloading",
+          "myoglobin": "higher_affinity_storage_in_muscle"
+        },
+        "respiratory_mechanics": {
+          "gas_exchange": "alveolar_surface_area_and_thin_barrier_optimize_diffusion",
+          "ventilation_perfusion": "matching_airflow_and_bloodflow_is_critical",
+          "oxygen_cascade": "PO2_gradients_drive_O2_from_air_to_mitochondria"
+        },
+        "cellular_respiration": {
+          "electron_transport": "cytochrome_c_oxidase_reduces_O2_to_H2O",
+          "water_formation": "4e-+4H++O2->2H2O",
+          "ATP_synthesis": "O2_consumption_drives_proton_motive_force_for_ATP_synthase"
+        },
+        "oxygen_sensing": {
+          "hypoxia_response": "HIF_pathways_adjust_gene_expression_under_low_O2",
+          "oxygen_toxicity": "excess_O2_can_increase_ROS_and_cause_tissue_damage"
+        }
+      },
+      "reactive_oxygen_species": {
+        "name": "cellular_signaling_and_oxidative_stress_mediators",
+        "description": "ROS_function_as_signals_at_controlled_levels_and_cause_damage_when_unchecked.",
+        "ROS_generation": {
+          "mitochondria": "small_fraction_of_O2_reduced_to_superoxide_during_ETC",
+          "enzymatic_production": "NADPH_oxidases_generate_ROS_for_host_defense_and_signaling",
+          "photochemical": "UV_and_photosensitizers_form_singlet_O2_and_radicals",
+          "inflammation": "phagocytes_mount_respiratory_burst"
+        },
+        "major_types": {
+          "superoxide": "O2•-_dismutates_to_H2O2",
+          "hydrogen_peroxide": "H2O2_diffusible_second_messenger",
+          "hydroxyl_radical": "•OH_highly_reactive_causes_macromolecular_damage",
+          "nitric_oxide": "NO•_gaseous_signal_vascular_and_neural_roles"
+        },
+        "defenses": {
+          "enzymes": "SOD_catalase_glutathione_peroxidases",
+          "small_molecules": "glutathione_vitamin_C_vitamin_E",
+          "repair": "DNA_and_protein_repair_pathways_limit_damage"
+        },
+        "physiology": {
+          "signaling": "ROS_modulate_pathways_and_gene_expression",
+          "immune_function": "oxidative_killing_of_pathogens",
+          "vascular_regulation": "NO_and_ROS_in_tone_and_remodeling"
+        }
+      },
+      "combustion_chemistry": {
+        "name": "fire_triangle_completion_and_energy_release",
+        "description": "Oxygen_supports_rapid_oxidation_releasing_heat_and_light.",
+        "combustion_fundamentals": {
+          "fire_triangle": "fuel_O2_heat_required",
+          "stoichiometry": "mixture_ratios_govern_complete_vs_incomplete_combustion"
+        },
+        "biological_combustion": {
+          "controlled_oxidation": "cells_extract_energy_stepwise_capturing_it_as_ATP",
+          "waste_products": "CO2_and_H2O_analogous_to_exhaust"
+        },
+        "applications": {
+          "engines": "internal_combustion_and_turbines_require_O2",
+          "rocketry": "liquid_oxygen_as_oxidizer",
+          "industry": "steel_making_welding_chemical_feedstock"
+        }
+      },
+      "photosynthetic_production": {
+        "name": "water_splitting_oxygen_liberation_process",
+        "description": "Virtually_all_free_atmospheric_O2_originates_from_biological_water_oxidation.",
+        "light_reactions": {
+          "photosystem_II": "Mn-Ca_oxygen_evolving_complex_splits_water",
+          "reaction": "2H2O->O2+4H++4e-_(requires_photon_inputs)"
+        },
+        "global_oxygen_production": {
+          "terrestrial": "forests_grasslands_and_crops_contribute_substantially",
+          "marine": "phytoplankton_produce_roughly_half_of_global_O2_input"
+        }
+      },
+      "medical_applications": {
+        "name": "therapeutic_oxygen_delivery_and_monitoring",
+        "description": "Clinical_use_of_O2_to_support_or_restore_tissue_oxygenation.",
+        "oxygen_therapy": {
+          "supplemental": "treats_hypoxemia_and_respiratory_failure",
+          "hyperbaric": "use_in_CO_poisoning_and_selected_wounds"
+        },
+        "diagnostics": {
+          "pulse_oximetry": "noninvasive_SpO2",
+          "arterial_blood_gases": "PaO2_PaCO2_pH_assessment",
+          "VO2_max": "aerobic_capacity_metric"
+        }
+      },
+      "environmental_chemistry": {
+        "name": "atmospheric_aquatic_and_soil_oxygen_cycling",
+        "description": "Oxygen_participates_in_climate_air_quality_and_ecosystem_processes.",
+        "atmosphere": {
+          "ozone_chemistry": "photolysis_and_recombination_cycle_forms_O3",
+          "smog": "NOx_and_VOC_photochemistry_produces_ground_level_O3"
+        },
+        "aquatic": {
+          "dissolved_oxygen": "solubility_drops_with_temperature_and_salinity",
+          "eutrophication": "nutrient_loading_can_cause_hypoxia_and_dead_zones"
+        },
+        "soil": {
+          "respiration": "roots_and_microbes_consume_O2",
+          "redox": "O2_availability_controls_soil_chemistry"
+        }
+      },
+      "information_processing": {
+        "name": "oxygen_dependence_of_neural_computation",
+        "description": "Continuous_O2_supply_is_critical_for_high_rate_synaptic_and_axon_activity.",
+        "neural_metabolism": {
+          "brain_O2_use": "disproportionately_high_relative_to_mass",
+          "neurovascular_coupling": "activity_evokes_local_increases_in_flow_and_O2_delivery"
+        },
+        "function_and_failure": {
+          "cognition": "attention_memory_and_executive_functions_depend_on_adequate_O2",
+          "hypoxia": "low_O2_impairs_function_and_can_cause_injury"
+        }
+      }
+    },
+    "dynamic_connections": [
+      {
+        "to_concept": "carbon_prime",
+        "relationship_type": "complementary_redox_cycling",
+        "strength": 1.0,
+        "description": "oxygen_and_carbon_cycles_are_coupled_via_photosynthesis_respiration_and_combustion"
+      },
+      {
+        "to_concept": "photosynthesis_prime",
+        "relationship_type": "primary_product",
+        "strength": 1.0,
+        "description": "oxygen_is_released_by_water_splitting_in_oxygenic_photosynthesis"
+      },
+      {
+        "to_concept": "cellular_respiration_prime",
+        "relationship_type": "essential_substrate",
+        "strength": 1.0,
+        "description": "oxygen_is_the_terminal_electron_acceptor_in_aerobic_respiration"
+      },
+      {
+        "to_concept": "water_cycle_prime",
+        "relationship_type": "constituent_element",
+        "strength": 0.9,
+        "description": "oxygen_is_a_component_of_water_and_participates_in_all_water_cycle_flows"
+      },
+      {
+        "to_concept": "gravity_prime",
+        "relationship_type": "atmospheric_distribution_driver",
+        "strength": 0.6,
+        "description": "gravity_retains_atmospheric_gases_and_supports_pressure_gradients_for_gas_exchange"
+      },
+      {
+        "to_concept": "hemoglobin",
+        "relationship_type": "transport_partnership",
+        "strength": 0.9,
+        "description": "hemoglobin_reversibly_binds_and_transports_O2_in_blood"
+      },
+      {
+        "to_concept": "mitochondria",
+        "relationship_type": "metabolic_partnership",
+        "strength": 0.95,
+        "description": "mitochondria_consume_O2_to_generate_ATP"
+      },
+      {
+        "to_concept": "ozone_layer",
+        "relationship_type": "atmospheric_protection",
+        "strength": 0.8,
+        "description": "O3_in_the_stratosphere_absorbs_harmful_UV_radiation"
+      }
+    ],
+    "scale_manifestations": {
+      "molecular_scale": {
+        "description": "diatomic_O2_with_two_unpaired_electrons_is_paramagnetic",
+        "bond_characteristics": "O=O_double_bond_with_antibonding_unpaired_electrons"
+      },
+      "cellular_scale": {
+        "description": "O2_diffuses_across_membranes_and_is_consumed_in_mitochondria",
+        "regulation": "cells_sense_and_adjust_to_O2_availability"
+      },
+      "tissue_scale": {
+        "description": "capillary_networks_and_oxygen_gradients_match_local_metabolic_demand"
+      },
+      "organ_scale": {
+        "description": "brain_and_heart_have_high_O2_requirements_with_specialized_delivery"
+      },
+      "organism_scale": {
+        "description": "integrated_respiratory_and_circulatory_systems_manage_whole_body_O2_transport",
+        "adaptation": "responses_to_exercise_and_altitude_adjust_O2_delivery_and_use"
+      },
+      "ecosystem_scale": {
+        "description": "photosynthesis_and_respiration_balance_determine_net_O2_flux"
+      },
+      "atmospheric_scale": {
+        "description": "global_O2_fraction_is_maintained_by_biological_and_geochemical_feedbacks"
+      }
+    },
+    "practical_applications": {
+      "medical_technology": {
+        "oxygen_therapy": "supplemental_O2_for_hypoxemia",
+        "hyperbaric_medicine": "pressurized_O2_for_specific_indications",
+        "pulse_oximetry": "noninvasive_SpO2_monitoring"
+      },
+      "industrial_processes": {
+        "steel_production": "oxygen_injection_improves_combustion_and_refining",
+        "chemical_synthesis": "O2_as_reactant_or_oxidant",
+        "wastewater_treatment": "dissolved_O2_levels_track_biological_treatment_health"
+      },
+      "aerospace_technology": {
+        "rocket_oxidizer": "LOX_enables_high_specific_impulse_propulsion",
+        "life_support": "generation_and_recycling_of_O2_for_spacecraft"
+      },
+      "environmental_monitoring": {
+        "water_quality": "DO_monitoring_for_aquatic_ecosystem_status",
+        "air_quality": "ozone_and_Ox_tracking_in_photochemical_smog_studies",
+        "climate_research": "oxygen_isotopes_in_paleoclimate_reconstruction"
+      }
+    },
+    "deeper_insights": {
+      "philosophical_implications": {
+        "life_enabler": "atmospheric_oxygen_enabled_large_energy_budgets_and_complexity",
+        "double_edged_element": "essential_for_life_but_drives_oxidative_damage_if_unchecked"
+      },
+      "cosmic_perspective": {
+        "stellar_origin": "oxygen_is_synthesized_in_massive_stars_and_dispersed_by_supernovae",
+        "biosignature": "persistent_atmospheric_O2_may_indicate_biological_activity_on_exoplanets"
+      }
+    },
+    "visualization_notes": {
+      "geometric_representation": "diatomic_molecules_with_flowing_electron_clouds_and_redox_flux_lines",
+      "color_scheme": "cool_blues_for_O2_with_warm_flare_zones_for_combustion",
+      "animation_pattern": "respiratory_pulse_waves_and_ETC_linked_redox_flashes",
+      "connection_style": "dynamic_redox_edges_linking_metabolism_and_photosynthesis_nodes"
+    },
+    "computational_interface": {
+      "query_examples": [
+        "calculate_oxygen_consumption_rate_for_activity_profile",
+        "simulate_alveolar_to_tissue_O2_transport",
+        "estimate_dissolved_oxygen_under_given_temperature_salinity",
+        "analyze_O2_flux_balance_in_an_ecosystem_model"
+      ],
+      "calculation_functions": [
+        "hemoglobin_saturation_SaO2_from_PaO2_curve",
+        "VO2_estimator_from_workload_and_efficiency",
+        "dissolved_oxygen_solubility_T_P_salinity",
+        "ecosystem_O2_budget_photosynthesis_minus_respiration"
+      ]
+    }
+  }
+}
