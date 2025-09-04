@@ -1,0 +1,12 @@
+{
+  "id": "node:fibonacci_spirals_prime",
+  "glyph": "🌀",
+  "position_2d": {"x": 0.618, "y": -0.618, "scale": 5.0},
+  "essence": "growth_optimization",
+  "links": [
+    {"to": "neural_networks_prime", "type": "architectural_optimization", "w": 0.9},
+    {"to": "dna_replication_prime", "type": "structural_encoding", "w": 0.8},
+    {"to": "photosynthesis_prime", "type": "phyllotaxis", "w": 1.0}
+  ],
+  "render_hints": {"spiral_turns": 5, "golden_angle_deg": 137.5}
+}
