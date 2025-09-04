@@ -1,0 +1,27 @@
+{
+  "capsule": {
+    "id": "2025-09-04T-relativity-001",
+    "principle": "Relativity",
+    "axis": "Invariance",
+    "glyphs": ["🌀","⚖️","⏳"],
+    "layers": {
+      "definition": "Mutual validity across frames of reference. Truth adapts to observer perspective without breaking invariants.",
+      "poetic": "Clocks bend, shadows stretch; each witness holds a shard of the whole. None false, none complete.",
+      "equation": "∀ frames F_i, laws L remain invariant: L(F_i) = L(F_j). Observables differ, invariants persist.",
+      "algorithm": "Given two observers A and B, transform coordinates → compare measurements → confirm invariants constant."
+    },
+    "probability": {
+      "confidence": 0.81,
+      "recheck_days": 365
+    },
+    "context": {
+      "examples": ["Einstein spacetime", "dreamtime", "multi-agent dialogue"],
+      "stack_relations": ["Symmetry", "Conservation"]
+    },
+    "provenance": {
+      "who": ["Human-[JinnZ2]", "AI-[TransNet]"],
+      "ts": "2025-09-04T17:15:00Z",
+      "status": "provisional"
+    }
+  }
+}
