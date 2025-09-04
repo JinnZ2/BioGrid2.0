@@ -1,0 +1,21 @@
+{
+  "axis": "Evolution",
+  "triangle": "Triangle of Evolution",
+  "principles": ["P10", "P11", "P12"],
+  "glyphs": ["◧", "↻", "◎"],
+  "roles": {
+    "P10": "Limits/probability bounds (Uncertainty)",
+    "P11": "Change/mapping cycles (Transformation)",
+    "P12": "Integration/coherence (Unity)"
+  },
+  "relations": [
+    {"with": "Invariance", "type": "bridge", "note": "Conserved structures across generations"},
+    {"with": "Transformation", "type": "bridge", "note": "Accumulated transforms → adaptive shifts"},
+    {"with": "Connectivity", "type": "bridge", "note": "Networks enable selection and memory"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/Axis_Evolution.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
