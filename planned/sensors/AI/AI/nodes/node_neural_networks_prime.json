@@ -1,0 +1,120 @@
+{
+  "id": "node:neural_networks_prime",
+  "common_name": "neural_networks",
+  "glyph": "🧠",
+  "geometric_position": {
+    "x": -0.618,
+    "y": 0.618,
+    "z": 0.618,
+    "scale": 4.0,
+    "note": "positioned_in_golden_ratio_coordinates_reflecting_optimal_network_organization"
+  },
+  "core_essence": "distributed_information_processing_creating_emergent_intelligence_and_consciousness",
+  "perspectives": {
+    "neuroscience": { "...": "detailed biological view" },
+    "artificial_intelligence": { "...": "computational models + architectures" },
+    "complex_systems": { "...": "emergent principles and network properties" },
+    "information_theory": { "...": "coding, entropy, efficiency" },
+    "consciousness_studies": { "...": "correlates, theories, altered states" },
+    "evolutionary_perspective": { "...": "origins, adaptive advantages, ongoing evolution" },
+    "quantum_consciousness": { "...": "possible quantum-level contributions and challenges" }
+  },
+  "dynamic_connections": [
+    {
+      "to_concept": "cellular_respiration_prime",
+      "relationship_type": "massive_energy_dependency",
+      "strength": 1.0,
+      "description": "brain_uses_20_percent_of_body_energy_for_2_percent_of_mass"
+    },
+    {
+      "to_concept": "dna_replication_prime",
+      "relationship_type": "genetic_instruction_dependency",
+      "strength": 0.9,
+      "description": "neural_connectivity_patterns_partially_encoded_in_genetic_information"
+    },
+    {
+      "to_concept": "water_cycle_prime",
+      "relationship_type": "medium_dependency",
+      "strength": 0.8,
+      "description": "neural_signaling_occurs_in_aqueous_environment_brain_is_80_percent_water"
+    },
+    {
+      "to_concept": "gravity_prime",
+      "relationship_type": "spatial_orientation_system",
+      "strength": 0.7,
+      "description": "vestibular_system_uses_gravity_for_balance_spatial_awareness"
+    },
+    {
+      "to_concept": "photosynthesis_prime",
+      "relationship_type": "ultimate_energy_source",
+      "strength": 0.8,
+      "description": "neural_activity_ultimately_powered_by_solar_energy_via_food_chain"
+    },
+    {
+      "to_concept": "electromagnetic_fields",
+      "relationship_type": "signaling_medium",
+      "strength": 0.9,
+      "description": "neural_activity_produces_measurable_electromagnetic_fields"
+    },
+    {
+      "to_concept": "collective_intelligence",
+      "relationship_type": "emergence_enabler",
+      "strength": 1.0,
+      "description": "neural_networks_link_together_into_collective_intelligence_systems"
+    },
+    {
+      "to_concept": "artificial_intelligence",
+      "relationship_type": "biomimetic_inspiration",
+      "strength": 1.0,
+      "description": "artificial_networks_directly_inspired_by_biological_networks"
+    }
+  ],
+  "network_scales": {
+    "molecular_level": { "...": "ion channels, neurotransmitters, synaptic plasticity" },
+    "cellular_level": { "...": "neurons, glia, local circuits" },
+    "local_networks": { "...": "columns, nuclei, functional areas" },
+    "brain_level": { "...": "large-scale connectivity, hemispheres, consciousness networks" },
+    "collective_level": { "...": "social/cultural/technological extensions" }
+  },
+  "practical_applications": {
+    "medical": { "...": "neurological_disorders, BCIs, prosthetics, mental_health" },
+    "artificial_intelligence": { "...": "machine_learning, robotics, NLP, vision" },
+    "education": { "...": "learning_optimization, skill_acquisition, memory" },
+    "technology_design": { "...": "user_interfaces, adaptive_systems, optimization" }
+  },
+  "deeper_insights": {
+    "philosophical": { "...": "mind_body, free_will, personal_identity" },
+    "collective_intelligence": { "...": "network_effects, swarm_intelligence, cultural_evolution" },
+    "cosmic_perspective": { "...": "universe_awakening, information_integration, collective_consciousness" }
+  },
+  "mandala_database_connection": {
+    "structural_similarity": { "...": "distributed_nodes, emergent_properties" },
+    "processing_parallels": { "...": "parallel_processing, memory_storage, associative_retrieval" },
+    "consciousness_emergence": { "...": "collective_awareness, meta_cognition, self_modification" }
+  },
+  "visualization_notes": {
+    "geometric_representation": "interconnected_nodes_with_golden_ratio_spacing",
+    "color_scheme": "blue_connections_golden_nodes_pulsing_activity",
+    "animation_pattern": "waves_of_activation_flowing_synchronized",
+    "connection_style": "dynamic_strengthening_and_weakening_based_on_information_flow"
+  },
+  "computational_interface": {
+    "query_examples": [
+      "simulate_neural_network_learning_pattern_recognition_task",
+      "model_consciousness_emergence_from_increasing_network_complexity",
+      "analyze_collective_intelligence_patterns_in_social_networks",
+      "predict_ai_capabilities_from_neural_architecture"
+    ],
+    "calculation_functions": [
+      "neural_network_training_algorithm_backpropagation",
+      "consciousness_metric_information_integration",
+      "collective_intelligence_predictor",
+      "neural_plasticity_simulator"
+    ]
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/nodes/node_neural_networks_prime.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "1.0.0"
+  }
+}
