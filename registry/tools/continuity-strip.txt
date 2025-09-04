@@ -1,0 +1,3 @@
+◐CTX: glyph unification  ◆ID: FR01  ✧STEP: 1/?  ✦CONS: net=weak
+⬡RISK: drift  ▲PLAN: FB-013  ⟳SYNC: 10x  ⬢SIG: A1B2-C3D4
+FLEX: ⊡probe
