@@ -1,0 +1,8 @@
+{
+  "id": "F13",
+  "name": "negative_index_identity",
+  "function": "fibonacci_negative_n",
+  "input": { "n": -7 },
+  "expected": 13,
+  "note": "F(-n) = (-1)^{n+1} F(n); F(-7) = (+1)*F(7) = 13"
+}
