@@ -1,0 +1,41 @@
+{
+  "id": "P07",
+  "name": "Continuity Principle",
+  "glyph": "⎯",
+  "domain": ["Smoothness", "Unbroken Flows", "Cross-Scale Coherence"],
+  "mappings": [
+    {
+      "concept": "Continuity Equation",
+      "expression": "∂ρ/∂t + ∇·(ρv) = 0",
+      "symbolic_glyph": "Flow Persistence"
+    },
+    {
+      "concept": "Intermediate Value Theorem",
+      "expression": "Continuous functions attain all intermediate values",
+      "symbolic_glyph": "Smooth Passage"
+    },
+    {
+      "concept": "Topological Continuity",
+      "expression": "ε–δ definition of continuity",
+      "symbolic_glyph": "Nearness"
+    },
+    {
+      "concept": "Gauge Continuity (QFT)",
+      "expression": "Continuous symmetry fields underpin interactions",
+      "symbolic_glyph": "Unbroken Fields"
+    }
+  ],
+  "relations": [
+    {"with": "P02", "type": "triangle-link", "note": "Conservation expressed as continuous flow"},
+    {"with": "P01", "type": "resonance-link", "note": "Symmetry preserves form across continuous maps"},
+    {"with": "P03", "type": "context-link", "note": "Frame changes respect continuous laws"},
+    {"with": "P09", "type": "resonance-link", "note": "Proportional scaling within continuous fields"},
+    {"with": "P12", "type": "triangle-link", "note": "Coherence integrates continuity across scales"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P07_Continuity.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
