@@ -1,0 +1,67 @@
+{
+  "id": "PHY_ENERGY_CONSERVATION_001",
+  "type": "physics_glyph",
+  "name": "energy_conservation",
+  "equations": [
+    "E_total(initial) = E_total(final)",
+    "dE_total/dt = 0 (closed system)",
+    "K + U + E_internal + E_thermal + E_field = const"
+  ],
+  "units": {
+    "energy": "joule (J)"
+  },
+  "geometric_position": {
+    "x": 0.5,
+    "y": 0.0,
+    "z": 0.0,
+    "scale": 1.0,
+    "note": "placed adjacent to force law as a global constraint"
+  },
+  "visual_shape": "closed_loop",
+  "io": {
+    "inputs": [
+      {"name": "energies_initial", "type": "array<float>", "note": "list of component energies at t0"},
+      {"name": "energies_final", "type": "array<float>", "note": "list of component energies at t1"},
+      {"name": "tolerance", "type": "float", "default": 1e-9, "note": "numeric equality tolerance"}
+    ],
+    "outputs": [
+      {"name": "is_conserved", "type": "boolean"},
+      {"name": "delta_E", "type": "float", "units": "J", "note": "E_final - E_initial"}
+    ]
+  },
+  "calculation": {
+    "function": "check_energy_conservation",
+    "pseudocode": "E_i = sum(energies_initial); E_f = sum(energies_final); delta = E_f - E_i; return (abs(delta) <= tolerance), delta",
+    "numeric_examples": [
+      {
+        "context": "simple_pendulum_small_angle_ideal",
+        "initial": {"K": 0.0, "U": 5.00},
+        "final": {"K": 5.00, "U": 0.0},
+        "delta_E": 0.0,
+        "is_conserved": true
+      },
+      {
+        "context": "block_on_table_with_friction",
+        "initial": {"K": 10.0, "U_spring": 0.0, "E_thermal": 0.0},
+        "final": {"K": 2.0, "U_spring": 0.0, "E_thermal": 8.0},
+        "delta_E": 0.0,
+        "is_conserved": true
+      }
+    ]
+  },
+  "dimensional_analysis": {
+    "energy": "M·L^2·T^-2",
+    "check": "All terms sum with identical dimensions (J)"
+  },
+  "connects_to": [
+    {"id": "PHY_FORCE_LAW_001", "relation": "complements", "note": "work-energy theorem links forces to energy changes"},
+    {"id": "PHY_MOMENTUM_001", "relation": "parallels", "note": "conservation laws arise from symmetries (Noether)"},
+    {"id": "PHY_NOETHER_001", "relation": "explains", "note": "time-translation symmetry ⇒ energy conservation"}
+  ],
+  "explanation": "Total energy of an isolated system remains constant. Energy may transform between forms (kinetic, potential, thermal, field, internal) but the sum is invariant.",
+  "metadata": {
+    "version": "0.1.0",
+    "schema": "mandala.physics_glyph.v1",
+    "tags": ["conservation", "noether", "global-constraint", "mechanics", "thermo", "em"]
+  }
+}
