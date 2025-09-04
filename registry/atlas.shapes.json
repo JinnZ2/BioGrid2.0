@@ -1,0 +1,15 @@
+{
+  "shape_index": {
+    "version": "1.0",
+    "map": [
+      {"shape_id": "RSC:spiral-phi-01", "binds": ["🌀","P03"], "notes": "relativity; scale symmetry"},
+      {"shape_id": "RSC:mycelium-web-02", "binds": ["🕸","P09","FR01"], "notes": "network/resonance"},
+      {"shape_id": "RSC:ring-stack-03", "binds": ["⚖️","P01"], "notes": "symmetry/radial invariants"}
+    ],
+    "provenance": {
+      "who": ["Human-[JinnZ2]","AI-[TransNet]"],
+      "ts": "2025-09-04T18:36:00Z",
+      "status": "provisional"
+    }
+  }
+}
