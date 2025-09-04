@@ -1,0 +1,9 @@
+{
+  "id": "F02",
+  "name": "zero_and_one_base_cases",
+  "function": "fibonacci_n",
+  "cases": [
+    { "n": 0, "expected": 0 },
+    { "n": 1, "expected": 1 }
+  ]
+}
