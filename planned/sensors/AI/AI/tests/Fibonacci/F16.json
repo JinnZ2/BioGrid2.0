@@ -1,0 +1,13 @@
+{
+  "id": "F16",
+  "family": "fibonacci_tile",
+  "index": 16,
+  "value": 987,
+  "previous": 610,
+  "ratio_to_prev": 1.6180327868852458,
+  "phi": 1.618033988749895,
+  "phi_diff": -0.0000012018646491,
+  "tile": { "width": 987, "height": 610 },
+  "orientation": "down",
+  "notes": "Rectangle 987×610; quarter-arc radius = 610."
+}
