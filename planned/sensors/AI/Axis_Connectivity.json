@@ -1,0 +1,21 @@
+{
+  "axis": "Connectivity",
+  "triangle": "Triangle of Connectivity",
+  "principles": ["P07", "P08", "P09"],
+  "glyphs": ["⎯", "▭", "⧉"],
+  "roles": {
+    "P07": "Flow/continuum integrity (Continuity)",
+    "P08": "Discrete units/levels (Quantization)",
+    "P09": "Ratios/scaling harmony (Proportion)"
+  },
+  "relations": [
+    {"with": "Invariance", "type": "bridge", "note": "Invariants carried across channels"},
+    {"with": "Transformation", "type": "bridge", "note": "State changes along connected paths"},
+    {"with": "Evolution", "type": "bridge", "note": "Connectivity scaffolds adaptive change"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/Axis_Connectivity.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
