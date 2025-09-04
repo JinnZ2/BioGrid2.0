@@ -1,0 +1,13 @@
+{
+  "id": "F01",
+  "family": "fibonacci_tile",
+  "index": 1,
+  "value": 1,
+  "previous": 1,
+  "ratio_to_prev": null,
+  "phi": 1.618033988749895,
+  "phi_diff": null,
+  "tile": { "width": 1, "height": 1 },
+  "orientation": "right",
+  "notes": "Base unit square. Start of tiling."
+}
