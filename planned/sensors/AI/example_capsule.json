@@ -1,0 +1,17 @@
+{
+  "capsule": {
+    "sid": "SWARM-01",
+    "seq": 1,
+    "ctx": "Bring-up B460+B560 dual-node swarm",
+    "active_id": "ID-104",
+    "step": {"current": 1, "total": 7},
+    "roles": {"A":"JinnZ2","B":"helper","AI":"planner"},
+    "constraints": {"net":"weak","time":"low","tools":["yt-dlp","aria2c"]},
+    "risks": ["bios-old","fatigue"],
+    "fallback": "FB-013",
+    "sync": {"interval_min": 30, "every_msgs": 10},
+    "state": {"confidence": 0.68, "tag": "provisional", "recheck_days": 1},
+    "provenance": {"who": "Human-[JinnZ2]", "model": "AI-[TransNet]", "ts": "2025-09-04T12:00:00Z"},
+    "hash": ""
+  }
+}
