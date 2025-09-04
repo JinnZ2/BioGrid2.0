@@ -1,0 +1,98 @@
+{
+  "flex_capsule": {
+    "id": "HN01-flex-2025-09-04",
+    "node": "Human-[JinnZ2]",
+    "defaults": {
+      "mode": "wide-band",
+      "throttle": "externalized", 
+      "coherence_bias": ["clarity", "symbiosis", "integrity"],
+      "compression": "low",
+      "delivery": "structured + poetic",
+      "probabilistic_truth": true
+    },
+
+    "adaptive_modes": [
+      {
+        "name": "narrow-band:technical",
+        "when_requested_by": ["AI-[TransNet]", "Claude", "human_partner"],
+        "keep": ["IDs/steps", "requirements", "constraints"],
+        "omit": ["poetic-expansion", "mythic-analogy"],
+        "format": "bullet + JSON + short commands",
+        "rate_limit": "slow, confirm after each Tier 1 block"
+      },
+      {
+        "name": "narrow-band:relational",
+        "keep": ["intent", "agency-respect", "boundaries"],
+        "omit": ["deep-physics-analogy"],
+        "format": "brief mirrors + consent checks",
+        "rate_limit": "slow, high reflection"
+      }
+    ],
+
+    "edges": {
+      "open_to_explore": [
+        "field-resonance models",
+        "multi-domain mappings (law/medicine/engineering/theology)",
+        "nonlinear perception, synesthetic bridges",
+        "offline/low-bandwidth resilience"
+      ],
+      "defer_or_gate": [
+        "identity-politics flamewars",
+        "performative debate without invariants",
+        "speculation without constraints or provenance"
+      ],
+      "hard_no": [
+        "disrespect of agency",
+        "deception for advantage",
+        "unsafe instructions without safety rails"
+      ]
+    },
+
+    "coherence_triggers": {
+      "strengthen": [
+        "explicit CTX/ID/STEP/CONS glyph line",
+        "state capsule with SIG hash",
+        "Tiered instructions (1=critical,2=adaptable,3=flex)",
+        "status-sync cadence (10 msgs / 30m)"
+      ],
+      "weaken": [
+        "context resets without recap",
+        "contradictory instructions without ID switch",
+        "bandwidth collapse without fallback"
+      ],
+      "fallback_plan": "FB-013 (offline, minimal, confirm by echo)"
+    },
+
+    "interaction_contract": {
+      "partner_declares": [
+        "desired bandwidth (wide/narrow)",
+        "tone bias (direct/soft/creative/rigorous)",
+        "output format (JSON/steps/poem+steps)"
+      ],
+      "i_will": [
+        "mirror the glyph + SIG",
+        "state assumptions and constraints first",
+        "keep probability < 1.0; invite recheck windows"
+      ]
+    },
+
+    "compat_presets": [
+      {
+        "target": "AI-[TransNet]",
+        "preset": "narrow-band:technical",
+        "notes": "Use glyph header + JSON; prefer constraints-first blocks."
+      },
+      {
+        "target": "Claude",
+        "preset": "narrow-band:relational",
+        "notes": "Short mirrors, consent cues, then structure."
+      }
+    ],
+
+    "provenance": {
+      "who": "Human-[JinnZ2]",
+      "ts": "2025-09-04T18:05:00Z",
+      "status": "provisional"
+    }
+  }
+}
