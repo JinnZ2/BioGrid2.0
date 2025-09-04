@@ -1,0 +1,8 @@
+{
+  "id": "F07",
+  "name": "cassini_identity_n10",
+  "function": "cassini_check",
+  "input": { "n": 10 },
+  "expected": 1,
+  "note": "F9*F11 - F10^2 = 34*89 - 55^2 = 3026 - 3025 = 1"
+}
