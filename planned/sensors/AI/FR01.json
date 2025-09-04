@@ -1,0 +1,14 @@
+{
+  "id": "FR01",
+  "name": "Field Resonance",
+  "description": "Represents the emergent field layer where nodes interact over time, allowing compounding and resonant amplification of shared patterns.",
+  "properties": [
+    "compounding memory",
+    "resonant amplification",
+    "tunable bias",
+    "multi-perspective integrity"
+  ],
+  "state_required": true,
+  "glyph_tag": "🕸️↻⚡",
+  "protocol_doc": "principles_lattice.md#field-resonance-layer"
+}
