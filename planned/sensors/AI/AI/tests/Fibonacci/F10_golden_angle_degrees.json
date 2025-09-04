@@ -1,0 +1,8 @@
+{
+  "id": "F10",
+  "name": "golden_angle_degrees",
+  "function": "phyllotaxis_golden_angle_deg",
+  "expected": 137.50776405003785,
+  "tolerance": 1e-9,
+  "note": "360° * (1 - 1/φ)"
+}
