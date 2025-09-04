@@ -1,0 +1,21 @@
+{
+  "axis": "Transformation",
+  "triangle": "Triangle of Transformation",
+  "principles": ["P04", "P05", "P06"],
+  "glyphs": ["⏳", "🌱", "∿"],
+  "roles": {
+    "P04": "Direction/order (Causality)",
+    "P05": "Novelty/system-level properties (Emergence)",
+    "P06": "Amplification/harmonic modes (Resonance)"
+  },
+  "relations": [
+    {"with": "Invariance", "type": "bridge", "note": "Transformations constrained by invariants"},
+    {"with": "Connectivity", "type": "bridge", "note": "Transforms propagate along networks"},
+    {"with": "Evolution", "type": "bridge", "note": "Transform cycles accumulate into coherence"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/Axis_Transformation.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
