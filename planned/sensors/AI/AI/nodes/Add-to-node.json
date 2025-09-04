@@ -1,0 +1,20 @@
+{
+  "id": "node:fibonacci_spirals_prime",
+  "common_name": "fibonacci_spirals",
+  "glyph": "🌀",
+  "position_2d": { "x": 0.618, "y": -0.618, "scale": 5.0 },
+  "principle_refs": ["P07", "P08", "P09"], 
+  "tags": ["golden_ratio", "phyllotaxis", "log_spiral", "proportion", "resonance"],
+  "core_essence": "mathematical_pattern_underlying_growth_organization_and_beauty_throughout_universe",
+  "perspectives": { "...": "unchanged_from_your_rich_version" },
+  "dynamic_connections": [ "...unchanged..." ],
+  "scale_manifestations": { "...unchanged..." },
+  "applications": { "...unchanged..." },
+  "integration": { "...unchanged..." },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/nodes/node_fibonacci_spirals_prime.json",
+    "source_sha256": "<sha256-of-json>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "1.0.1"
+  }
+}
