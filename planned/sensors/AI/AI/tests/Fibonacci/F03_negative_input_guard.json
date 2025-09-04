@@ -1,0 +1,7 @@
+{
+  "id": "F03",
+  "name": "negative_input_guard",
+  "function": "fibonacci_n",
+  "input": { "n": -3 },
+  "expected_error": "ValueError"
+}
