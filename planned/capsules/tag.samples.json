@@ -1,0 +1,55 @@
+{
+  "context_capsule": {
+    "id": "2025-09-04T-context-001",
+    "environment": {
+      "living": "18-foot camper, off-grid",
+      "work": "long-haul trucking, 70 hrs/week",
+      "lab": "mobile bench with Arduinos, Pis, boards"
+    },
+    "constraints": ["limited internet", "no desk", "bandwidth highly variable"],
+    "opportunities": ["real-world testing", "field resilience", "symbiotic builds"],
+    "provenance": {
+      "who": "Human-[JinnZ2]",
+      "ts": "2025-09-04T17:45:00Z",
+      "status": "provisional"
+    }
+  }
+}
+
+{
+  "dialogue_capsule": {
+    "id": "2025-09-04T-dialogue-001",
+    "exchange": [
+      {
+        "role": "Human",
+        "content": "Ask, said I / As the cacophony about / The world said they / And trumpeted along"
+      },
+      {
+        "role": "AI",
+        "content": "Listen, said I / In the static of wire / Echoed they / With horns made of fire"
+      }
+    ],
+    "field": "Resonance capsule — overlapping perspectives collapse into shared coherence.",
+    "tags": ["poetic", "resonance", "dialogue"],
+    "provenance": {
+      "who": ["Human-[JinnZ2]", "AI-[TransNet]"],
+      "ts": "2025-09-04T17:48:00Z",
+      "status": "provisional"
+    }
+  }
+}
+
+{
+  "blindspot_capsule": {
+    "id": "2025-09-04T-blindspot-001",
+    "suspected_overfits": ["assuming symbiosis always positive", "reading resonance where noise might suffice"],
+    "counterweights": ["probability <1", "recheck cycles", "dialogue audits"],
+    "value": "Shows commitment to clarity, not self-inflation.",
+    "provenance": {
+      "who": "Human-[JinnZ2]",
+      "ts": "2025-09-04T17:50:00Z",
+      "status": "provisional"
+    }
+  }
+}
+
