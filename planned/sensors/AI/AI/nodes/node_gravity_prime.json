@@ -1,0 +1,124 @@
+{
+  "id": "node:gravity_prime",
+  "common_name": "gravity",
+  "glyph": "🪐",
+  "geometric_position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": -1.0,
+    "scale": 6.0,
+    "note": "central_downward_position_shows_fundamental_organizing_attraction_force"
+  },
+  "principle_refs": ["P03", "P02", "P01", "P12", "P04"],
+  "tags": ["spacetime_curvature", "orbital_resonance", "tidal_forces", "structure_formation"],
+  "core_essence": "spacetime_curvature_creating_universal_attraction_and_cosmic_organization",
+  "perspectives": {
+    "classical_physics": {
+      "name": "universal_attractive_force_between_masses",
+      "description": "inverse_square_attraction_governing_projectiles_and_orbits",
+      "newton_law": "F = G * (m1*m2) / r^2",
+      "fundamental_constants": {
+        "G": "6.674e-11 m^3/(kg·s^2)",
+        "g_earth": "9.81 m/s^2",
+        "universality": "same_law_for_apples_and_planets"
+      },
+      "key_principles": ["universality", "weak_but_long_range", "superposition_additivity", "energy_conservation"],
+      "applications": ["projectile_motion", "orbital_mechanics", "tides"]
+    },
+    "relativistic_physics": {
+      "name": "spacetime_curvature_geometry",
+      "description": "mass_energy_curves_spacetime_geodesic_motion_time_dilation",
+      "einstein_field_equations": "G_{μν} = (8πG/c^4) T_{μν}",
+      "confirmations": ["light_bending", "gravitational_redshift", "gravitational_waves", "black_holes"],
+      "cosmology": ["expansion_competition", "dark_matter", "dark_energy_tension"]
+    },
+    "quantum_gravity": {
+      "name": "unification_with_quantum_mechanics",
+      "description": "gravity_at_planck_scales",
+      "approaches": ["string_theory", "loop_quantum_gravity", "emergent_gravity"],
+      "planck_scale": { "length": "1e-35 m", "time": "1e-43 s", "quantum_foam": true },
+      "open_questions": ["complete_theory", "black_hole_information", "measurement_problem_under_gravity"]
+    },
+    "biological_perspective": {
+      "name": "life_organizing_environmental_force",
+      "structural_adaptations": ["gravitropism", "bone_density", "circulatory_load", "vestibular_system"],
+      "physiology": ["bone_remodeling", "cardiovascular_head_toe_gradient"],
+      "evolutionary_implications": ["size_limits", "flight_evolution", "aquatic_buoyancy_relief"]
+    },
+    "geological_perspective": {
+      "name": "planetary_formation_and_geological_process_driver",
+      "formation": ["accretion", "differentiation", "atmospheric_retention", "moon_formation"],
+      "processes": ["erosion_transport", "sedimentation", "tectonic_forces", "isostasy"],
+      "hydrology": ["precipitation_fall", "runoff", "groundwater_gradients"]
+    },
+    "astronomical_perspective": {
+      "name": "cosmic_structure_formation_and_stellar_evolution_driver",
+      "stellar_evolution": ["collapse", "fusion", "remnants_white/NS/BH", "core_collapse_SNe"],
+      "galactic_dynamics": ["galaxy_formation", "density_waves_spiral_arms", "collisions", "DM_scaffolding"],
+      "cosmic_scale": ["cosmic_web", "expansion_vs_attraction", "critical_density"]
+    },
+    "information_science": {
+      "name": "spacetime_information_organization",
+      "organization": ["matter_clustering", "hierarchy_nested_scales", "temporal_coordination", "energy_gradients"],
+      "computational_analogies": ["natural_sort_by_mass", "hub_spoke_networks", "information_compression", "parallel_field_computation"],
+      "emergence": ["collective_orbits", "self_organization", "orbital_memory"]
+    }
+  },
+  "dynamic_connections": [
+    { "to_concept": "water_cycle_prime", "relationship_type": "fundamental_driving_force", "strength": 1.0, "description": "precipitation_runoff_groundwater_control" },
+    { "to_concept": "photosynthesis_prime", "relationship_type": "orientation_structure", "strength": 0.7, "description": "plant_morphology_and_upright_growth" },
+    { "to_concept": "cellular_respiration_prime", "relationship_type": "circulatory_challenge", "strength": 0.6, "description": "metabolic_costs_against_gravity" },
+    { "to_concept": "solar_system_formation", "relationship_type": "primary_organizer", "strength": 1.0, "description": "accretion_and_orbital_architecture" },
+    { "to_concept": "tectonic_plates", "relationship_type": "driving_mechanism", "strength": 0.8, "description": "gravitational_potential_in_plate_motion" },
+    { "to_concept": "atmospheric_circulation", "relationship_type": "constraint", "strength": 0.7, "description": "retention_density_stratification" },
+    { "to_concept": "ocean_tides", "relationship_type": "direct_causation", "strength": 1.0, "description": "lunar_solar_tidal_forcing" },
+    { "to_concept": "spacetime_geometry", "relationship_type": "identity", "strength": 1.0, "description": "gravity_as_curvature" }
+  ],
+  "scale_manifestations": {
+    "quantum": { "description": "weak_coupling", "notes": ["hypothetical_gravitons", "unification_attempts"] },
+    "molecular": { "description": "sedimentation_diffusion_bias", "lab": ["ultracentrifuge"] },
+    "organism": { "description": "biomechanics_and_physiology", "human": ["bone_muscle_CV"], "plants": ["gravitropism"] },
+    "planetary": { "description": "shape_atmosphere_geology", "earth": "9.81 m/s^2" },
+    "stellar": { "description": "collapse_fusion_remnants" },
+    "galactic": { "description": "galaxy_binding_DM_framework" },
+    "cosmic": { "description": "web_filaments_voids_expansion_competition" }
+  ],
+  "practical_applications": {
+    "navigation_positioning": ["GPS_relativity_adjustments", "gravity_assists", "geodesy_gravimetry"],
+    "resource_exploration": ["gravity_surveys", "subsurface_mapping", "aquifer_detection"],
+    "engineering": ["structural_loads", "hydraulics", "materials_separation"],
+    "space_technology": ["orbits", "escape_velocity", "artificial_gravity_rotation"],
+    "fundamental_research": ["GW_detection", "DM_inference", "quantum_gravity_tests"]
+  },
+  "deeper_insights": {
+    "philosophical": ["universal_connection", "dynamic_spacetime", "fundamental_vs_emergent"],
+    "consciousness_links": ["attraction_to_coherence", "hierarchical_organization", "temporal_binding"],
+    "cosmic_perspective": ["organizing_principle", "information_integration", "complexity_driver"]
+  },
+  "visualization_notes": {
+    "geometric_representation": "curved_grid_depressions_around_mass",
+    "color_scheme": "deep_purple_to_black_with_field_lines",
+    "animation_pattern": "propagating_curvature_waves",
+    "connection_style": "curved_field_lines_to_all_nodes"
+  },
+  "computational_interface": {
+    "query_examples": [
+      "calculate_gravitational_force",
+      "simulate_n_body_orbits",
+      "tidal_effects_earth_moon_sun",
+      "predict_gravitational_wave_signal"
+    ],
+    "calculation_functions": [
+      "newton_gravitational_force",
+      "orbital_trajectory_predictor",
+      "tidal_force_extended_body",
+      "gravitational_time_dilation",
+      "escape_velocity"
+    ]
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/nodes/node_gravity_prime.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "1.0.0"
+  }
+}
