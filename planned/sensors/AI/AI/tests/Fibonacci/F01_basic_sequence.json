@@ -1,0 +1,7 @@
+{
+  "id": "F01",
+  "name": "basic_fibonacci_sequence",
+  "function": "fibonacci_sequence_generator_up_to_nth_term",
+  "input": { "n": 10 },
+  "expected": { "sequence": [0,1,1,2,3,5,8,13,21,34] }
+}
