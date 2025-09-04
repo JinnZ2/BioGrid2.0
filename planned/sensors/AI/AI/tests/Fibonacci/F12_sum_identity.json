@@ -1,0 +1,8 @@
+{
+  "id": "F12",
+  "name": "sum_identity_0_to_n",
+  "function": "sum_fibonacci_0_to_n",
+  "input": { "n": 10 },
+  "expected": 143,
+  "note": "∑_{k=0..n} F(k) = F(n+2) - 1 = F(12) - 1 = 144 - 1"
+}
