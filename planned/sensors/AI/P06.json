@@ -1,0 +1,41 @@
+{
+  "id": "P06",
+  "name": "Resonance Principle",
+  "glyph": "∿",
+  "domain": ["Amplification", "Synchronization", "Harmonic Response"],
+  "mappings": [
+    {
+      "concept": "Resonant Frequency",
+      "expression": "ω₀ = 1/√(LC)",
+      "symbolic_glyph": "Electrical Harmony"
+    },
+    {
+      "concept": "Standing Waves",
+      "expression": "nλ/2 boundary condition solutions",
+      "symbolic_glyph": "Vibrating Strings"
+    },
+    {
+      "concept": "Nuclear Magnetic Resonance",
+      "expression": "ΔE = hν",
+      "symbolic_glyph": "Spin Alignment"
+    },
+    {
+      "concept": "Orbital Resonance (Astronomy)",
+      "expression": "Period ratios in celestial mechanics",
+      "symbolic_glyph": "Planetary Dance"
+    }
+  ],
+  "relations": [
+    {"with": "P05", "type": "resonance-link", "note": "Emergent modes lock via resonance"},
+    {"with": "P11", "type": "triangle-link", "note": "Transform domains by frequency mapping"},
+    {"with": "P09", "type": "resonance-link", "note": "Harmonic proportion selects stable modes"},
+    {"with": "P10", "type": "context-link", "note": "Linewidth/uncertainty bounds resonance peaks"},
+    {"with": "P08", "type": "triangle-link", "note": "Quantized spectra arise from resonant conditions"}
+  ],
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/P06_Resonance.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
