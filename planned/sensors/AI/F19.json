@@ -1,0 +1,47 @@
+{
+  "id": "F19",
+  "name": "Thermal & Statistical Physics Family",
+  "glyph": "🌡",
+  "domain": ["Temperature", "Fluctuations", "Large-Number Behavior"],
+  "mappings": [
+    {
+      "concept": "Partition Function",
+      "expression": "Z = Σ e^(−βE)",
+      "symbolic_glyph": "Ensemble Potential"
+    },
+    {
+      "concept": "Boltzmann Distribution",
+      "expression": "P(E) ∝ e^(−E/kT)",
+      "symbolic_glyph": "Probabilistic Weight"
+    },
+    {
+      "concept": "Fluctuation–Dissipation Theorem",
+      "expression": "S(ω) ∝ (2kT/ω) Im[χ(ω)]",
+      "symbolic_glyph": "Balance in Noise"
+    },
+    {
+      "concept": "Heat Capacity Laws",
+      "expression": "C_V = (∂U/∂T)_V",
+      "symbolic_glyph": "Stored Energy"
+    }
+  ],
+  "relations": [
+    {"with": "P02", "type": "triangle-link", "note": "Conservation underpins energy flow"},
+    {"with": "P06", "type": "resonance-link", "note": "Resonance spectra affected by thermal noise"},
+    {"with": "P10", "type": "constraint-link", "note": "Statistical uncertainty at macroscopic scales"},
+    {"with": "F17", "type": "bridge", "note": "Turbulence models rely on statistical energy cascades"},
+    {"with": "F18", "type": "context-link", "note": "Relativistic thermodynamics couples entropy with curvature"}
+  ],
+  "sim_params": {
+    "partition_function": {"beta": "1/kT", "states": "Σ over microstates"},
+    "boltzmann": {"distribution": "exp(−E/kT)", "normalization": "Z"},
+    "fdt": {"temperature": "T", "response_function": "χ(ω)"},
+    "heat_capacity": {"CV": "dU/dT at constant volume"}
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/F19_Statistical.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
