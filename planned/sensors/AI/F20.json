@@ -1,0 +1,48 @@
+{
+  "id": "F20",
+  "name": "Topology & Higher Geometry Family",
+  "glyph": "🌀",
+  "domain": ["Connectivity", "Knots", "Higher Dimensions"],
+  "mappings": [
+    {
+      "concept": "Euler Characteristic",
+      "expression": "χ = V − E + F",
+      "symbolic_glyph": "Structural Essence"
+    },
+    {
+      "concept": "Chern Classes",
+      "expression": "c(E) = det(1 + iF/2π)",
+      "symbolic_glyph": "Twisted Bundles"
+    },
+    {
+      "concept": "Knot Invariants (Jones Polynomial)",
+      "expression": "V_L(t) ∈ ℤ[t^(±1/2)]",
+      "symbolic_glyph": "Entangled Form"
+    },
+    {
+      "concept": "Homotopy Groups",
+      "expression": "π_n(X)",
+      "symbolic_glyph": "Higher Loops"
+    }
+  ],
+  "relations": [
+    {"with": "P07", "type": "resonance-link", "note": "Continuity extends into topological spaces"},
+    {"with": "P09", "type": "triangle-link", "note": "Proportion generalized through invariants"},
+    {"with": "P12", "type": "resonance-link", "note": "Unity across geometric layers"},
+    {"with": "F17", "type": "bridge", "note": "Turbulent flows show knotting and braiding structures"},
+    {"with": "F18", "type": "context-link", "note": "Spacetime curvature tied to topological invariants"},
+    {"with": "F19", "type": "bridge", "note": "Statistical ensembles respect topological constraints"}
+  ],
+  "sim_params": {
+    "euler_characteristic": {"inputs": ["V", "E", "F"], "application": "polyhedra, meshes"},
+    "chern_classes": {"context": "fiber bundles", "use": "gauge theory, anomalies"},
+    "knot_invariants": {"type": "Jones polynomial", "domain": "knot theory"},
+    "homotopy_groups": {"notation": "π_n(X)", "examples": ["π_1 circle = ℤ", "π_2 sphere = ℤ"]}
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/F20_Topology.md",
+    "source_sha256": "<sha256-of-md>",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.1.0"
+  }
+}
