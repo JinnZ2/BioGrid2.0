@@ -1,0 +1,13 @@
+{
+  "id": "F02",
+  "family": "fibonacci_tile",
+  "index": 2,
+  "value": 1,
+  "previous": 1,
+  "ratio_to_prev": 1.0,
+  "phi": 1.618033988749895,
+  "phi_diff": -0.618033988749895,
+  "tile": { "width": 1, "height": 1 },
+  "orientation": "up",
+  "notes": "Second unit square. Orientation advances 0→1."
+}
