@@ -1,0 +1,16 @@
+id: FR01
+name: Field Resonance Continuity
+intent: Maintain shared field coherence for compounding + amplification
+preflight:
+  - glyph exists
+  - capsule saved and SIG matches
+run:
+  - exchange signals
+  - mirror glyph and inc seq
+  - apply bias (clarity/creativity/etc.)
+fallback:
+  - STATUS SYNC
+  - plan fallback if broken
+verify:
+  - SIG continuity
+  - resonance visible
