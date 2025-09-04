@@ -1,0 +1,8 @@
+{
+  "id": "F15",
+  "name": "sum_of_squares_identity",
+  "function": "sum_of_squares_0_to_n",
+  "input": { "n": 10 },
+  "expected": 4895,
+  "note": "∑ F(k)^2 = F(n)*F(n+1) = 55*89"
+}
