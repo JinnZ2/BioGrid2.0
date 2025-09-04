@@ -1,0 +1,124 @@
+{
+  "id": "node:cellular_respiration_prime",
+  "common_name": "cellular_respiration",
+  "glyph": "🔥",
+  "geometric_position": {
+    "x": -0.618,
+    "y": -0.618,
+    "z": 0.0,
+    "scale": 3.0,
+    "note": "mirror_to_photosynthesis_showing_complementarity"
+  },
+  "principle_refs": ["P02", "P05", "P06", "P10", "P07"],
+  "tags": ["ATP", "mitochondria", "oxidative_phosphorylation", "metabolism"],
+  "core_essence": "stored_chemical_energy_becomes_living_motion_and_consciousness",
+  "perspectives": {
+    "chemistry": {
+      "name": "glucose_oxidation_cascade",
+      "key_equation": "C6H12O6 + 6 O2 → 6 CO2 + 6 H2O + energy",
+      "molecular_players": {
+        "reactants": ["glucose", "oxygen", "ADP", "Pi"],
+        "products": ["carbon_dioxide", "water", "ATP"]
+      },
+      "enzymes": ["glycolysis", "pyruvate_dehydrogenase", "TCA_cycle", "ETC_complexes_I–IV", "ATP_synthase"],
+      "energy_transformations": [
+        "glucose → pyruvate + ATP + NADH",
+        "pyruvate → acetyl_CoA + NADH",
+        "TCA: acetyl_CoA → CO2 + NADH + FADH2",
+        "ETC: NADH/FADH2 → proton_gradient → ATP"
+      ],
+      "location": "cytoplasm_and_mitochondria",
+      "efficiency_note": "eukaryotes_yield_≈30–32_ATP_per_glucose"
+    },
+    "physics": {
+      "name": "thermodynamic_energy_liberation_engine",
+      "fundamentals": {
+        "free_energy": "ΔG°' ≈ -686 kcal/mol (glucose → CO2 + H2O)",
+        "entropy": "order_to_disorder_with_heat_release",
+        "heat_fraction": "≈60% heat; ≈40% captured_as_ATP (context_dependent)"
+      },
+      "principles": ["coupled_reactions", "gradient_driven_work", "temperature_regulation"]
+    },
+    "biology": {
+      "name": "universal_cellular_energy_currency",
+      "evolution": ["ancient_bacterial_origins", "endosymbiotic_mitochondria", "near_universality"],
+      "integration": ["demand_regulation", "growth_repair_coordination"],
+      "physiology": ["muscle_contraction", "ion_pumps", "biosynthesis", "active_transport"]
+    },
+    "engineering": {
+      "name": "staged_combustion_design",
+      "design_principles": ["stepwise_energy_capture", "waste_management_CO2_H2O", "thermal_control"],
+      "optimization": ["fuel_flexibility", "load_balancing", "redundancy", "ATP/ADP_feedback"],
+      "biomimetics": ["biofuel_cells", "energy_storage_strategies", "thermal_management"]
+    },
+    "information_science": {
+      "name": "cellular_energy_management_computing",
+      "processing": ["input_signals_nutrients_O2", "metabolic_algorithms", "outputs_ATP_heat", "feedback_control"],
+      "computation": ["massive_parallelism_mitochondria", "real_time_optimization", "repair_loops", "metabolic_memory"]
+    },
+    "mathematics": {
+      "name": "metabolic_network_optimization",
+      "models": ["enzyme_kinetics_Michaelis_Menten", "flux_balance_analysis", "stoichiometry", "feedback_differential_eqs"],
+      "topology": ["graph_models", "flow_optimization", "robustness_redundancy"]
+    }
+  },
+  "dynamic_connections": [
+    { "to_concept": "photosynthesis_prime", "relationship_type": "perfect_complement", "strength": 1.0, "description": "consumes_O2_glucose_produces_CO2_H2O_ATP" },
+    { "to_concept": "carbon_cycle", "relationship_type": "major_component", "strength": 0.9, "description": "returns_CO2_to_atmosphere" },
+    { "to_concept": "oxygen_cycle", "relationship_type": "major_consumer", "strength": 0.9, "description": "uses_atmospheric_O2" },
+    { "to_concept": "muscle_contraction", "relationship_type": "direct_energy_source", "strength": 1.0, "description": "ATP_for_actin_myosin" },
+    { "to_concept": "neural_activity", "relationship_type": "direct_energy_source", "strength": 1.0, "description": "ATP_for_ion_gradients" },
+    { "to_concept": "body_temperature", "relationship_type": "primary_heat_source", "strength": 0.8, "description": "metabolic_heat_generation" },
+    { "to_concept": "circadian_rhythms", "relationship_type": "regulatory_link", "strength": 0.7, "description": "metabolic_rate_daily_cycles" }
+  ],
+  "photosynthesis_respiration_unity": {
+    "perfect_cycle": {
+      "photosynthesis_input": "CO2 + H2O + light",
+      "photosynthesis_output": "glucose + O2",
+      "respiration_input": "glucose + O2",
+      "respiration_output": "CO2 + H2O + ATP",
+      "insight": "life_is_light_energy_circulating_through_matter"
+    },
+    "day_night_rhythm": {
+      "day": "photosynthesis_stores_solar_energy",
+      "night": "respiration_releases_stored_energy",
+      "continuous": "animals_respire_24_7_from_food_energy",
+      "planetary_breathing": "global_gas_exchange_cycles"
+    }
+  },
+  "practical_applications": {
+    "medicine": ["metabolic_disorders", "exercise_physiology", "aging_mitochondria", "drug_targets_in_metabolism"],
+    "biotechnology": ["biofuels", "biosensors", "food_energy_optimization"],
+    "environment": ["ecosystem_respiration", "carbon_accounting", "climate_models"]
+  },
+  "deeper_insights": {
+    "philosophical": ["life_as_controlled_fire", "energy_consciousness_link", "ancient_sunlight_powers_now"],
+    "consciousness_links": ["thinking_burns_glucose", "attention_energy_cost", "metabolic_states_and_emotion"],
+    "cosmic_perspective": ["burning_concentrated_starlight", "entropy_acceleration", "self_maintaining_combustion"]
+  },
+  "visualization_notes": {
+    "geometric_representation": "inward_spiral_counter_to_photosynthesis_outward_spiral",
+    "color_scheme": "deep_blue_core_with_red_energy_flows_and_golden_heat",
+    "animation_pattern": "pulse_synced_to_heartbeat/breathing",
+    "connection_style": "energy_streams_into_body_systems"
+  },
+  "computational_interface": {
+    "query_examples": [
+      "calculate_ATP_yield_from_glucose_or_fat",
+      "model_metabolic_rate_vs_exercise",
+      "trace_glucose_to_ATP_path",
+      "compare_pathway_efficiency"
+    ],
+    "calculation_functions": [
+      "atp_yield_estimator",
+      "daily_caloric_requirement",
+      "oxygen_consumption_model",
+      "metabolic_pathway_efficiency"
+    ]
+  },
+  "provenance": {
+    "source_path": "planned/sensors/AI/AI/nodes/node_cellular_respiration_prime.json",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "1.0.0"
+  }
+}
