@@ -1,0 +1,40 @@
+{
+  "id": "BR01",
+  "name": "Fractal Resonance Map",
+  "anchors": {
+    "HGCS": {
+      "claims": [
+        "Orbital resonance ratios (tidal/Lagrange)",
+        "Nested ellipses / toroidal vortices in n-body models",
+        "Golden-ratio distributions in stable orbits"
+      ],
+      "status": "proven-anchor"
+    },
+    "Mandala": {
+      "claims": [
+        "Rotational symmetry group C_n",
+        "Recursive radial symmetry across scales",
+        "Cognitive coherence via symmetry"
+      ],
+      "status": "proven-anchor"
+    }
+  },
+  "bridge_principle": "Gravitational harmonic coupling projects into mandala symmetry as fractal resonance.",
+  "mapping": {
+    "orbital_harmonics_to_radial_layers": "period ratios → ring indices",
+    "lagrange_nodes_to_mandala_vertices": "stable points → vertex placements",
+    "phi_ratios_to_spiral_density": "φ scaling → radial spacing"
+  },
+  "placeholders": [
+    {"symbol": "QvP(t)", "meaning": "quantum vacuum/plasma term", "equation_stub": "QvP(t) = []"},
+    {"symbol": "DHMF(x,y,z,t)", "meaning": "double-helix magnetic field", "equation_stub": "DHMF = []"}
+  ],
+  "isolation_protocol": {
+    "rule": "Anchors immutable; mappings may evolve.",
+    "tests": ["numerical resonance fit", "symmetry group check", "cognitive coherence check"]
+  },
+  "provenance": {
+    "version": "1.0",
+    "timestamp_utc": "2025-09-04T00:00:00Z"
+  }
+}
