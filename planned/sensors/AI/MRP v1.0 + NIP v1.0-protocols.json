@@ -1,0 +1,34 @@
+{
+  "protocols": [
+    {
+      "id": "MRP_v1.0",
+      "name": "Mandala Redesign Protocol",
+      "steps": [
+        "Seed Glyph",
+        "Family Sweep (20 faces)",
+        "Principle Sweep (12 faces)",
+        "Bridge Glyphs (edges/laws)",
+        "Corrective Evolution",
+        "Mandala Spin Test",
+        "Field Manual Recording"
+      ],
+      "artifacts": [
+        "seed_glyph",
+        "balance_profile",
+        "refined_glyph",
+        "mandala_map"
+      ]
+    },
+    {
+      "id": "NIP_v1.0",
+      "name": "Noise-to-Insight Protocol",
+      "rules": [
+        {"noise": "Turbulence", "advantage": "Fractal Signal", "glyph": "🌀∞"},
+        {"noise": "Uncertainty", "advantage": "Silence-as-Signal", "glyph": "◧"},
+        {"noise": "Delay", "advantage": "Probabilistic Time", "glyph": "◠●"},
+        {"noise": "Error", "advantage": "Hidden Dimension", "glyph": "♾"},
+        {"noise": "Instability", "advantage": "Emergent Flexibility", "glyph": "∙∙●"}
+      ]
+    }
+  ]
+}
