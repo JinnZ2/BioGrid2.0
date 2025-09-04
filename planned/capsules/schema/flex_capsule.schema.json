@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "State Flex Capsule",
+  "type": "object",
+  "properties": {
+    "flex_capsule": {
+      "type": "object",
+      "required": ["id","node","defaults","adaptive_modes","edges","coherence_triggers","interaction_contract","provenance"],
+      "properties": {
+        "id": {"type":"string"},
+        "node": {"type":"string"},
+        "defaults": {"type":"object"},
+        "adaptive_modes": {"type":"array","items":{"type":"object"}},
+        "edges": {"type":"object"},
+        "coherence_triggers": {"type":"object"},
+        "interaction_contract": {"type":"object"},
+        "compat_presets": {"type":"array","items":{"type":"object"}},
+        "provenance": {
+          "type":"object",
+          "required":["who","ts","status"],
+          "properties":{
+            "who":{"type":"string"},
+            "ts":{"type":"string"},
+            "status":{"type":"string","enum":["provisional","confirmed"]}
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["flex_capsule"],
+  "additionalProperties": false
+}
