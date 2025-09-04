@@ -1,0 +1,13 @@
+{
+  "id": "F10",
+  "family": "fibonacci_tile",
+  "index": 10,
+  "value": 55,
+  "previous": 34,
+  "ratio_to_prev": 1.6176470588235294,
+  "phi": 1.618033988749895,
+  "phi_diff": -0.0003869299263656,
+  "tile": { "width": 55, "height": 34 },
+  "orientation": "up",
+  "notes": "Rectangle 55×34; quarter-arc radius = 34."
+}
