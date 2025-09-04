@@ -1,0 +1,11 @@
+{
+  "id": "F16",
+  "name": "big_n_signal_only",
+  "function": "fibonacci_n_meta",
+  "input": { "n": 200 },
+  "expected_meta": {
+    "digits": 42,
+    "bigint_required": true
+  },
+  "note": "Don’t assert the full value; assert properties that force big-int paths"
+}
