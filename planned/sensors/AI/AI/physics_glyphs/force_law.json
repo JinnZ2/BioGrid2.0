@@ -1,0 +1,53 @@
+{
+  "id": "PHY_FORCE_LAW_001",
+  "type": "physics_glyph",
+  "name": "force_law",
+  "equation": "F = m·a",
+  "units": {
+    "F": "newton (N)",
+    "m": "kilogram (kg)",
+    "a": "meter per second squared (m/s^2)"
+  },
+  "geometric_position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0,
+    "scale": 1.0,
+    "note": "placed at origin as a foundational dynamic law"
+  },
+  "visual_shape": "vector_arrow",
+  "io": {
+    "inputs": [
+      {"name": "mass", "symbol": "m", "type": "float", "constraints": {"min": 0.0}},
+      {"name": "acceleration", "symbol": "a", "type": "float"}
+    ],
+    "outputs": [
+      {"name": "force", "symbol": "F", "type": "float"}
+    ]
+  },
+  "dimensional_analysis": {
+    "F": "M·L·T^-2",
+    "m": "M",
+    "a": "L·T^-2",
+    "check": "F / (m·a) → 1 (dimensionless)"
+  },
+  "calculation": {
+    "function": "calculate_force",
+    "pseudocode": "return m * a",
+    "numeric_examples": [
+      {"context": "car_acceleration", "m": 1500, "a": 2.5, "F": 3750},
+      {"context": "falling_apple", "m": 0.1, "a": 9.81, "F": 0.981}
+    ]
+  },
+  "connects_to": [
+    {"id": "PHY_ENERGY_WORK_001", "relation": "supports", "note": "work-energy theorem"},
+    {"id": "PHY_MOMENTUM_001", "relation": "constrains", "note": "F = dp/dt"},
+    {"id": "PHY_NEWTON_3RD_001", "relation": "paired_with", "note": "action-reaction"}
+  ],
+  "explanation": "Force equals mass times acceleration — a core relationship linking matter (inertia) to motion (kinematics).",
+  "metadata": {
+    "version": "0.1.0",
+    "schema": "mandala.physics_glyph.v1",
+    "tags": ["dynamics", "newtonian", "vector", "foundational"]
+  }
+}
