@@ -1,0 +1,177 @@
+{
+  "id": "node.water_cycle_prime",
+  "common_name": "water_cycle",
+  "glyph": "💧",
+  "core_essence": "information_and_energy_flowing_through_planetary_circulation_system",
+  "geometric_position": { "x": 0.0, "y": 0.0, "z": 1.0, "scale": 4, "note": "central_vertical_position_shows_connection_between_earth_and_sky" },
+  "tags": ["hydrology", "climate", "phase-change", "biology", "energy-transport"],
+  "perspectives": {
+    "chemistry": {
+      "name": "molecular_phase_transition_network",
+      "description": "H₂O molecules continuously changing between solid, liquid, and gas phases",
+      "phase_transitions": {
+        "evaporation": "H₂O(l) → H₂O(g) + 2.26e6 J/kg (latent heat absorbed)",
+        "condensation": "H₂O(g) → H₂O(l) − 2.26e6 J/kg (latent heat released)",
+        "sublimation": "H₂O(s) → H₂O(g) + 2.83e6 J/kg",
+        "deposition": "H₂O(g) → H₂O(s) − 2.83e6 J/kg",
+        "melting": "H₂O(s) → H₂O(l) + 3.34e5 J/kg",
+        "freezing": "H₂O(l) → H₂O(s) − 3.34e5 J/kg"
+      },
+      "molecular_properties": {
+        "hydrogen_bonding": "drives high heat capacity, cohesion, surface tension",
+        "polarity": "excellent solvent for ionic/polar solutes",
+        "density_anomaly": "ice less dense than liquid water; floating ice insulates ecosystems"
+      },
+      "chemical_transport": "dissolves and carries minerals, nutrients, and pollutants"
+    },
+    "physics": {
+      "name": "planetary_energy_distribution_engine",
+      "description": "Solar-driven heat engine that redistributes energy via latent heat and circulation",
+      "thermodynamic_processes": {
+        "solar_heating": "ocean evaporation dominates the energy input",
+        "latent_heat_transport": "water vapor exports heat poleward and upward",
+        "convection_currents": "buoyancy from moist instability drives storms",
+        "pressure_dynamics": "vapor pressure modulates clouds and precipitation"
+      },
+      "gravitational_component": "gravity closes the loop via precipitation, runoff, and groundwater flow"
+    },
+    "biology": {
+      "name": "universal_life_support_circulation_system",
+      "description": "Water enables metabolism, transport, temperature control, and ecosystem coupling",
+      "biological_integration": {
+        "cellular_function": "primary medium for biochemical reactions",
+        "photosynthesis_connection": "source of electrons/protons for glucose synthesis",
+        "respiration_connection": "metabolic water produced; assists thermoregulation",
+        "transport_medium": "blood/lymph/sap shuttle nutrients and wastes"
+      },
+      "ecosystem_connectivity": {
+        "habitat_creation": "rivers, lakes, wetlands, coastlines",
+        "migration_corridors": "aquatic networks link biomes",
+        "nutrient_cycling": "couples terrestrial and aquatic cycles",
+        "climate_regulation": "large water bodies buffer temperature"
+      }
+    },
+    "geology": {
+      "name": "planetary_sculpting_and_mineral_transport",
+      "description": "Primary agent of erosion, deposition, weathering, and subsurface flow",
+      "geological_processes": {
+        "erosion": "mechanical abrasion and dissolution",
+        "deposition": "deltas, alluvium, floodplains",
+        "chemical_weathering": "hydrolysis, carbonation, oxidation",
+        "groundwater_flow": "karst, aquifers, speleogenesis"
+      },
+      "mineral_cycling": {
+        "dissolution": "mobilizes ions from rock and soil",
+        "transportation": "streams/rivers deliver to oceans",
+        "precipitation": "evaporites, travertine, hydrothermal deposits",
+        "biogeochemical_cycles": "mediates C–N–P–S cycling"
+      }
+    },
+    "atmospheric_science": {
+      "name": "global_circulation_and_climate_regulation",
+      "description": "Water vapor/clouds control weather and radiative balance",
+      "atmospheric_processes": {
+        "humidity_regulation": "controls precipitation thresholds",
+        "cloud_formation": "CCN/IN nucleation; microphysics matter",
+        "precipitation_patterns": "monsoons, ITCZ, jet stream coupling",
+        "storm_systems": "hurricanes/thunderstorms harvest latent heat"
+      },
+      "climate_feedback": {
+        "albedo_effect": "ice/snow reflectivity vs open water absorption",
+        "greenhouse_effect": "H₂O vapor amplifies radiative forcing",
+        "thermohaline_circulation": "salinity/temperature drive deep ocean loops"
+      }
+    },
+    "human_systems": {
+      "name": "civilization_foundation_and_resource_management",
+      "description": "Agriculture, industry, energy, and urban life depend on reliable water",
+      "agricultural_dependence": {
+        "irrigation": "extends productivity in arid zones",
+        "crop_requirements": "timing/quantity matter for yield",
+        "soil_health": "moisture controls microbiome and nutrients"
+      },
+      "industrial_applications": {
+        "manufacturing": "cooling/cleaning/processing",
+        "energy_production": "hydro, steam, and thermal plant cooling",
+        "transportation": "navigable waterways"
+      },
+      "urban_planning": {
+        "settlement_patterns": "cities co-locate with water sources",
+        "infrastructure": "supply, treatment, flood control",
+        "sustainability": "balance human demand and ecosystem flows"
+      }
+    }
+  },
+  "dynamic_connections": [
+    { "to_concept": "photosynthesis_prime", "relationship_type": "essential_reactant_and_transport_medium", "strength": 1.0, "description": "provides_electrons/protons_and_transports_nutrients_to_chloroplasts" },
+    { "to_concept": "cellular_respiration_prime", "relationship_type": "waste_product_and_cooling_system", "strength": 0.9, "description": "metabolic_water_and_evaporative_cooling_link" },
+    { "to_concept": "solar_radiation", "relationship_type": "energy_input_for_phase_transitions", "strength": 1.0, "description": "drives_evaporation_and_convection" },
+    { "to_concept": "gravity_prime", "relationship_type": "driving_force_for_liquid_movement", "strength": 0.9, "description": "precipitation_runoff_groundwater" },
+    { "to_concept": "atmospheric_circulation", "relationship_type": "mutual_reinforcement_system", "strength": 0.9, "description": "winds_shape_moisture_paths; moisture_feeds_winds" },
+    { "to_concept": "carbon_cycle", "relationship_type": "transport_and_dissolution_medium", "strength": 0.8, "description": "oceans_absorb_CO₂; rivers_export_carbon" },
+    { "to_concept": "nutrient_cycles", "relationship_type": "universal_transport_medium", "strength": 0.9, "description": "mobilizes_N_P_trace_metals" },
+    { "to_concept": "ocean_currents", "relationship_type": "component_subsystem", "strength": 1.0, "description": "evaporation/precipitation_couple_with_circulation" }
+  ],
+  "cycle_components": {
+    "evaporation": { "location": "oceans>land; also lakes/soil/vegetation", "energy_source": "solar_radiation", "rate_factors": "temperature_humidity_wind_surface_area" },
+    "transpiration": { "location": "stomata", "biological_function": "cooling_nutrient_transport_water_uptake", "combined_term": "evapotranspiration" },
+    "condensation": { "location": "atmosphere_on_nuclei", "formation": "clouds_fog_dew", "energy_release": "latent_heat_warms_air" },
+    "precipitation": { "forms": "rain_snow_sleet_hail", "distribution": "spatiotemporally_uneven", "collection": "runoff_infiltration_storage" },
+    "infiltration": { "process": "percolation_to_soil/aquifers", "factors": "soil_texture_slope_vegetation_intensity", "storage": "soil_moisture_and_aquifers" },
+    "runoff": { "surface_flow": "overland_to_channels", "erosion_transport": "moves_sediment_nutrients_pollutants", "collection": "returns_to_oceans" }
+  },
+  "practical_applications": {
+    "water_resource_management": {
+      "supply_planning": "reservoirs/allocations_from_cycle_climatology",
+      "drought_prediction": "monitor_SoilMoisture_ET_clouds",
+      "flood_control": "land_use_storage_green_infrastructure",
+      "quality_protection": "trace_pollutants_along_flowpaths"
+    },
+    "agriculture": {
+      "irrigation_scheduling": "ET-based_scheduling",
+      "crop_selection": "match_to_climate_and_water_budget",
+      "soil_management": "increase_infiltration_and_retention",
+      "precision_agriculture": "sensor-driven_water_application"
+    },
+    "climate_science": {
+      "weather_prediction": "assimilation_of_vapor/clouds/precip",
+      "climate_modeling": "feedbacks_of_H₂O_vapor_clouds",
+      "change_assessment": "shifts_in_intensity_timing_variability"
+    },
+    "environmental_restoration": {
+      "watershed_management": "reconnect_floodplains",
+      "wetland_restoration": "store/filter_flow",
+      "reforestation": "strengthen_local_cycles"
+    }
+  },
+  "information_transport": {
+    "chemical_messaging": { "dissolved_substances": "signals_and_contaminants", "pheromone_transport": "aquatic_communication", "nutrient_information": "geochemical_signatures" },
+    "physical_information": { "temperature_memory": "heat_capacity_as_climate_buffer", "isotopic_signatures": "tracers_of_origin_and_history", "flow_patterns": "currents_encode_pressure_fields" },
+    "biological_information": { "genetic_material": "DNA/spores_seeds_dispersal", "microbial_communities": "moving_microbiomes", "ecosystem_signals": "water_quality_as_health_indicator" }
+  },
+  "visualization_notes": {
+    "geometric_representation": "vertical_spiral_cylinder_linking_surface_ocean_atmosphere",
+    "color_scheme": "deep_blue_to_white_cloud_gradients",
+    "animation_pattern": "continuous_circulation_with_scale-dependent_speeds",
+    "connection_style": "streamlines_to_neighbor_nodes"
+  },
+  "computational_interface": {
+    "query_examples": [
+      "trace_water_molecule_path",
+      "calculate_evapotranspiration_rates",
+      "model_regional_water_balance",
+      "analyze_watershed_connectivity"
+    ],
+    "calculation_functions": [
+      "evaporation_rate(T, RH, wind)",
+      "precipitation_from_column_water",
+      "groundwater_flow_solver(geology)",
+      "runoff_volume(precip, land_use)"
+    ]
+  },
+  "provenance": {
+    "source": "user_notes_to_mandala_node_normalization",
+    "timestamp_utc": "2025-09-04T00:00:00Z",
+    "version": "0.2.0"
+  }
+}
