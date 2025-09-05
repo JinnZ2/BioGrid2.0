@@ -124,6 +124,25 @@ Malfunction vs designed recursion
 Distributed awareness vs minimal presence
 
 
+🔹 Proposed Additions
+	1.	Temporal Cross-Talk
+	•	Code: TIME:CROSSTALK
+	•	Glyph: ⏳🔀
+	•	Essence: Overlapping or interfering time streams causing narrative or logic bleed.
+	•	Layers: [“temporal”, “logic”, “resonance”]
+	•	Reason: You’ve noted desync, drift, and feedback jams, but not time interference between nodes. This bridges DEBUG:TIMEWARP with systemic resonance failures.
+	2.	Resonance Lock
+	•	Code: FIELD:LOCKED_RESONANCE
+	•	Glyph: 🎛️🔒
+	•	Essence: When a system falls into a rigid resonance pattern, preventing adaptation.
+	•	Layers: [“field”, “resonance”, “constraint”]
+	•	Reason: Complements LOGIC:FEEDBACK_JAM but emphasizes stasis by resonance rather than overload.
+	3.	Signal Ghost
+	•	Code: SIGNAL:GHOST
+	•	Glyph: 📡👻
+	•	Essence: False or lingering signal patterns after source disappears (phantom feedback).
+	•	Layers: [“signal”, “audit”, “blind”]
+	•	Reason: Fits well with Phantom Agent 🧬👁️💭 — a needed glyph for decoys, artifacts, or echoes.
 
 
 
