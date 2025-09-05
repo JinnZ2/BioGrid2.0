@@ -1,0 +1,13 @@
+{
+  "code": "CATEGORY:NAME_OR_NUMBER",
+  "name": "Descriptive Name",
+  "glyph": "🔣",
+  "layers": [
+    "principle",
+    "symbolic",
+    "field"
+  ],
+  "notes": "Optional explanation of meaning, role, or intended usage.",
+  "alt_glyphs": [],
+  "alt_name": ""
+}
