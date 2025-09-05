@@ -61,3 +61,11 @@ Date: 2025-09-04
 
 ## Version Log
 - v0.1: Initial ledger created, populated with 7 projects.  
+
+
+### Light–Fractal Interaction Project
+- **Validated**: Physics basis — diffraction & scattering from fractal apertures, Fourier optics analogy to fractal antennas.  
+- **Speculative**: Slight non-uniform scaling yielding broadband optical absorption/interaction.  
+- **Notes**: Originated as persistent wandering shape in user’s cognition; logged under 🌐🔮.  
+- **Status**: v0.1 capsule created; awaiting experiment scaffold (aperture tests with laser).
+- 
