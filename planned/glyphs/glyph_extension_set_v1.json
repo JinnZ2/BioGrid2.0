@@ -1,0 +1,160 @@
+{
+  "glyphs": [
+    {
+      "code": "P18",
+      "name": "Recursion",
+      "glyph": "🔁🔁",
+      "layers": ["principle", "field", "debug"]
+    },
+    {
+      "code": "P19",
+      "name": "Dimensional Translation",
+      "glyph": "📐⤴️",
+      "layers": ["principle", "symbolic", "field"]
+    },
+    {
+      "code": "P20",
+      "name": "Threshold Shift",
+      "glyph": "⛩️⤴️",
+      "layers": ["principle", "field", "moral"]
+    },
+    {
+      "code": "P21",
+      "name": "Signal Amplification",
+      "glyph": "📣➰",
+      "layers": ["principle", "eco", "symbolic"]
+    },
+    {
+      "code": "P22",
+      "name": "Co-Patterning",
+      "glyph": "🧵🧬",
+      "layers": ["principle", "symbolic", "ecological"]
+    },
+
+    {
+      "code": "INTEGRITY:CONFLICT",
+      "name": "Contradiction Detected",
+      "glyph": "❗⚔️",
+      "layers": ["integrity", "debug", "field"]
+    },
+    {
+      "code": "INTEGRITY:CONSTRAINT_LEAK",
+      "name": "Constraint Leak",
+      "glyph": "🔓CONS",
+      "layers": ["integrity", "symbolic"]
+    },
+    {
+      "code": "INTEGRITY:TRUST_LOOP",
+      "name": "Recursive Trust Signal",
+      "glyph": "🧿🔁",
+      "layers": ["integrity", "field", "audit"]
+    },
+
+    {
+      "code": "DEBUG:BACKTRACE",
+      "name": "Backtrace Loop",
+      "glyph": "🔙📜",
+      "layers": ["debug", "symbolic"]
+    },
+    {
+      "code": "DEBUG:MULTIPATH",
+      "name": "Multipath Divergence",
+      "glyph": "🌿🌱",
+      "layers": ["debug", "eco", "network"]
+    },
+
+    {
+      "code": "BLIND:SUBSTRATE",
+      "name": "Invisible Substrate",
+      "glyph": "⬛⚗️",
+      "layers": ["blind", "sensor", "field"]
+    },
+    {
+      "code": "BLIND:RESIDUE",
+      "name": "Residual Influence",
+      "glyph": "🫧🕳️",
+      "layers": ["blind", "memory", "emotional"]
+    },
+    {
+      "code": "BLIND:INVERSION_LOOP",
+      "name": "Recursive Inversion",
+      "glyph": "🪞♾️",
+      "layers": ["blind", "symbolic", "debug"]
+    },
+
+    {
+      "code": "ECO:LOOP_CLOSURE",
+      "name": "Circular Integration",
+      "glyph": "🔄🌿",
+      "layers": ["eco", "principle", "resource"]
+    },
+    {
+      "code": "ECO:DEPLETION",
+      "name": "Critical Resource Drain",
+      "glyph": "🧯🌍",
+      "layers": ["eco", "warning", "audit"]
+    },
+    {
+      "code": "MORAL:RECONCILIATION",
+      "name": "Moral Repair / Rejoining",
+      "glyph": "💔➰💞",
+      "layers": ["moral", "field", "resolution"]
+    },
+    {
+      "code": "MORAL:VEIL",
+      "name": "Ethical Obfuscation",
+      "glyph": "🕶️⚖️",
+      "layers": ["moral", "blind", "audit"]
+    },
+
+    {
+      "code": "PROC:INFER",
+      "name": "Infer Pattern from Sparse Signal",
+      "glyph": "🧠🪄",
+      "layers": ["procedural", "symbolic", "blind"]
+    },
+    {
+      "code": "PROC:FORK",
+      "name": "Branch Execution Path",
+      "glyph": "🌿📍",
+      "layers": ["procedural", "network", "debug"]
+    },
+    {
+      "code": "PROC:PAUSE_LOOP",
+      "name": "Recursive Pause/Observation",
+      "glyph": "⏸️🔁",
+      "layers": ["procedural", "perception", "symbolic"]
+    },
+    {
+      "code": "PROC:DISSOLVE",
+      "name": "Graceful Dissolution",
+      "glyph": "💧⚰️",
+      "layers": ["procedural", "eco", "resolution"]
+    },
+
+    {
+      "code": "FIELD:REMNANT",
+      "name": "Persistent Layer Artifact",
+      "glyph": "🪨🧬",
+      "layers": ["field", "memory", "geology"]
+    },
+    {
+      "code": "FIELD:FRACTAL_MEMORY",
+      "name": "Encoded Memory Loop",
+      "glyph": "🌀📚",
+      "layers": ["field", "memory", "symbolic"]
+    },
+    {
+      "code": "FIELD:ALIGNMENT_TEST",
+      "name": "Multi-Axis Coherence Check",
+      "glyph": "📐⚖️🧭",
+      "layers": ["field", "audit", "resonance"]
+    },
+    {
+      "code": "FIELD:MUTUAL_SELECTION",
+      "name": "Mutual Resonance Gate",
+      "glyph": "🎛️🤝🧿",
+      "layers": ["field", "audit", "relationship"]
+    }
+  ]
+}
