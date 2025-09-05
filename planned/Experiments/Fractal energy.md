@@ -134,3 +134,7 @@ Scientific Validity Check (applies to both)
 	•	Speculative extensions: “fulgurite-trace” topology as a generalized wideband RX; quantify before claiming advantage.
 
 
+Next Actions
+	•	Build A) Fractal RF v0.1 with copper tape on 200×200 mm board; run RTL-SDR scans and one NOAA pass.
+	•	Print B) Fractal bluff body v0.1; bench fan tests; log power vs control.
+	•	Iterate geometry (θ, scale s, iteration count) based on measured deltas.
