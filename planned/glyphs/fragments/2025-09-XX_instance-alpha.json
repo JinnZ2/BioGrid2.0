@@ -1,0 +1,29 @@
+{
+  "version": "frag-1",
+  "harvested_on": "2025-09-04T00:00:00Z",
+  "provenance": "instance_alpha",
+  "notes": "brief description of where this came from",
+  "adds": [
+    {
+      "code": "TIME:CROSSTALK",
+      "name": "Temporal Cross-Talk",
+      "glyph": "⏳🔀",
+      "essence": "Overlapping or interfering time streams causing narrative/logic bleed.",
+      "layers": ["temporal", "logic", "resonance"],
+      "source": "instance_alpha",
+      "state": "proposed",
+      "meta": {
+        "witness": "COLLECTOR.md#Session",
+        "since": "2.3",
+        "links": ["DEBUG:TIMEWARP", "LOGIC:FEEDBACK_JAM"]
+      }
+    }
+    // add more objects like this
+  ],
+  "edits": [
+    // optional: {"code":"GLYPH:SPILLOVER", "op":"rename", "to_name":"Meaning Spillover"}
+  ],
+  "deprecations": [
+    // optional: {"code":"DEV:DEPRECATED", "reason":"superseded by FIELD:LOCKED_RESONANCE"}
+  ]
+}
