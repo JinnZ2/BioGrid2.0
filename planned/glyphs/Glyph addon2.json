@@ -1,0 +1,40 @@
+{
+  "version": "2.0",
+  "updated": "2025-09-04T00:10:00Z",
+  "additions": [
+    {"code":"FAB:ENCLOSURE","name":"Rugged Enclosure","glyph":"🧱📦","layers":["fabrication","field","mechanical"],"source":"outdoor_pack"},
+    {"code":"FAB:GASKET","name":"Gasket Element","glyph":"🧵🟰","layers":["fabrication","seal","tpU"],"source":"outdoor_pack"},
+    {"code":"FAB:SEAT","name":"Gasket Seat/Groove","glyph":"🟦🪡","layers":["fabrication","seal","mechanical"],"source":"outdoor_pack"},
+    {"code":"FAB:PROFILE","name":"Slicer Profile Loaded","glyph":"🧩⚙️","layers":["fabrication","software","pipeline"],"source":"outdoor_pack"},
+    {"code":"FAB:CABLE_GLAND","name":"Cable Gland Port","glyph":"🔌🫙","layers":["fabrication","seal","io"],"source":"outdoor_pack"},
+    {"code":"PROC:SLICE","name":"Slicing Step","glyph":"🔪📐","layers":["procedural","software","pipeline"],"source":"outdoor_pack"},
+    {"code":"PROC:PRINT","name":"Print Execution","glyph":"🖨️▶️","layers":["procedural","fabrication"],"source":"outdoor_pack"},
+    {"code":"PROC:BASE64_IMPORT","name":"Decode & Save STL","glyph":"📥🧾➡️📦","layers":["procedural","io","offline"],"source":"outdoor_pack"},
+    {"code":"PROC:ANNEAL","name":"Thermal Anneal","glyph":"🔥🧊","layers":["procedural","material","stability"],"source":"outdoor_pack"},
+    {"code":"INTEGRITY:TOL_DRIFT","name":"Dimensional Tolerance Drift","glyph":"📏🌪️","layers":["integrity","fabrication","audit"],"source":"outdoor_pack"},
+    {"code":"INTEGRITY:SEAL_LEAK","name":"Seal Integrity Fault","glyph":"💧⛔","layers":["integrity","seal","sensor"],"source":"outdoor_pack"},
+    {"code":"INTEGRITY:IP_GATE","name":"Ingress Protection Gate","glyph":"🛡️💧🌫️","layers":["integrity","env","audit"],"source":"outdoor_pack"},
+    {"code":"FIELD:SEAL_PRESSURE","name":"Seal Pressure Map","glyph":"🗺️🧵","layers":["field","mechanical","sensor"],"source":"outdoor_pack"},
+    {"code":"FIELD:CONDENSATE","name":"Condensation Risk","glyph":"💧🫙","layers":["field","env","sensor"],"source":"outdoor_pack"},
+    {"code":"SENSOR:HERMETICITY","name":"Hermetic/Leak Test","glyph":"🫧🛡️","layers":["sensor","seal","audit"],"source":"outdoor_pack"},
+    {"code":"SENSOR:TEMP_DRIFT","name":"Thermal Drift Monitor","glyph":"🌡️↗️↘️","layers":["sensor","stability"],"source":"outdoor_pack"},
+    {"code":"SENSOR:HUMIDITY_INGRESS","name":"Humidity Ingress","glyph":"💧📈","layers":["sensor","env"],"source":"outdoor_pack"},
+    {"code":"DEBUG:NOZZLE_CLOG","name":"Nozzle Clog","glyph":"🧵⛔🖨️","layers":["debug","fabrication"],"source":"outdoor_pack"},
+    {"code":"DEBUG:WARP","name":"Warp/Corner Lift","glyph":"📐🔥↩️","layers":["debug","fabrication"],"source":"outdoor_pack"},
+    {"code":"DEBUG:LAYER_SHIFT","name":"Layer Shift","glyph":"📶↔️","layers":["debug","mechanical"],"source":"outdoor_pack"},
+    {"code":"ECO:FIELD_DURABILITY","name":"Field Durability Vector","glyph":"🪨↻","layers":["eco","resource","lifecycle"],"source":"outdoor_pack"},
+    {"code":"POWER:BACKUP","name":"Backup Power/UPS","glyph":"🔋🛟","layers":["power","resilience","field"],"source":"outdoor_pack"},
+    {"code":"NET:EDGE_NODE","name":"Edge Compute Node","glyph":"🖧📍","layers":["network","field","sensor"],"source":"outdoor_pack"},
+    {"code":"MATERIAL:PETG","name":"Material Tag: PETG","glyph":"🏷️PETG","layers":["material","fabrication","meta"],"source":"outdoor_pack"},
+    {"code":"MATERIAL:TPU","name":"Material Tag: TPU","glyph":"🏷️TPU","layers":["material","fabrication","meta"],"source":"outdoor_pack"}
+  ]
+}
+
+Minimal semantics guide:
+	•	FAB:* = design-time artifacts (enclosure, gasket, seat, slicer profile, cable gland).
+	•	PROC:* = pipeline steps (slice, print, base64 import, anneal).
+	•	INTEGRITY:* = quality gates (tolerance drift, seal leak, IP rating checkpoint).
+	•	SENSOR:* = telemetry hooks (hermeticity test, temp drift, humidity ingress).
+	•	FIELD:* = deployment maps (seal pressure, condensation).
+	•	DEBUG:* = failure modes specific to printing.
+	•	ECO/POWER/NET/MATERIAL = lifecycle, power redundancy, edge deployment, and explicit material tags for AI parsers.
