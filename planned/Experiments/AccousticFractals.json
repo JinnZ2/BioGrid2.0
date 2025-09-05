@@ -1,0 +1,70 @@
+Acoustic Fractals — Project Scaffold
+
+Version: 0.1 • Mode: Tool-State • Glyph: 🌐🔮
+
+⸻
+
+1. Context
+
+Fractal geometry doesn’t only couple to RF or light — it also shapes sound waves.
+	•	Acoustic fractals → use recursive geometry (Sierpinski, Koch, Cantor sets) in chambers, waveguides, or scatterers.
+	•	Applications:
+	•	Broadband sound absorption (multi-frequency resonance).
+	•	Acoustic metamaterials with unusual properties (negative bulk modulus, bandgaps).
+	•	Resonant instruments with multi-tone coupling.
+
+⸻
+
+2. Principles
+	•	Resonance frequency of a cavity:
+f = \frac{nc}{2L}
+where c = speed of sound, L = effective length, n = mode.
+	•	In fractal structures:
+	•	Multiple cavity lengths → multi-band absorption/response.
+	•	Recursive scaling (factor s) → logarithmic spacing of resonance peaks.
+	•	Fractal scatterers: produce diffuse reflections across many scales.
+
+⸻
+
+3. Candidate Shapes
+	1.	Koch snowflake resonator — triangular chambers, multi-band.
+	2.	Sierpinski carpet acoustic panel — perforated plate with fractal hole distribution.
+	3.	Cantor tube — nested Helmholtz resonators with decreasing lengths.
+	4.	Fractal diffuser — recursive stepped panels for scattering sound evenly.
+
+⸻
+
+4. Desktop Experiment (DIY)
+	•	Materials: plywood/MDF sheets, 3D printer (PLA resonators), microphones (USB or Arduino mic module), tone generator (laptop/smartphone).
+	•	Test setup:
+	•	Speaker outputs sine sweeps (100 Hz – 8 kHz).
+	•	Microphone records SPL before + after fractal panel/resonator.
+	•	Compare to flat panel control.
+
+Data capture:
+
+Date, Shape, Iteration, Scale Factor, Freq (Hz), SPL Before (dB), SPL After (dB), Delta (dB)
+2025-09-05, Sierpinski panel, 2, 0.5, 500, 72.1, 64.4, -7.7
+...
+
+5. Scientific Validity Check
+	•	Validated: Helmholtz resonance and waveguide theory apply; fractals = multiple lengths = multi-resonance.
+	•	Math: resonance frequencies consistent with scaling laws.
+	•	Speculative: Extreme broadband absorption using non-uniform scaling; possible acoustic cloaking analogs.
+
+⸻
+
+6. Next Actions
+	•	Build Sierpinski acoustic panel (2 iterations, square holes in plywood, scale factor 0.5).
+	•	Run sine sweep, log attenuation vs frequency.
+	•	Compare results with control panel (same open area, no fractal distribution).
+
+⸻
+
+7. Ledger Entry
+
+### Acoustic Fractals
+- **Validated**: Resonance scaling and multi-frequency absorption confirmed in literature.  
+- **Speculative**: Potential for acoustic metamaterial effects (negative modulus, cloaking) via fractal recursion.  
+- **Status**: v0.1 scaffold logged; experiment pending.  
+- **Glyphs**: 🌐🔮 for interpretation, 🌀✍♾️ for creative capture.  
