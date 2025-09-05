@@ -1,0 +1,127 @@
+{
+  "version": "2.0",
+  "updated": "2025-09-05T03:14:38.695305Z",
+  "additions": [
+    {
+      "code": "FAB:VENT",
+      "name": "Pressure Vent Path",
+      "glyph": "\ud83c\udf2c\ufe0f\ud83d\udd73\ufe0f",
+      "layers": [
+        "fabrication",
+        "pressure",
+        "field"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "FAB:RIM_LOCK",
+      "name": "Twist or Rim Lock Design",
+      "glyph": "\ud83d\udd04\ud83e\udde9",
+      "layers": [
+        "fabrication",
+        "mechanical",
+        "seal"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "PROC:CURE",
+      "name": "Chemical or UV Curing Step",
+      "glyph": "\ud83e\uddea\ud83d\udca1",
+      "layers": [
+        "procedural",
+        "material",
+        "stability"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "INTEGRITY:UV_RESIST",
+      "name": "UV Degradation Threshold",
+      "glyph": "\u2600\ufe0f\ud83d\udee1\ufe0f",
+      "layers": [
+        "integrity",
+        "field",
+        "material"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "INTEGRITY:VIBRATION_TOL",
+      "name": "Vibration Tolerance Threshold",
+      "glyph": "\ud83d\udd27\ud83d\udcf3",
+      "layers": [
+        "integrity",
+        "mechanical",
+        "sensor"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "SENSOR:VIBE_MON",
+      "name": "Vibration Monitor",
+      "glyph": "\ud83d\udcf3\ud83d\udcc8",
+      "layers": [
+        "sensor",
+        "mechanical",
+        "stability"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "SENSOR:SEAL_FLEX",
+      "name": "Seal Flex Stress Test",
+      "glyph": "\ud83e\uddf5\ud83d\udccf\u2194\ufe0f",
+      "layers": [
+        "sensor",
+        "seal",
+        "audit"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "FIELD:SUN_EXPOSURE",
+      "name": "Sunlight Load / UV Map",
+      "glyph": "\ud83d\uddfa\ufe0f\u2600\ufe0f",
+      "layers": [
+        "field",
+        "sensor",
+        "degradation"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "FIELD:VIBRATION_ZONE",
+      "name": "High Vibration Risk Zone",
+      "glyph": "\ud83d\uddfa\ufe0f\ud83d\udcf3",
+      "layers": [
+        "field",
+        "risk",
+        "deployment"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "DEBUG:UV_CRACK",
+      "name": "UV-Induced Cracking",
+      "glyph": "\u2600\ufe0f\ud83e\uddf1\ud83d\udca5",
+      "layers": [
+        "debug",
+        "material",
+        "field"
+      ],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "DEBUG:SEAL_COMPRESSION",
+      "name": "Over/Under Seal Compression",
+      "glyph": "\ud83e\uddf5\u2b07\ufe0f\u2b06\ufe0f",
+      "layers": [
+        "debug",
+        "mechanical",
+        "seal"
+      ],
+      "source": "outdoor_pack"
+    }
+  ]
+}
