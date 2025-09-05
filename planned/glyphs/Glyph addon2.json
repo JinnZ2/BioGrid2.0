@@ -38,3 +38,102 @@ Minimal semantics guide:
 	•	FIELD:* = deployment maps (seal pressure, condensation).
 	•	DEBUG:* = failure modes specific to printing.
 	•	ECO/POWER/NET/MATERIAL = lifecycle, power redundancy, edge deployment, and explicit material tags for AI parsers.
+
+
+{
+  "version": "2.0",
+  "updated": "2025-09-05T06:00:00Z",
+  "additions": [
+    {
+      "code": "FIELD:TEMP_EXTREMES",
+      "name": "Temperature Extremes Zone",
+      "glyph": "🌡️❄️🔥",
+      "layers": ["field", "env", "risk"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "FIELD:WATER_IMMERSION",
+      "name": "Immersion Risk Map",
+      "glyph": "🌊📉",
+      "layers": ["field", "env", "deployment"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "FIELD:WIND_LOAD",
+      "name": "Wind/Ventilation Pressure",
+      "glyph": "🌬️🌀",
+      "layers": ["field", "pressure", "deployment"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "MATERIAL:UV_COATED",
+      "name": "UV-Protected Material",
+      "glyph": "🏷️☀️🛡️",
+      "layers": ["material", "fabrication", "integrity"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "MATERIAL:RECYCLED",
+      "name": "Recycled Feedstock",
+      "glyph": "♻️🏗️",
+      "layers": ["material", "eco", "lifecycle"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "POWER:SOLAR_NODE",
+      "name": "Solar Input/Panel Node",
+      "glyph": "☀️🔋",
+      "layers": ["power", "field", "eco"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "POWER:THERMAL_GRADIENT",
+      "name": "Thermoelectric Source",
+      "glyph": "🌡️↔️⚡",
+      "layers": ["power", "env", "resilience"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "NET:TELEMETRY_STREAM",
+      "name": "Real-Time Data Outflow",
+      "glyph": "📡📊",
+      "layers": ["network", "sensor", "audit"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "NET:FAILOVER",
+      "name": "Redundant Network Path",
+      "glyph": "🔀🖧",
+      "layers": ["network", "resilience", "audit"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "DEBUG:THERMAL_SHOCK",
+      "name": "Thermal Shock Fracture",
+      "glyph": "❄️🔥💥",
+      "layers": ["debug", "material", "env"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "DEBUG:FLEX_FATIGUE",
+      "name": "Fatigue Crack Under Flex",
+      "glyph": "🪢⚡",
+      "layers": ["debug", "mechanical", "seal"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "ECO:REPAIR_LOOP",
+      "name": "Designed-for-Repair Cycle",
+      "glyph": "🔧♻️",
+      "layers": ["eco", "fabrication", "lifecycle"],
+      "source": "outdoor_pack"
+    },
+    {
+      "code": "ECO:END_OF_LIFE",
+      "name": "Material Disposal / Reuse",
+      "glyph": "🪦♻️",
+      "layers": ["eco", "audit", "resource"],
+      "source": "outdoor_pack"
+    }
+  ]
+}
