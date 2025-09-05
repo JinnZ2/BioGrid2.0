@@ -1,3 +1,91 @@
+Light–Fractal Interaction — Experiment Log Scaffold
+
+Version: 0.1 • Mode: Tool-State • Glyph: 🌐🔮
+
+⸻
+
+1. Project Capsule Link
+	•	Capsule ID: light-fractal-v0.1
+	•	Origin: Wandering shape (persistent attention)
+	•	Status: Provisional (confidence 0.87, recheck in 21 days)
+
+⸻
+
+2. Objective
+
+Explore how light interacts with fractal-like geometries (apertures, films, traces), inspired by RF fractal antennas but scaled for visible/IR wavelengths.
+	•	Hypothesis: Non-uniform scaling of fractal shapes → broadband scattering/absorption patterns, analogous to multi-band resonance in fractal antennas.
+
+⸻
+
+3. Experimental Setup (Desktop Scale)
+	•	Light Sources:
+	•	Red laser (650 nm)
+	•	Green laser (532 nm)
+	•	Blue/violet laser (405 nm)
+	•	Optional: white LED flashlight for broadband scatter
+	•	Fractal Apertures (opaque card, 3D print, or laser cut):
+	•	Koch Snowflake (2 iterations)
+	•	Sierpinski carpet (2 iterations)
+	•	Randomized fulgurite-style trace
+	•	Slight variant shapes (5–15% scale offsets)
+	•	Detection:
+	•	Projection screen + camera/webcam capture
+	•	Photodiodes (BPW34 or LDR array) at set angles
+	•	Ruler/protractor or turntable for angular sweep
+
+⸻
+
+4. Equations / Theoretical Basis
+	•	Diffraction order:
+\theta_m = \arcsin\!\left(\frac{m\lambda}{d}\right)
+where d ≈ feature spacing, m = diffraction order.
+	•	Fourier optics link:
+Light scatter = Fourier transform of aperture geometry.
+Fractal apertures → multi-scale Fourier components.
+	•	Fractal dimension check:
+D = \frac{\log N(\epsilon)}{\log(1/\epsilon)}
+used to compare shape complexity vs scatter spread.
+
+⸻
+
+5. Procedure
+	1.	Place fractal aperture in beam path.
+	2.	Capture scatter pattern (photo/video) on screen at 0.5–1 m distance.
+	3.	Repeat with control (single slit of equal aperture width).
+	4.	Record scatter angle vs intensity at red/green/blue wavelengths.
+	5.	Vary aperture iteration depth + slight scale offsets; log changes.
+	6.	Optional: rotate aperture 90°; repeat to test polarization effects.
+
+⸻
+
+6. Data Log Format
+
+   Date, Aperture, Iteration, Shape Variant, Wavelength (nm), Angle (deg), Relative Intensity, Notes
+2025-09-05, Koch, 2, standard, 532, 15, 0.42, clean pattern
+2025-09-05, Koch, 2, +10% scale offset, 532, 15, 0.57, stronger side lobe
+
+7. Expected Outcomes
+	•	Validated: Scatter patterns with multiple lobes corresponding to fractal scales.
+	•	Speculative: Non-uniform scaling producing broadened spectrum → flatter, broadband-like scatter response.
+
+⸻
+
+8. Safety
+	•	Wear laser safety glasses (rated for 405–650 nm).
+	•	Enclose beam path to prevent stray reflections.
+
+⸻
+
+9. Version Log
+	•	v0.1: Scaffold created with three candidate shapes + multi-wavelength tests.
+
+
+
+
+
+Notes:
+
 Fractal Energy Experiments — Field Notes
 
 Version: 0.1 • Mode: Tool-State • Glyphs: 🧭🌐🔮♾️
