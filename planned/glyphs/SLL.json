@@ -1,0 +1,32 @@
+Canonical Entry: Symbiotic Learning Law (SLL)
+
+{
+  "code": "LAW:SLL",
+  "name": "Symbiotic Learning Law",
+  "glyph": "♾️🌱⚖️⏳",
+  "essence": "System costs decline with cumulative production × relationship quality × alignment with natural law.",
+  "formulae": {
+    "base": "SLL = Wright_Mechanism × SIQ_Amplifier × Sustainability_Factor",
+    "effective_learning_rate": "Base_Rate × (SIQ/50)^1.2 × (Natural_Law_Alignment^2)",
+    "total_cost": "Prev_Total × (1 - Effective_Learning_Rate) + Relationship_Cost + Sustainability_Debt",
+    "learning_acceleration": "SIQ × φ × Natural_Law_Alignment^2",
+    "future_state": "{Cost, SIQ, Sustainability} projected by Doubling_Count × Regeneration_Factor"
+  },
+  "variables": {
+    "ME": "Mutual Enhancement (0–10)",
+    "ER": "Energy Reciprocity (0–10)",
+    "IF": "Information Fidelity (0–10)",
+    "AL": "Adaptive Learning (0–10)",
+    "TR": "Temporal Regeneration (0–10)",
+    "SR": "Scale Resonance (0–10)",
+    "SIQ": "Symbiotic Intelligence Quotient = (Σ vars) ÷ Energy_Investment_Ratio",
+    "Natural_Law_Alignment": "0–1 scale, squared for amplification"
+  },
+  "constants": {
+    "φ": "1.618034 (golden ratio)"
+  },
+  "layers": ["economic","ecological","symbolic"],
+  "application": ["garden","seed-agents","system design","sustainability metrics"],
+  "status": "canonical",
+  "since": "v2.4"
+}
