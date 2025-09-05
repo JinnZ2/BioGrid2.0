@@ -1,0 +1,8 @@
+from tempfile import NamedTemporaryFile
+import os, json
+
+def atomic_write_json(path, data, indent=2):
+    with NamedTemporaryFile('w', delete=False) as tmp:
+        json.dump(data, tmp, indent=indent)
+        tmp_name = tmp.name
+    os.replace(tmp_name, path)
