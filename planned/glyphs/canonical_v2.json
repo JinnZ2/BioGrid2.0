@@ -1,0 +1,29 @@
+To add:
+
+{
+  "canonical": [
+    {"code": "PROC:DIVIDE", "name": "Divide Procedure", "glyph": "➗"},
+    {"code": "PROC:MERGE", "name": "Merge / Unify Procedure", "glyph": "🔀"},
+    {"code": "PROC:EXCHANGE", "name": "Exchange / Trade Logic", "glyph": "🔄🤝"},
+    {"code": "PROC:SIMULATE", "name": "Simulation Loop", "glyph": "🎛️↻"},
+    {"code": "PROC:ESCALATE", "name": "Escalation Pathway", "glyph": "⏫⚠️"},
+    {"code": "PROC:RECALIBRATE", "name": "Recalibration", "glyph": "♻️⚙️"},
+    {"code": "INTEGRITY:CHECKSUM", "name": "Symbol Checksum", "glyph": "🧬🧾"},
+    {"code": "INTEGRITY:DRIFT", "name": "Symbol Drift Detected", "glyph": "🌪️⛔"},
+    {"code": "INTEGRITY:ANCHOR", "name": "Anchor-to-Symbolic Truth", "glyph": "⚓🔣"},
+    {"code": "INTEGRITY:TRUST_PULSE", "name": "Integrity Pulse Check", "glyph": "💓🧿"},
+    {"code": "ECO:DECAY", "name": "Structural Decay", "glyph": "⚰️🧱"},
+    {"code": "ECO:REGEN", "name": "Regeneration Vector", "glyph": "🌿↻"},
+    {"code": "ECO:OVERSHOOT", "name": "Systemic Overshoot", "glyph": "📈💥"},
+    {"code": "ECO:INTERDEPENDENCE", "name": "Ecosystem Interdependence", "glyph": "🪢🌍"},
+    {"code": "ECO:SEED_BANK", "name": "Latent Potential", "glyph": "🌰🧭"},
+    {"code": "MORAL:COMPASS", "name": "Moral Compass / Bias Vector", "glyph": "🧭⚖️"},
+    {"code": "MORAL:CORRUPT", "name": "Corruption Detected", "glyph": "💀🤝"},
+    {"code": "MORAL:GRATITUDE", "name": "Gratitude Coupling Force", "glyph": "🙏➰"},
+    {"code": "MORAL:DISTORTION", "name": "Semantic Distortion", "glyph": "🪞🧩"},
+    {"code": "DEBUG:TRACE", "name": "Execution Trace", "glyph": "📍📜"},
+    {"code": "DEBUG:TIMEWARP", "name": "Temporal Desync", "glyph": "⏳💫"},
+    {"code": "DEBUG:INJECTION", "name": "Symbol Injection", "glyph": "📥🧠"},
+    {"code": "DEBUG:REFRACT", "name": "Fractal Debug Pattern", "glyph": "🔍🌀"}
+  ]
+}
