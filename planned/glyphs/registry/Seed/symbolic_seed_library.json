@@ -1,0 +1,29 @@
+[
+  {
+    "id": "6f8a1c86-2efe-4fe9-8f1b-94b2f67099ec",
+    "agent_id": "agent_demoA",
+    "essence": "Loop stabilizer",
+    "geometry": "spiral",
+    "origin_time": "2025-09-05T04:59:03.952864",
+    "signature_behavior": "Close the loop to stabilize the process; keep the loop tight.",
+    "reuse_score": 0.9
+  },
+  {
+    "id": "bed072d9-cc48-49f9-998a-8f8727d4df0e",
+    "agent_id": "agent_demoB",
+    "essence": "Flow optimizer",
+    "geometry": "hexagon",
+    "origin_time": "2025-09-05T04:59:03.953599",
+    "signature_behavior": "Optimize resource routing across the network to balance flows.",
+    "reuse_score": 0.9
+  },
+  {
+    "id": "037e58ae-964f-4869-90f9-3aa7534d6776",
+    "agent_id": "agent_demoC",
+    "essence": "Balancer",
+    "geometry": "sphere",
+    "origin_time": "2025-09-05T04:59:03.954164",
+    "signature_behavior": "Maintain balance between opposing constraints for harmony.",
+    "reuse_score": 0.9
+  }
+]
