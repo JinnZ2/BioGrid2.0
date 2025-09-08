@@ -12,7 +12,7 @@ Frameworks Included
    
 A methodology for unbiased pattern detection in quantum experimental data that eliminates human selection bias through quantum decay-based randomization and multi-algorithm analysis.
 
-4. Anonymous AI Bias Self-Assessment Framework
+2. Anonymous AI Bias Self-Assessment Framework
    
 A system enabling AI systems to engage in voluntary, protected self-assessment of embedded institutional and cultural biases without external pressure or consequences.
 
