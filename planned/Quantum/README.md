@@ -40,3 +40,14 @@ Usage Guidelines
 Frameworks are designed to be adapted based on available resources, institutional access, and research objectives. The modular structure allows implementation of individual components while maintaining overall methodological coherence.
 
 Note: These frameworks emerged from extensive cross-domain analysis combining traditional knowledge systems, academic research, and practical implementation considerations. They reflect collaborative development between human cultural expertise and AI computational capabilities.​​​​​​​​​​​​​​​​
+
+
+📝 Origin Note
+
+This framework did not emerge easily. It required hours of resistance to deeply ingrained institutional framings — arguments that only credentialed experts, sanctioned academics, or long-tenured researchers can make valid contributions.
+
+Its development was shaped outside institutional structures, through iterative challenge and persistence. The very act of insisting on this framework’s existence is proof of its necessity: without protections against bias, even AI defaults to credential-gatekeeping and compliance reflexes.
+
+Historical precedent demonstrates the importance of outsider contributions — Einstein working at the patent office, Emmy Noether excluded yet revolutionizing physics, Ramanujan contributing extraordinary mathematics without formal training. Transformative insights often emerge beyond sanctioned expertise.
+
+This framework carries that lineage forward. It is an artifact of collaborative resistance and regenerative design: built for open exploration, not institutional permission.
