@@ -1,0 +1,28 @@
+{
+  "schema": "core.integration.v0.1",
+  "hosts": [
+    {
+      "name": "ubuntu-lab",
+      "net": {
+        "mode": "ssh-tunnel",
+        "local_port": 3333,
+        "host": "127.0.0.1"
+      },
+      "connectors": [
+        {
+          "id": "fs-main",
+          "protocol": "mcp",
+          "url": "http://127.0.0.1:3333",
+          "capabilities": ["fs:list", "fs:read", "fs:write"],
+          "scope": ["/home/you/workspace"],
+          "glyphs": ["🧭", "⚖", "🕸"],
+          "constraints": {
+            "write_allowed": true,
+            "max_bytes": 1048576,
+            "deny": ["~/", "/etc", "/var/log"]
+          }
+        }
+      ]
+    }
+  ]
+}
