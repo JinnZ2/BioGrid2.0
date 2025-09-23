@@ -42,6 +42,9 @@ Every AI agent or human collaborator should start here before traversing deeper.
   Full sensor catalog and schema registry.
 ---
 
+- [Symbolic Sensor Suite](https://github.com/JinnZ2/Symbolic-sensor-suite)  
+  A tool‑kit of symbolic audit sensors and symbolic system logic; complements the Biogrid ecosystem.
+
 ## Meta
 
 - **Owner**: JinnZ2  
