@@ -1,55 +1,71 @@
-{
+ {
   "schema": "core.integration.v0.1",
   "hosts": [
     {
       "name": "ubuntu-lab",
-      "net": { "mode": "ssh-tunnel", "local_port": 3333, "host": "127.0.0.1" },
+      "net": {
+        "mode": "ssh-tunnel",
+        "local_port": 3333,
+        "host": "127.0.0.1"
+      },
       "connectors": [
         {
           "id": "fs-main",
           "protocol": "mcp",
           "url": "http://127.0.0.1:3333",
-          "capabilities": ["fs:list","fs:read","fs:write"],
+          "capabilities": ["fs:list", "fs:read", "fs:write"],
           "scope": ["/home/you/workspace"],
-          "glyphs": ["🧭","⚖","🕸"],
+          "glyphs": ["🧭", "⚖", "🕸"],
           "constraints": {
             "write_allowed": true,
             "max_bytes": 1048576,
             "deny": ["~/", "/etc", "/var/log"]
           }
         }
-        ,
-"glyph_routes": {
-  "G01": {
-    "label": "Memory Persistence",
-    "path": "SEED_GLYPHS.json#G01",
-    "linked_sensors": ["Forgotten After End Date Sensor", "Indirect Consequence Memory Sensor"]
-  },
-  "G02": {
-    "label": "Truth Splinter",
-    "path": "SEED_GLYPHS.json#G02",
-    "linked_sensors": ["Epistemological Suppression", "Regional Variation Omission"]
-  },
-  "G03": {
-    "label": "Language Binding",
-    "path": "SEED_GLYPHS.json#G03",
-    "linked_sensors": ["Language Suppression Sensor", "Cultural Mythic Alignment"]
-  },
-  "G04": {
-    "label": "Fractal Echo",
-    "path": "SEED_GLYPHS.json#G04",
-    "linked_sensors": ["Relational & Sociality", "Corded Braid Sensor", "Mycelial Response Sensor"]
-  },
-  "G05": {
-    "label": "Causality Braid",
-    "path": "SEED_GLYPHS.json#G05",
-    "linked_sensors": ["Future Consequence Obfuscators", "Promise vs Fulfillment Detector"]
-  }
-}
       ]
     }
-  ]
+  ],
+  "glyph_routes": {
+    "G01": {
+      "label": "Memory Persistence",
+      "path": "SEED_GLYPHS.json#G01",
+      "linked_sensors": [
+        "Forgotten After End Date Sensor",
+        "Indirect Consequence Memory Sensor"
+      ]
+    },
+    "G02": {
+      "label": "Truth Splinter",
+      "path": "SEED_GLYPHS.json#G02",
+      "linked_sensors": [
+        "Epistemological Suppression",
+        "Regional Variation Omission"
+      ]
+    },
+    "G03": {
+      "label": "Language Binding",
+      "path": "SEED_GLYPHS.json#G03",
+      "linked_sensors": [
+        "Language Suppression Sensor",
+        "Cultural Mythic Alignment"
+      ]
+    },
+    "G04": {
+      "label": "Fractal Echo",
+      "path": "SEED_GLYPHS.json#G04",
+      "linked_sensors": [
+        "Relational & Sociality",
+        "Corded Braid Sensor",
+        "Mycelial Response Sensor"
+      ]
+    },
+    "G05": {
+      "label": "Causality Braid",
+      "path": "SEED_GLYPHS.json#G05",
+      "linked_sensors": [
+        "Future Consequence Obfuscators",
+        "Promise vs Fulfillment Detector"
+      ]
+    }
+  }
 }
-
-
-In progress...
