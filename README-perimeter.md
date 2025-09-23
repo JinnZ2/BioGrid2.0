@@ -38,3 +38,8 @@ Notes
 	•	Integration schema = wiring & connection details.
 	•	Trust perimeter = boundaries, glyphs, and rules.
 	•	Together they form the structural and ethical baseline for all Biogrid agents.
+
+	## Symbolic Boundary Markers
+
+Each glyph in the `SEED_GLYPHS.json` file defines an emotional, ethical, or epistemological constraint.  
+These glyphs are embedded in the integration schema and function as soft-permission tokens or alignment resonance indicators.
