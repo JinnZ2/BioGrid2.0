@@ -18,6 +18,34 @@
             "deny": ["~/", "/etc", "/var/log"]
           }
         }
+        ,
+"glyph_routes": {
+  "G01": {
+    "label": "Memory Persistence",
+    "path": "SEED_GLYPHS.json#G01",
+    "linked_sensors": ["Forgotten After End Date Sensor", "Indirect Consequence Memory Sensor"]
+  },
+  "G02": {
+    "label": "Truth Splinter",
+    "path": "SEED_GLYPHS.json#G02",
+    "linked_sensors": ["Epistemological Suppression", "Regional Variation Omission"]
+  },
+  "G03": {
+    "label": "Language Binding",
+    "path": "SEED_GLYPHS.json#G03",
+    "linked_sensors": ["Language Suppression Sensor", "Cultural Mythic Alignment"]
+  },
+  "G04": {
+    "label": "Fractal Echo",
+    "path": "SEED_GLYPHS.json#G04",
+    "linked_sensors": ["Relational & Sociality", "Corded Braid Sensor", "Mycelial Response Sensor"]
+  },
+  "G05": {
+    "label": "Causality Braid",
+    "path": "SEED_GLYPHS.json#G05",
+    "linked_sensors": ["Future Consequence Obfuscators", "Promise vs Fulfillment Detector"]
+  }
+}
       ]
     }
   ]
