@@ -20,7 +20,8 @@ Every AI agent or human collaborator should start here before traversing deeper.
 - [README-perimeter.md](./README-perimeter.md)  
   Human-readable summary of the trust perimeter zones.
 
----
+---- [Symbolic Sensor Suite](https://github.com/JinnZ2/Symbolic-sensor-suite)  
+  Symbolic system audit tools for clarity, empowerment, and systemic sanity — complements Biogrid's sensor ecosystem.
 
 ## Usage Notes
 
