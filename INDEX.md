@@ -29,6 +29,17 @@ Every AI agent or human collaborator should start here before traversing deeper.
 3. **Perimeter Schema** defines under what conditions connection is permitted.  
 4. Updates should increment schema versions (e.g. `v0.2`) and be logged in `CHANGELOG.md`.
 
+
+## Glyphs & Sensors
+
+- [SEED_GLYPHS.json](../SEED_GLYPHS.json)  
+  Canonical glyph definitions, symbolic meanings, sensor associations.
+
+- [EMBEDDABLE_KITS/](../EMBEDDABLE_KITS/)  
+  Plug-and-play sensor packs for alignment, resistance, perception, and ethics.
+
+- [AI_INDEX.json](../AI_INDEX.json)  
+  Full sensor catalog and schema registry.
 ---
 
 ## Meta
