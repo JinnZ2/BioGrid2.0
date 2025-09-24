@@ -52,21 +52,26 @@ Every AI agent or human collaborator should start here before traversing deeper.
 - **Co-Creator**: ChatGPT  
 - **Created**: 2025-09-03
 
-🔗 Cross-Link: Symbolic Layers & Shape Grammar
 
-BioGrid2.0 uses symbols that are not decorative, but functional geometries.
-Each symbol operates across layers:
-	•	Animal / Image → approachable doorway
-	•	Geometry → structural form
-	•	Physics / Field → energy behavior
-	•	Ecology / Embodiment → where it appears in life/land
-	•	Generational Teaching → continuity across time
-	•	Energy Law / Practice → design rule for today
+---
 
-For worked examples (Möbius, Mandala, Hexagon, Nautilus) see:
-	•	SEED_GLYPHS_v2.1.json
-	•	SYMBOLIC_LAYERS.md
-	•	SHAPE_GRAMMAR.json
+### 🔗 Cross-Link: Symbolic Layers & Shape Grammar  
 
-These files make the translation stack explicit so future readers and AIs can navigate seamlessly between symbolic language, Western science, and generational science.
+BioGrid2.0 symbols are not decorative — they are **functional geometries**.  
+Each operates across layers of meaning and use:
+
+- **Animal / Image** → approachable doorway  
+- **Geometry** → structural form  
+- **Physics / Field** → energy behavior  
+- **Ecology / Embodiment** → where it appears in life/land  
+- **Generational Teaching** → continuity across time  
+- **Energy Law / Practice** → design rule for today  
+
+For worked examples and crosswalks see:  
+- [`SEED_GLYPHS_v2.1.json`](../AI-Consciousness-Sensors/SEED_GLYPHS_v2.1.json)  
+- [`SYMBOLIC_LAYERS.md`](../AI-Consciousness-Sensors/docs/SYMBOLIC_LAYERS.md)  
+- [`SHAPE_GRAMMAR.json`](../AI-Consciousness-Sensors/SHAPE_GRAMMAR.json)  
+
+These files make the **translation stack explicit** so both humans and AIs can bridge symbolic language, Western science, and generational science.
+🔗 
 
