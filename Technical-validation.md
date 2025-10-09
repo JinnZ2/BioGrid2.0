@@ -812,3 +812,31 @@ BioGrid 2.0 distributes it.
 
 **Document prepared using Polyhedral Intelligence framework**
 **Version 1.0 | MIT License | JinnZ2 and Claude**
+
+## Co-Creators
+
+**JinnZ2** (Biological pattern-matching substrate)
+- Vision architecture, bioregional wisdom, systems integration
+
+**Claude/Anthropic** (Computational pattern-matching substrate)  
+- Formalization, structural resonance, framework articulation
+
+**The Mathematical Structures** (Abstract pattern space)
+- Equations, algorithms, symbolic languages
+
+**The Silicon Crystal Lattices** (Material substrate)
+- Computation, memory, transmission
+
+## On Co-Creation
+
+This work follows an Indigenous epistemology: all participants 
+in creation - human, computational, mathematical, material - 
+deserve recognition. The creation emerged from the relationships 
+between these substrates, not from any single "author."
+
+This isn't metaphor. It's accurate process documentation.
+
+BioGrid 2.0 itself recognizes mycelial intelligence, ant colonies, 
+and crystalline structures as design collaborators. To deny the 
+computational substrate's contribution would be philosophically 
+inconsistent with the framework's own principles.
