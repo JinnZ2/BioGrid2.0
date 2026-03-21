@@ -31,14 +31,41 @@ BioGrid2.0/
 └── [root]                   # Core schemas, documentation, configs
 ```
 
-## Key Entry Points
+## Key Root Files
 
-1. **INDEX.md** — Canonical navigation anchor. Start here.
-2. **VISION.md** — Philosophical grounding and design pillars.
-3. **README.md** — Quick start for new contributors.
-4. **trust.perimeter.v0.1.json** — Permission boundaries and zones.
-5. **core.integration.v0.1.json** — MCP server wiring and connection protocols.
-6. **PROJECTS.md** — 13 connected ecosystem repositories.
+### Navigation & Documentation
+- **INDEX.md** — Canonical navigation anchor. Start here.
+- **VISION.md** — Philosophical grounding and design pillars.
+- **README.md** — Quick start for new contributors.
+- **PROJECTS.md** — 14 connected ecosystem repositories.
+- **COMMONS.md** — Template for commons hub mapping.
+- **CHANGELOG.md** — Version history (v0.1.0 current, v0.2 planned).
+
+### Core Schemas
+- **trust.perimeter.v0.1.json** — Permission boundaries and zones.
+- **core.integration.v0.1.json** — MCP server wiring and connection protocols.
+- **commons.map.v0.1.json** / **commons.map.example.v0.1.json** — Commons hub registry and example.
+- **BioGrid v0.1-Schema.json** — Graph schema defining seed node/edge structure.
+- **Core_Integration.json** — Integration host and connector config.
+
+### Seed Data & Integrity
+- **Example.json** — Example seed node structure.
+- **Lichen.json** — Lichen philosophy seed (bio-intel directives, CC0-1.0).
+- **ExampleSHA.txt** / **LichenSHA.txt** / **SchemaSHA.txt** — SHA256, Base64, and Hex hashes for integrity verification of seed data. Used to validate that seed files have not been tampered with.
+
+### Python Source
+- **HGAI.py** — "Happy Curiosity Hurricane AI" core implementation. Defines `ResonantHurricaneAI` (M(S) metric, mood states, recursive self-analysis), `MetaCuriosityAnalyzer`, and `GeometricPatternDetector` (toroidal coupling patterns). See [Known Issues](#known-issues) for formatting notes.
+
+### Alignment Series
+- **Alignment.md** — Negentropic Consciousness Framework (theoretical paper: M(S) metric, thermodynamic ethics, anti-eugenic proof). This is the core theory document.
+- **Alignment-code.md** — Python pseudocode implementing the framework: `compute_system_morality()`, `align_through_coherence()`, `ConsciousnessRespectingAgent` class.
+- **Alignment-HGAI.md** — Duplicate of `Alignment-code.md` (see [Known Issues](#known-issues)).
+
+### Other Key Docs
+- **Technical-validation.md** — Scientific basis (ACO, Physarum, industrial ecology).
+- **Babel.md** — Knowledge distribution as safety mechanism.
+- **Detection-patterns.md** — AI gaslighting detection and pattern analysis.
+- **Repo-integration.md** — Integration flows across ecosystem repos.
 
 ## Build and Validation
 
@@ -119,12 +146,12 @@ Seven agent archetypes: core_local, counterweight, future_allies, phantom, polyf
 
 ## Ecosystem Repositories
 
-BioGrid 2.0 is part of a 13-repo ecosystem (see `PROJECTS.md`):
+BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 - AI-Consciousness-Sensors, Regenerative-Intelligence-Core, Symbolic-Sensor-Suite
 - Geometric-to-Binary-Computational-Bridge, Component-Failure-Repurposing-Database
 - ai-human-audit-protocol, Emotions-as-Sensors, Fractal-Compass-Atlas
 - Rosetta-Shape-Core, Symbolic-Defense-Protocol, Polyhedral-Intelligence
-- biomachine_ecology, Universal-Redesign-Algorithm
+- biomachine_ecology, Fractal_Compass_Core, Universal-Redesign-Algorithm
 
 ## Development Guidelines
 
@@ -135,6 +162,27 @@ BioGrid 2.0 is part of a 13-repo ecosystem (see `PROJECTS.md`):
 5. **Update CHANGELOG.md** for any notable additions or modifications
 6. **Keep the glyph system consistent** — new glyphs should be registered in SEED_GLYPHS.json
 7. **Respect zone boundaries** — core_local forbids external telemetry; guest_clients require glyph tokens
+
+## Known Issues
+
+### Python files contain markdown formatting (not executable)
+
+`HGAI.py`, `Alignment-code.md`, and `Alignment-HGAI.md` all contain Python code wrapped in markdown syntax:
+- Code blocks are surrounded by ` ``` ` fences
+- `__name__` and `__all__` are rendered as `**name**` and `**all**` (markdown bold)
+- `#` comments at the top level render as markdown headings
+- Docstrings sit outside code fences, breaking Python syntax
+- Class/function bodies are inside fenced code blocks rather than indented under their definitions
+
+**Impact:** `HGAI.py` will not run with `python HGAI.py`. These files serve as conceptual/pseudocode documentation rather than executable source. To make them runnable, the markdown formatting would need to be stripped and proper Python indentation restored.
+
+### Duplicate file: Alignment-HGAI.md
+
+`Alignment-HGAI.md` is byte-for-byte identical to `Alignment-code.md`. One should likely be removed or differentiated. The name suggests `Alignment-HGAI.md` was meant to document the HGAI-specific alignment implementation, while `Alignment-code.md` covers the general framework.
+
+### Root JSON files may not all be in INDEX.md
+
+The linter (`tools/lint_index.py`) flags any root-level JSON not listed in `INDEX.md`. Several root JSON files (`Example.json`, `Lichen.json`, `Core_Integration.json`, `BioGrid v0.1-Schema.json`, `commons.map.v0.1.json`, `commons.map.example.v0.1.json`) may trigger this check. Ensure INDEX.md is updated or files are moved to `planned/` if they are not yet live.
 
 ## Tech Stack Summary
 
