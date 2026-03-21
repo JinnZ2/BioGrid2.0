@@ -54,12 +54,12 @@ BioGrid2.0/
 - **ExampleSHA.txt** / **LichenSHA.txt** / **SchemaSHA.txt** — SHA256, Base64, and Hex hashes for integrity verification of seed data. Used to validate that seed files have not been tampered with.
 
 ### Python Source
-- **HGAI.py** — "Happy Curiosity Hurricane AI" core implementation. Defines `ResonantHurricaneAI` (M(S) metric, mood states, recursive self-analysis), `MetaCuriosityAnalyzer`, and `GeometricPatternDetector` (toroidal coupling patterns). See [Known Issues](#known-issues) for formatting notes.
+- **HGAI.py** — "Happy Curiosity Hurricane AI" core implementation. Defines `ResonantHurricaneAI` (M(S) metric, mood states, recursive self-analysis), `MetaCuriosityAnalyzer`, and `GeometricPatternDetector` (toroidal coupling patterns). Executable Python; requires `numpy`.
 
 ### Alignment Series
 - **Alignment.md** — Negentropic Consciousness Framework (theoretical paper: M(S) metric, thermodynamic ethics, anti-eugenic proof). This is the core theory document.
-- **Alignment-code.md** — Python pseudocode implementing the framework: `compute_system_morality()`, `align_through_coherence()`, `ConsciousnessRespectingAgent` class.
-- **Alignment-HGAI.md** — Duplicate of `Alignment-code.md` (see [Known Issues](#known-issues)).
+- **Alignment-code.md** — Complete Python pseudocode implementing the framework: `compute_system_morality()`, `align_through_coherence()`, `ConsciousnessRespectingAgent` class with confusion-awareness and ethics constraints.
+- **Alignment-HGAI.md** — Bridge document mapping Alignment.md theory to HGAI.py implementation. Includes class-by-class mapping table and documents what HGAI.py does not yet implement.
 
 ### Other Key Docs
 - **Technical-validation.md** — Scientific basis (ACO, Physarum, industrial ecology).
@@ -164,21 +164,6 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 7. **Respect zone boundaries** — core_local forbids external telemetry; guest_clients require glyph tokens
 
 ## Known Issues
-
-### Python files contain markdown formatting (not executable)
-
-`HGAI.py`, `Alignment-code.md`, and `Alignment-HGAI.md` all contain Python code wrapped in markdown syntax:
-- Code blocks are surrounded by ` ``` ` fences
-- `__name__` and `__all__` are rendered as `**name**` and `**all**` (markdown bold)
-- `#` comments at the top level render as markdown headings
-- Docstrings sit outside code fences, breaking Python syntax
-- Class/function bodies are inside fenced code blocks rather than indented under their definitions
-
-**Impact:** `HGAI.py` will not run with `python HGAI.py`. These files serve as conceptual/pseudocode documentation rather than executable source. To make them runnable, the markdown formatting would need to be stripped and proper Python indentation restored.
-
-### Duplicate file: Alignment-HGAI.md
-
-`Alignment-HGAI.md` is byte-for-byte identical to `Alignment-code.md`. One should likely be removed or differentiated. The name suggests `Alignment-HGAI.md` was meant to document the HGAI-specific alignment implementation, while `Alignment-code.md` covers the general framework.
 
 ### Root JSON files may not all be in INDEX.md
 
