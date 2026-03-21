@@ -7,20 +7,40 @@ Every AI agent or human collaborator should start here before traversing deeper.
 
 ## Schemas
 
-- [core.integration.v0.1.json](./core.integration.v0.1.json)  
+- [core.integration.v0.1.json](./core.integration.v0.1.json)
   Wiring diagram of MCP servers, connectors, scopes, glyphs, and constraints.
 
-- [trust.perimeter.v0.1.json](./trust.perimeter.v0.1.json)  
+- [trust.perimeter.v0.1.json](./trust.perimeter.v0.1.json)
   Boundary rules, glyph-coded zones, and auditing standards.
+
+- [commons.map.v0.1.json](./commons.map.v0.1.json)
+  Commons hub registry — nodes, links, policies, and resilience rings.
+
+- [commons.map.example.v0.1.json](./commons.map.example.v0.1.json)
+  Example commons map for reference and testing.
+
+- [BioGrid v0.1-Schema.json](./BioGrid%20v0.1-Schema.json)
+  Graph schema defining seed node/edge structure (nodes, edges, meta).
+
+- [Core_Integration.json](./Core_Integration.json)
+  Integration host configuration and MCP connector definitions.
+
+## Seed Data
+
+- [Example.json](./Example.json)
+  Example seed node structure with lichen/glyph references and SHA integrity.
+
+- [Lichen.json](./Lichen.json)
+  Lichen philosophy seed — bio-intel directives, autonomy, mutual value (CC0-1.0).
 
 ---
 
 ## Documentation
 
-- [README-perimeter.md](./README-perimeter.md)  
+- [README-perimeter.md](./README-perimeter.md)
   Human-readable summary of the trust perimeter zones.
 
----- [Symbolic Sensor Suite](https://github.com/JinnZ2/Symbolic-sensor-suite)  
+- [Symbolic Sensor Suite](https://github.com/JinnZ2/Symbolic-sensor-suite)
   Symbolic system audit tools for clarity, empowerment, and systemic sanity — complements Biogrid's sensor ecosystem.
 
 ## Usage Notes

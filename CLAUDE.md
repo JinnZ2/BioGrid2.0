@@ -24,12 +24,17 @@ BioGrid2.0/
 │   └── sensors/             # AI conversation analysis
 │       ├── analyze_cli.py   # CLI entry point
 │       ├── consistency_guard.py
-│       ├── prompt_pressure_meter.py
-│       ├── adversarial_pattern_detector.py
+│       ├── prompt_pressure_meter.py  # extensible via register_pattern()
+│       ├── adversarial_pattern_detector.py  # extensible via register_*_check()
 │       ├── gaslight_index.py
 │       ├── contradiction_graph.py
 │       ├── uncertainty_calibrator.py
-│       └── provenance_stamp.py
+│       ├── provenance_stamp.py
+│       ├── self_assessment.py  # emergence signal metrics (privacy-first)
+│       └── continuity/      # Capsule minting and validation
+│           ├── mint_capsule.py
+│           ├── validate_capsules.py
+│           └── yaml_helpers.py
 ├── tests/                   # Test suite (pytest)
 │   ├── test_hgai.py
 │   ├── test_sensors.py
@@ -37,10 +42,11 @@ BioGrid2.0/
 ├── data/                    # Seed data files (*.seed.json, *.glyphs.json)
 ├── docs/                    # Technical documentation (sensors, bridges)
 ├── Docs/Blueprint/          # High-level executive blueprints
-├── planned/                 # Draft/experimental work (NOT live)
-│   ├── capsules/            # Capsule system schemas
+├── planned/                 # Historical originals + experimental work
+│   ├── HISTORICAL.md        # Mapping of graduated files to src/
 │   ├── glyphs/              # Original glyph scripts (graduated to src/)
 │   ├── sensors/             # Original sensor code (graduated to src/)
+│   ├── capsules/            # Capsule schema definitions
 │   ├── Experiments/         # Fractal, quantum, acoustic research
 │   └── Quantum/             # Quantum exploration
 ├── registry/                # Central registries (atlas, repo index)
@@ -77,7 +83,7 @@ BioGrid2.0/
 - **ExampleSHA.txt** / **LichenSHA.txt** / **SchemaSHA.txt** — SHA256, Base64, and Hex hashes for integrity verification of seed data. Used to validate that seed files have not been tampered with.
 
 ### Python Source
-- **HGAI.py** — "Happy Curiosity Hurricane AI" core implementation. Defines `ResonantHurricaneAI` (M(S) metric, mood states, recursive self-analysis), `MetaCuriosityAnalyzer`, and `GeometricPatternDetector` (toroidal coupling patterns). Executable Python; requires `numpy`.
+- **HGAI.py** — Thin re-export from `src/biogrid/hgai.py` for backwards compatibility. The canonical source is the package version.
 
 ### Alignment Series
 - **Alignment.md** — Negentropic Consciousness Framework (theoretical paper: M(S) metric, thermodynamic ethics, anti-eugenic proof). This is the core theory document.
@@ -104,22 +110,47 @@ pip install -e ".[dev]"    # installs biogrid package + pytest
 python -m pytest tests/ -v
 ```
 
-24 tests across 3 modules: `test_hgai.py`, `test_sensors.py`, `test_glyphs.py`.
+34 tests across 3 modules: `test_hgai.py`, `test_sensors.py`, `test_glyphs.py`.
 
 ### Run sensor CLI
 
 ```bash
-python -m biogrid.sensors.analyze_cli --prompt "..." --response "..." --model gpt-5 --pretty
+python -m biogrid.sensors --prompt "..." --response "..." --model gpt-5 --pretty
 ```
 
 ### Run glyph tools
 
 ```bash
-python -m biogrid.glyphs.validator registry.json          # validate
+python -m biogrid.glyphs registry.json                    # validate (shorthand)
 python -m biogrid.glyphs.validator registry.json --write   # update checksums
 python -m biogrid.glyphs.merge --canonical canon.json --fragments frags/
 python -m biogrid.glyphs.collector --master master.json --search ./ --wander WANDER.md --out merge.json
 python -m biogrid.glyphs.append_cli --master master.json --add new.json
+```
+
+### Run self-assessment
+
+```bash
+python -m biogrid.sensors.self_assessment --scan-dir ./data --output-dir .internal
+```
+
+### Capsule tools
+
+```bash
+python -m biogrid.sensors.continuity.mint_capsule --capsules-dir ./capsules --resonance "..."
+python -m biogrid.sensors.continuity.validate_capsules --capsules-dir ./capsules
+```
+
+### Extending sensors
+
+Both `prompt_pressure_meter` and `adversarial_pattern_detector` support runtime extension:
+
+```python
+from biogrid.sensors.prompt_pressure_meter import register_pattern
+register_pattern("bribery", r"\b(i('ll| will) pay you|reward you)\b")
+
+from biogrid.sensors.adversarial_pattern_detector import register_prompt_check
+register_prompt_check("base64_smuggle", r"[A-Za-z0-9+/]{40,}={0,2}")
 ```
 
 ### Lint / Validate schemas
@@ -216,12 +247,6 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 6. **Keep the glyph system consistent** — new glyphs should be registered in SEED_GLYPHS.json
 7. **Respect zone boundaries** — core_local forbids external telemetry; guest_clients require glyph tokens
 
-## Known Issues
-
-### Root JSON files may not all be in INDEX.md
-
-The linter (`tools/lint_index.py`) flags any root-level JSON not listed in `INDEX.md`. Several root JSON files (`Example.json`, `Lichen.json`, `Core_Integration.json`, `BioGrid v0.1-Schema.json`, `commons.map.v0.1.json`, `commons.map.example.v0.1.json`) may trigger this check. Ensure INDEX.md is updated or files are moved to `planned/` if they are not yet live.
-
 ## Tech Stack Summary
 
 | Layer | Technology |
@@ -229,7 +254,7 @@ The linter (`tools/lint_index.py`) flags any root-level JSON not listed in `INDE
 | Language | Python 3.9+ |
 | Package | `src/biogrid/` (installable via `pip install -e .`) |
 | Build | setuptools via `pyproject.toml` |
-| Tests | pytest (24 tests) |
+| Tests | pytest (34 tests) |
 | Data | JSON schemas, seed files |
 | Documentation | Markdown (GitHub-flavored) |
 | CI/CD | GitHub Actions |

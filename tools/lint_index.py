@@ -2,7 +2,7 @@
 import argparse, json, re, sys
 from pathlib import Path
 
-MD_LINK_RE = re.compile(r'\[[^\]]+\]\((\.\/)?([A-Za-z0-9._\-\/]+)\)')
+MD_LINK_RE = re.compile(r'\[[^\]]+\]\((\.\/)?([A-Za-z0-9._\-\/% ]+)\)')
 SCHEMA_VERSION_RE = re.compile(r'\.v(\d+)\.(\d+)\.json$')  # e.g., *.v0.1.json
 
 # File patterns regarded as "draft" or non-live by policy
@@ -35,6 +35,8 @@ def read_index_links(index_path: Path):
         # Normalize "./" prefix
         if rel.startswith("./"):
             rel = rel[2:]
+        # Decode URL-encoded characters (e.g. %20 -> space)
+        rel = rel.replace("%20", " ")
         links.append(rel)
     return sorted(set(links))
 
@@ -50,7 +52,8 @@ def is_draft_path(p: Path) -> bool:
     return any(marker in s for marker in DRAFT_MARKERS)
 
 def list_root_json(repo: Path):
-    return sorted([p for p in repo.iterdir() if p.is_file() and p.suffix == ".json"])
+    return sorted([p for p in repo.iterdir()
+                   if p.is_file() and p.suffix == ".json" and not p.name.startswith(".")])
 
 def load_json_safe(p: Path):
     try:
@@ -72,9 +75,17 @@ def main():
     repo = Path(args.repo).resolve()
     index_path = (repo / args.index).resolve()
 
-    # 1) Harvest declared live files from INDEX.md
+    # 1) Harvest declared live files from INDEX.md (skip external/cross-repo links)
     live_declared = read_index_links(index_path)
-    live_declared_paths = [ (repo / p).resolve() for p in live_declared if p.endswith(".json") ]
+    live_declared_paths = []
+    for p in live_declared:
+        if not p.endswith(".json"):
+            continue
+        if p.startswith(".."):
+            if args.verbose:
+                print(f"  (skipping external link: {p})")
+            continue
+        live_declared_paths.append((repo / p).resolve())
     if args.verbose:
         print("Declared live JSON files in INDEX.md:")
         for p in live_declared_paths: print("  -", p.relative_to(repo))
