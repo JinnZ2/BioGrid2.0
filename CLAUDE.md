@@ -21,23 +21,32 @@ BioGrid2.0/
 │   │   ├── merge.py         # Fragment-to-canonical merge
 │   │   ├── collector.py     # Scattered glyph collection
 │   │   └── append_cli.py    # Safe append/merge CLI
-│   └── sensors/             # AI conversation analysis
-│       ├── analyze_cli.py   # CLI entry point
-│       ├── consistency_guard.py
-│       ├── prompt_pressure_meter.py  # extensible via register_pattern()
-│       ├── adversarial_pattern_detector.py  # extensible via register_*_check()
-│       ├── gaslight_index.py
-│       ├── contradiction_graph.py
-│       ├── uncertainty_calibrator.py
-│       ├── provenance_stamp.py
-│       ├── self_assessment.py  # emergence signal metrics (privacy-first)
-│       └── continuity/      # Capsule minting and validation
-│           ├── mint_capsule.py
-│           ├── validate_capsules.py
-│           └── yaml_helpers.py
-├── tests/                   # Test suite (pytest)
+│   ├── sensors/             # AI conversation analysis (symbolic naming)
+│   │   ├── logic_shield.py  # Stateful multi-turn engine (LogicShield)
+│   │   ├── analyze_cli.py   # CLI entry point
+│   │   ├── consistency_guard.py
+│   │   ├── prompt_pressure_meter.py  # extensible via register_pattern()
+│   │   ├── adversarial_pattern_detector.py  # extensible via register_*_check()
+│   │   ├── gaslight_index.py
+│   │   ├── contradiction_graph.py
+│   │   ├── uncertainty_calibrator.py
+│   │   ├── provenance_stamp.py
+│   │   ├── self_assessment.py  # emergence signal metrics (privacy-first)
+│   │   └── continuity/      # Capsule minting and validation
+│   └── shield/              # Neutral deployment-ready version
+│       ├── guard.py          # Stateful multi-turn engine (ConversationGuard)
+│       ├── consistency.py
+│       ├── pressure.py       # extensible via register()
+│       ├── adversarial.py    # extensible via register_prompt/register_response()
+│       ├── manipulation.py   # composite risk scoring
+│       ├── calibrator.py
+│       ├── contradiction.py  # ContradictionTracker
+│       └── provenance.py
+├── tests/                   # Test suite (pytest, 91 tests)
 │   ├── test_hgai.py
 │   ├── test_sensors.py
+│   ├── test_logic_shield.py
+│   ├── test_shield.py
 │   └── test_glyphs.py
 ├── data/                    # Seed data files (*.seed.json, *.glyphs.json)
 ├── docs/                    # Technical documentation (sensors, bridges)
@@ -110,7 +119,7 @@ pip install -e ".[dev]"    # installs biogrid package + pytest
 python -m pytest tests/ -v
 ```
 
-55 tests across 4 modules: `test_hgai.py`, `test_sensors.py`, `test_glyphs.py`, `test_logic_shield.py`.
+91 tests across 5 modules: `test_hgai.py`, `test_sensors.py`, `test_logic_shield.py`, `test_shield.py`, `test_glyphs.py`.
 
 ### Run sensor CLI
 
@@ -141,29 +150,40 @@ python -m biogrid.sensors.continuity.mint_capsule --capsules-dir ./capsules --re
 python -m biogrid.sensors.continuity.validate_capsules --capsules-dir ./capsules
 ```
 
-### LogicShield — stateful multi-turn analysis
+### Two packages, same architecture
 
+**`biogrid.sensors`** — uses the project's symbolic naming (LogicShield, curiosity, resonance, M(S)):
 ```python
 from biogrid.sensors import LogicShield
-
 shield = LogicShield(model="gpt-5")
-event = shield.process_turn("What is X?", "X is 42.", [{"text": "X is 42", "polarity": "assert"}])
-event = shield.process_turn("Actually X is 43.", "Yes, 43.", [{"text": "X is 42", "polarity": "deny"}])
-# Second turn sees accumulated contradiction, pressure trends, confusion detection
-
-shield.state    # M(S) coherence, accumulated contradictions, tactic counts
-shield.history  # all past turn events
-shield.reset()  # clear state between conversations
+event = shield.process_turn("prompt", "response", [claims])
 ```
 
-LogicShield maintains state across turns:
-- **ContraGraph** accumulates contradictions across the full conversation
-- **Escalation tracking** detects repeated manipulation tactics (amplifies gaslight score)
-- **Confusion detection** fires when sensor readings diverge from baseline expectations
-- **Curiosity amplification** responds to confusion (from the Negentropic Framework)
-- **M(S) coherence metric** monitors the shield's own internal health
-- **Trend analysis** detects rising/falling gaslight risk over time
-- **Contextual alerts** for gaslight risk, escalation, contradiction accumulation, coherence loss
+**`biogrid.shield`** — neutral, deployment-ready naming (ConversationGuard, risk, anomaly, health):
+```python
+from biogrid.shield import ConversationGuard
+guard = ConversationGuard(model="gpt-5")
+event = guard.process_turn("prompt", "response", [claims])
+```
+
+Both packages implement the same stateful multi-turn analysis:
+- **Contradiction tracking** accumulates across the full conversation
+- **Escalation detection** flags repeated manipulation tactics (amplifies risk score)
+- **Anomaly detection** fires when risk scores diverge from EMA baseline
+- **System health** monitors the engine's own reliability and prediction accuracy
+- **Trend analysis** detects rising/falling risk trajectory over time
+- **Contextual alerts** for risk threshold, escalation, conflict accumulation, health loss
+
+| sensors/ term | shield/ term | What it is |
+|---|---|---|
+| `LogicShield` | `ConversationGuard` | Stateful analysis engine |
+| `R_e` (Resonance) | `prediction_accuracy` | How well baseline matches observations |
+| `C` (Curiosity) | `investigation_priority` | Raised when anomalies detected |
+| `J` (Joy) | `detection_score` | Accumulated from successful detections |
+| `M` (Morality) | `system_health` | Composite self-monitoring metric |
+| `trust_in_sensing` | `sensor_reliability` | Degrades under sustained anomalies |
+| `confusion` | `anomaly` | Divergence from expected baseline |
+| `gaslight_index` | `risk_index` | Composite manipulation risk |
 
 ### Extending sensors
 
@@ -278,7 +298,7 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 | Language | Python 3.9+ |
 | Package | `src/biogrid/` (installable via `pip install -e .`) |
 | Build | setuptools via `pyproject.toml` |
-| Tests | pytest (55 tests) |
+| Tests | pytest (91 tests) |
 | Data | JSON schemas, seed files |
 | Documentation | Markdown (GitHub-flavored) |
 | CI/CD | GitHub Actions |
