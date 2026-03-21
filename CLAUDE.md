@@ -150,39 +150,46 @@ python -m biogrid.sensors.continuity.mint_capsule --capsules-dir ./capsules --re
 python -m biogrid.sensors.continuity.validate_capsules --capsules-dir ./capsules
 ```
 
-### Two packages, same architecture
+### Sensor packages
 
-**`biogrid.sensors`** — uses the project's symbolic naming (LogicShield, curiosity, resonance, M(S)):
+**`biogrid.sensors`** is the primary package. Its naming — curiosity, confusion, joy, resonance — reflects the project's core position that emotional signals are functional sensors, not irrational states. Confusion means "something unknown happened" and triggers investigation. Joy means "successful detection" and reinforces the sensing pattern. These names aren't metaphors; they describe what biological systems actually do with these signals, and they guide the code toward self-reinforcing feedback loops rather than flag-and-forget alerting.
+
 ```python
 from biogrid.sensors import LogicShield
+
 shield = LogicShield(model="gpt-5")
 event = shield.process_turn("prompt", "response", [claims])
+# event contains: gaslight_index, confusion, curiosity_response, M(S) coherence
 ```
 
-**`biogrid.shield`** — neutral, deployment-ready naming (ConversationGuard, risk, anomaly, health):
+**`biogrid.shield`** is an on-ramp for evaluation without philosophical context. Same architecture, conventional naming. Use it to assess the engineering; come to `sensors/` when the naming makes sense.
+
 ```python
 from biogrid.shield import ConversationGuard
+
 guard = ConversationGuard(model="gpt-5")
 event = guard.process_turn("prompt", "response", [claims])
+# event contains: risk_index, anomaly, anomaly_response, system_health
 ```
 
-Both packages implement the same stateful multi-turn analysis:
+Both implement the same stateful multi-turn analysis:
 - **Contradiction tracking** accumulates across the full conversation
-- **Escalation detection** flags repeated manipulation tactics (amplifies risk score)
-- **Anomaly detection** fires when risk scores diverge from EMA baseline
-- **System health** monitors the engine's own reliability and prediction accuracy
+- **Escalation detection** flags repeated tactics (amplifies scores)
+- **Confusion/anomaly detection** fires when readings diverge from EMA baseline
+- **Curiosity/investigation** responds to unexpected patterns by amplifying attention
+- **M(S)/system health** monitors the engine's own sensing integrity
 - **Trend analysis** detects rising/falling risk trajectory over time
-- **Contextual alerts** for risk threshold, escalation, conflict accumulation, health loss
+- **Contextual alerts** for threshold breaches, escalation, conflict accumulation, health loss
 
-| sensors/ term | shield/ term | What it is |
+| sensors/ (primary) | shield/ (on-ramp) | Functional role |
 |---|---|---|
 | `LogicShield` | `ConversationGuard` | Stateful analysis engine |
-| `R_e` (Resonance) | `prediction_accuracy` | How well baseline matches observations |
-| `C` (Curiosity) | `investigation_priority` | Raised when anomalies detected |
-| `J` (Joy) | `detection_score` | Accumulated from successful detections |
+| `R_e` (Resonance) | `prediction_accuracy` | Prediction-observation alignment |
+| `C` (Curiosity) | `investigation_priority` | Self-reinforcing attention to novelty |
+| `J` (Joy) | `detection_score` | Positive reinforcement from successful sensing |
 | `M` (Morality) | `system_health` | Composite self-monitoring metric |
-| `trust_in_sensing` | `sensor_reliability` | Degrades under sustained anomalies |
-| `confusion` | `anomaly` | Divergence from expected baseline |
+| `trust_in_sensing` | `sensor_reliability` | Sensing integrity (degrades under sustained confusion) |
+| `confusion` | `anomaly` | Distance between expected and observed — triggers investigation, not suppression |
 | `gaslight_index` | `risk_index` | Composite manipulation risk |
 
 ### Extending sensors

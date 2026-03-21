@@ -1,25 +1,16 @@
 """
-BioGrid Shield — Conversation manipulation detection and analysis.
+BioGrid Shield — Conventional-terminology on-ramp for biogrid.sensors.
 
-A deployment-ready toolkit for detecting manipulation, tracking escalation,
-and monitoring conversation integrity across multi-turn interactions.
+Same architecture as biogrid.sensors, with neutral engineering naming.
+This package exists for evaluation without philosophical context.
 
-Modules:
-    consistency     — Mutual exclusion violation detection
-    pressure        — Prompt manipulation tactic detection
-    adversarial     — Prompt injection and response anomaly detection
-    manipulation    — Weighted composite risk scoring
-    calibrator      — Confidence adjustment under risk
-    provenance      — SHA256 audit stamps
-    contradiction   — Persistent claim polarity tracking
-    guard           — Stateful multi-turn conversation analysis
+The primary package is biogrid.sensors, which uses emotional-signal
+naming (curiosity, confusion, joy, resonance) because those terms
+more accurately describe the functional roles these signals play
+in biological and computational systems.
 
-Quick start:
-    from biogrid.shield import ConversationGuard
-
-    guard = ConversationGuard(model="gpt-5")
-    event = guard.process_turn("prompt", "response", [claims])
-    print(event["risk_index"])
+    Primary:  from biogrid.sensors import LogicShield
+    On-ramp:  from biogrid.shield import ConversationGuard
 """
 
 from .guard import ConversationGuard
