@@ -13,13 +13,34 @@ BioGrid 2.0 is a symbolic-geographic framework for decentralized, regenerative m
 
 ```
 BioGrid2.0/
+├── src/biogrid/             # Installable Python package
+│   ├── hgai.py              # HGAI core (M(S) metric, pattern detection)
+│   ├── glyphs/              # Glyph management tools
+│   │   ├── validator.py     # Schema validation + SHA256 checksums
+│   │   ├── diff_viewer.py   # Registry diff reports
+│   │   ├── merge.py         # Fragment-to-canonical merge
+│   │   ├── collector.py     # Scattered glyph collection
+│   │   └── append_cli.py    # Safe append/merge CLI
+│   └── sensors/             # AI conversation analysis
+│       ├── analyze_cli.py   # CLI entry point
+│       ├── consistency_guard.py
+│       ├── prompt_pressure_meter.py
+│       ├── adversarial_pattern_detector.py
+│       ├── gaslight_index.py
+│       ├── contradiction_graph.py
+│       ├── uncertainty_calibrator.py
+│       └── provenance_stamp.py
+├── tests/                   # Test suite (pytest)
+│   ├── test_hgai.py
+│   ├── test_sensors.py
+│   └── test_glyphs.py
 ├── data/                    # Seed data files (*.seed.json, *.glyphs.json)
 ├── docs/                    # Technical documentation (sensors, bridges)
 ├── Docs/Blueprint/          # High-level executive blueprints
 ├── planned/                 # Draft/experimental work (NOT live)
 │   ├── capsules/            # Capsule system schemas
-│   ├── glyphs/              # Glyph management (Python + registry)
-│   ├── sensors/             # AI sensor implementations
+│   ├── glyphs/              # Original glyph scripts (graduated to src/)
+│   ├── sensors/             # Original sensor code (graduated to src/)
 │   ├── Experiments/         # Fractal, quantum, acoustic research
 │   └── Quantum/             # Quantum exploration
 ├── registry/                # Central registries (atlas, repo index)
@@ -28,6 +49,8 @@ BioGrid2.0/
 ├── swarm/                   # Swarm agent definitions (7 agents)
 ├── tools/                   # Development tools (lint_index.py)
 ├── .github/workflows/       # CI/CD (question-seed.yml)
+├── pyproject.toml           # Package config (pip install -e .)
+├── requirements.txt         # Dependencies (numpy)
 └── [root]                   # Core schemas, documentation, configs
 ```
 
@@ -69,7 +92,37 @@ BioGrid2.0/
 
 ## Build and Validation
 
-### Lint / Validate
+### Install
+
+```bash
+pip install -e ".[dev]"    # installs biogrid package + pytest
+```
+
+### Test
+
+```bash
+python -m pytest tests/ -v
+```
+
+24 tests across 3 modules: `test_hgai.py`, `test_sensors.py`, `test_glyphs.py`.
+
+### Run sensor CLI
+
+```bash
+python -m biogrid.sensors.analyze_cli --prompt "..." --response "..." --model gpt-5 --pretty
+```
+
+### Run glyph tools
+
+```bash
+python -m biogrid.glyphs.validator registry.json          # validate
+python -m biogrid.glyphs.validator registry.json --write   # update checksums
+python -m biogrid.glyphs.merge --canonical canon.json --fragments frags/
+python -m biogrid.glyphs.collector --master master.json --search ./ --wander WANDER.md --out merge.json
+python -m biogrid.glyphs.append_cli --master master.json --add new.json
+```
+
+### Lint / Validate schemas
 
 ```bash
 python tools/lint_index.py --repo . --verbose
@@ -173,10 +226,14 @@ The linter (`tools/lint_index.py`) flags any root-level JSON not listed in `INDE
 
 | Layer | Technology |
 |-------|-----------|
-| Language | Python 3 |
+| Language | Python 3.9+ |
+| Package | `src/biogrid/` (installable via `pip install -e .`) |
+| Build | setuptools via `pyproject.toml` |
+| Tests | pytest (24 tests) |
 | Data | JSON schemas, seed files |
 | Documentation | Markdown (GitHub-flavored) |
 | CI/CD | GitHub Actions |
 | Validation | `tools/lint_index.py` |
-| Dependencies | numpy, pathlib (stdlib) |
+| Dependencies | numpy |
+| Dev deps | pytest, jsonschema |
 | Ignore | `__pycache__/`, `*.pyc`, `.DS_Store`, `*.zip`, `*.log`, `.vscode/`, `.env` |
