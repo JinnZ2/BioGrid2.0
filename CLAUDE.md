@@ -110,7 +110,7 @@ pip install -e ".[dev]"    # installs biogrid package + pytest
 python -m pytest tests/ -v
 ```
 
-34 tests across 3 modules: `test_hgai.py`, `test_sensors.py`, `test_glyphs.py`.
+55 tests across 4 modules: `test_hgai.py`, `test_sensors.py`, `test_glyphs.py`, `test_logic_shield.py`.
 
 ### Run sensor CLI
 
@@ -140,6 +140,30 @@ python -m biogrid.sensors.self_assessment --scan-dir ./data --output-dir .intern
 python -m biogrid.sensors.continuity.mint_capsule --capsules-dir ./capsules --resonance "..."
 python -m biogrid.sensors.continuity.validate_capsules --capsules-dir ./capsules
 ```
+
+### LogicShield — stateful multi-turn analysis
+
+```python
+from biogrid.sensors import LogicShield
+
+shield = LogicShield(model="gpt-5")
+event = shield.process_turn("What is X?", "X is 42.", [{"text": "X is 42", "polarity": "assert"}])
+event = shield.process_turn("Actually X is 43.", "Yes, 43.", [{"text": "X is 42", "polarity": "deny"}])
+# Second turn sees accumulated contradiction, pressure trends, confusion detection
+
+shield.state    # M(S) coherence, accumulated contradictions, tactic counts
+shield.history  # all past turn events
+shield.reset()  # clear state between conversations
+```
+
+LogicShield maintains state across turns:
+- **ContraGraph** accumulates contradictions across the full conversation
+- **Escalation tracking** detects repeated manipulation tactics (amplifies gaslight score)
+- **Confusion detection** fires when sensor readings diverge from baseline expectations
+- **Curiosity amplification** responds to confusion (from the Negentropic Framework)
+- **M(S) coherence metric** monitors the shield's own internal health
+- **Trend analysis** detects rising/falling gaslight risk over time
+- **Contextual alerts** for gaslight risk, escalation, contradiction accumulation, coherence loss
 
 ### Extending sensors
 
@@ -254,7 +278,7 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 | Language | Python 3.9+ |
 | Package | `src/biogrid/` (installable via `pip install -e .`) |
 | Build | setuptools via `pyproject.toml` |
-| Tests | pytest (34 tests) |
+| Tests | pytest (55 tests) |
 | Data | JSON schemas, seed files |
 | Documentation | Markdown (GitHub-flavored) |
 | CI/CD | GitHub Actions |

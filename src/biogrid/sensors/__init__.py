@@ -34,4 +34,6 @@ def analyze(prompt: str, response: str, claims: List[Dict],
     }
 
 
-__all__ = ['analyze']
+from .logic_shield import LogicShield
+
+__all__ = ['analyze', 'LogicShield']
