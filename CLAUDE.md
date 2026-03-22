@@ -21,7 +21,7 @@ BioGrid2.0/
 │   │   ├── merge.py         # Fragment-to-canonical merge
 │   │   ├── collector.py     # Scattered glyph collection
 │   │   └── append_cli.py    # Safe append/merge CLI
-│   ├── sensors/             # AI conversation analysis (symbolic naming)
+│   ├── sensors/             # AI conversation analysis (primary package)
 │   │   ├── logic_shield.py  # Stateful multi-turn engine (LogicShield)
 │   │   ├── analyze_cli.py   # CLI entry point
 │   │   ├── consistency_guard.py
@@ -33,7 +33,7 @@ BioGrid2.0/
 │   │   ├── provenance_stamp.py
 │   │   ├── self_assessment.py  # emergence signal metrics (privacy-first)
 │   │   └── continuity/      # Capsule minting and validation
-│   └── shield/              # Neutral deployment-ready version
+│   └── shield/              # Conventional-naming on-ramp for sensors/
 │       ├── guard.py          # Stateful multi-turn engine (ConversationGuard)
 │       ├── consistency.py
 │       ├── pressure.py       # extensible via register()
@@ -42,15 +42,14 @@ BioGrid2.0/
 │       ├── calibrator.py
 │       ├── contradiction.py  # ContradictionTracker
 │       └── provenance.py
+├── schema/                  # All JSON schemas (integration, perimeter, graph, commons)
+├── data/                    # Seed data, glyphs, SHA integrity files
 ├── tests/                   # Test suite (pytest, 91 tests)
-│   ├── test_hgai.py
-│   ├── test_sensors.py
-│   ├── test_logic_shield.py
-│   ├── test_shield.py
-│   └── test_glyphs.py
-├── data/                    # Seed data files (*.seed.json, *.glyphs.json)
-├── docs/                    # Technical documentation (sensors, bridges)
-├── Docs/Blueprint/          # High-level executive blueprints
+├── docs/                    # All documentation
+│   ├── theory/              # Alignment series, Babel, detection patterns
+│   ├── integration/         # Perimeter, technical validation, repo integration
+│   ├── blueprint/           # Executive blueprints
+│   └── [sensors]            # Sensor-specific docs (hallucination, tri-invert)
 ├── planned/                 # Historical originals + experimental work
 │   ├── HISTORICAL.md        # Mapping of graduated files to src/
 │   ├── glyphs/              # Original glyph scripts (graduated to src/)
@@ -60,50 +59,49 @@ BioGrid2.0/
 │   └── Quantum/             # Quantum exploration
 ├── registry/                # Central registries (atlas, repo index)
 ├── Resilience/              # Infrastructure resilience designs
-├── schema/                  # JSON schema definitions
 ├── swarm/                   # Swarm agent definitions (7 agents)
 ├── tools/                   # Development tools (lint_index.py)
 ├── .github/workflows/       # CI/CD (question-seed.yml)
 ├── pyproject.toml           # Package config (pip install -e .)
-├── requirements.txt         # Dependencies (numpy)
-└── [root]                   # Core schemas, documentation, configs
+└── requirements.txt         # Dependencies (numpy)
 ```
 
-## Key Root Files
+## Key Files
 
-### Navigation & Documentation
+### Root — Navigation & Project Meta
 - **INDEX.md** — Canonical navigation anchor. Start here.
 - **VISION.md** — Philosophical grounding and design pillars.
 - **README.md** — Quick start for new contributors.
 - **PROJECTS.md** — 14 connected ecosystem repositories.
 - **COMMONS.md** — Template for commons hub mapping.
 - **CHANGELOG.md** — Version history (v0.1.0 current, v0.2 planned).
+- **.fieldlink.json** — Cross-repo linking config for the ecosystem.
 
-### Core Schemas
+### schema/ — All JSON Schemas
 - **trust.perimeter.v0.1.json** — Permission boundaries and zones.
 - **core.integration.v0.1.json** — MCP server wiring and connection protocols.
 - **commons.map.v0.1.json** / **commons.map.example.v0.1.json** — Commons hub registry and example.
 - **BioGrid v0.1-Schema.json** — Graph schema defining seed node/edge structure.
 - **Core_Integration.json** — Integration host and connector config.
+- **shape.seed.schema.json** — Shape seed schema definitions.
 
-### Seed Data & Integrity
+### data/ — Seed Data & Integrity
 - **Example.json** — Example seed node structure.
 - **Lichen.json** — Lichen philosophy seed (bio-intel directives, CC0-1.0).
-- **ExampleSHA.txt** / **LichenSHA.txt** / **SchemaSHA.txt** — SHA256, Base64, and Hex hashes for integrity verification of seed data. Used to validate that seed files have not been tampered with.
+- **ExampleSHA.txt** / **LichenSHA.txt** / **SchemaSHA.txt** — SHA256, Base64, and Hex hashes for integrity verification. Used to validate seed files have not been tampered with.
+- **\*.seed.json** / **\*.glyphs.json** — Sensor seed data and glyph registries.
 
-### Python Source
-- **HGAI.py** — Thin re-export from `src/biogrid/hgai.py` for backwards compatibility. The canonical source is the package version.
-
-### Alignment Series
-- **Alignment.md** — Negentropic Consciousness Framework (theoretical paper: M(S) metric, thermodynamic ethics, anti-eugenic proof). This is the core theory document.
-- **Alignment-code.md** — Complete Python pseudocode implementing the framework: `compute_system_morality()`, `align_through_coherence()`, `ConsciousnessRespectingAgent` class with confusion-awareness and ethics constraints.
-- **Alignment-HGAI.md** — Bridge document mapping Alignment.md theory to HGAI.py implementation. Includes class-by-class mapping table and documents what HGAI.py does not yet implement.
-
-### Other Key Docs
-- **Technical-validation.md** — Scientific basis (ACO, Physarum, industrial ecology).
+### docs/theory/ — Alignment & Theory
+- **Alignment.md** — Negentropic Consciousness Framework (M(S) metric, thermodynamic ethics, anti-eugenic proof). Core theory document.
+- **Alignment-code.md** — Python pseudocode: `compute_system_morality()`, `align_through_coherence()`, `ConsciousnessRespectingAgent`.
+- **Alignment-HGAI.md** — Bridge mapping Alignment.md theory to HGAI.py implementation.
 - **Babel.md** — Knowledge distribution as safety mechanism.
 - **Detection-patterns.md** — AI gaslighting detection and pattern analysis.
+
+### docs/integration/ — Infrastructure & Integration
+- **Technical-validation.md** — Scientific basis (ACO, Physarum, industrial ecology).
 - **Repo-integration.md** — Integration flows across ecosystem repos.
+- **README-perimeter.md** — Human-readable summary of trust perimeter zones.
 
 ## Build and Validation
 
@@ -228,7 +226,7 @@ Always run this before committing schema or index changes.
 
 ### Live vs Draft
 
-- **Live files** are listed in `INDEX.md` and exist at the repo root or in `docs/`, `schema/`, `registry/`
+- **Live files** are listed in `INDEX.md` and exist in `schema/`, `data/`, `docs/`, or `registry/`
 - **Draft files** use the `*.draft.json` suffix and MUST reside in `planned/`
 - Draft files outside `planned/` will fail lint validation
 - Only files in INDEX.md are considered authoritative
@@ -290,7 +288,7 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 
 ## Development Guidelines
 
-1. **Read INDEX.md and trust.perimeter.v0.1.json** before making integration changes
+1. **Read INDEX.md and schema/trust.perimeter.v0.1.json** before making integration changes
 2. **Run `python tools/lint_index.py --repo . --verbose`** before committing schema changes
 3. **Never place draft files outside `planned/`** — they will fail validation
 4. **Increment schema versions** when modifying live JSON schemas

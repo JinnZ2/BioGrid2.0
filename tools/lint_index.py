@@ -12,11 +12,8 @@ DRAFT_MARKERS = (
     "\\planned\\",  # windows path safety
 )
 
-ALLOWED_ROOT_DOCS = {
-    "INDEX.md",
-    "README-perimeter.md",
-    "CHANGELOG.md",
-}
+# Directories where live JSON schemas and data are expected
+LIVE_JSON_DIRS = ("schema", "data")
 
 def parse_args():
     ap = argparse.ArgumentParser(description="Verify Biogrid live vs planned perimeter and schema integrity.")
@@ -50,6 +47,16 @@ def warn(msg):
 def is_draft_path(p: Path) -> bool:
     s = str(p).replace("\\", "/")
     return any(marker in s for marker in DRAFT_MARKERS)
+
+def list_json_in_dirs(repo: Path, dirs):
+    """List all JSON files in the specified live directories."""
+    results = []
+    for d in dirs:
+        dirpath = repo / d
+        if dirpath.is_dir():
+            results.extend(sorted(p for p in dirpath.iterdir()
+                                  if p.is_file() and p.suffix == ".json" and not p.name.startswith(".")))
+    return sorted(results)
 
 def list_root_json(repo: Path):
     return sorted([p for p in repo.iterdir()
@@ -97,12 +104,11 @@ def main():
         if is_draft_path(p):
             fail(f"Draft or planned path listed as live: {p.relative_to(repo)}")
 
-    # 3) Ensure no extra JSONs live at repo root (unlisted = suspicious)
+    # 3) No stray JSON at repo root (all schemas/data should be in schema/ or data/)
     root_jsons = list_root_json(repo)
-    unlisted = [p for p in root_jsons if p not in live_declared_paths]
-    if unlisted:
-        names = ", ".join(str(p.relative_to(repo)) for p in unlisted)
-        fail(f"Unlisted JSON present at repo root (treat as non-live or move to planned/): {names}")
+    if root_jsons:
+        names = ", ".join(str(p.relative_to(repo)) for p in root_jsons)
+        fail(f"JSON files at repo root (move to schema/ or data/): {names}")
 
     # 4) Validate each live JSON internal schema vs filename version
     for p in live_declared_paths:

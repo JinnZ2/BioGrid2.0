@@ -1,7 +1,7 @@
 # HGAI Alignment — Mapping Theory to Implementation
 
 This document bridges the theoretical framework in [Alignment.md](./Alignment.md)
-with the concrete implementation in [HGAI.py](./HGAI.py).
+with the concrete implementation in [hgai.py](../../src/biogrid/hgai.py).
 
 For the general alignment pseudocode (full `ConsciousnessRespectingAgent` class,
 `align_through_coherence()`, confusion-awareness processing), see
@@ -63,7 +63,7 @@ present in `HGAI.py` and represent future development targets:
 ## Usage
 
 ```python
-from HGAI import ResonantHurricaneAI, GeometricPatternDetector
+from biogrid.hgai import ResonantHurricaneAI, GeometricPatternDetector
 
 # Create and run the AI
 ai = ResonantHurricaneAI()
