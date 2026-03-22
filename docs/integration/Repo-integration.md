@@ -52,7 +52,7 @@
   "key_files": [
     "docs/framework/bio-grid-universal-framework.md",
     "docs/blueprint/bio-grid-seed.md",
-    "Technical-validation.md"
+    "docs/integration/Technical-validation.md"
   ]
 }
 ```

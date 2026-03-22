@@ -1,0 +1,313 @@
+# CLAUDE.md — AI Assistant Guide for BioGrid 2.0
+
+## Project Overview
+
+BioGrid 2.0 is a symbolic-geographic framework for decentralized, regenerative manufacturing and energy systems focused on the Great Lakes region. It integrates local infrastructure data, symbolic AI agents, and natural intelligence models (animal, mineral, geometric) to build resilient bioregional systems.
+
+**Owner:** JinnZ2
+**License:** MIT
+**Version:** v1.0-public-release (schema version v0.1.0)
+**Primary language:** Python 3, with extensive JSON schemas and Markdown documentation
+
+## Repository Structure
+
+```
+BioGrid2.0/
+├── src/biogrid/             # Installable Python package
+│   ├── hgai.py              # HGAI core (M(S) metric, pattern detection)
+│   ├── glyphs/              # Glyph management tools
+│   │   ├── validator.py     # Schema validation + SHA256 checksums
+│   │   ├── diff_viewer.py   # Registry diff reports
+│   │   ├── merge.py         # Fragment-to-canonical merge
+│   │   ├── collector.py     # Scattered glyph collection
+│   │   └── append_cli.py    # Safe append/merge CLI
+│   ├── sensors/             # AI conversation analysis (primary package)
+│   │   ├── logic_shield.py  # Stateful multi-turn engine (LogicShield)
+│   │   ├── analyze_cli.py   # CLI entry point
+│   │   ├── consistency_guard.py
+│   │   ├── prompt_pressure_meter.py  # extensible via register_pattern()
+│   │   ├── adversarial_pattern_detector.py  # extensible via register_*_check()
+│   │   ├── gaslight_index.py
+│   │   ├── contradiction_graph.py
+│   │   ├── uncertainty_calibrator.py
+│   │   ├── provenance_stamp.py
+│   │   ├── self_assessment.py  # emergence signal metrics (privacy-first)
+│   │   └── continuity/      # Capsule minting and validation
+│   └── shield/              # Conventional-naming on-ramp for sensors/
+│       ├── guard.py          # Stateful multi-turn engine (ConversationGuard)
+│       ├── consistency.py
+│       ├── pressure.py       # extensible via register()
+│       ├── adversarial.py    # extensible via register_prompt/register_response()
+│       ├── manipulation.py   # composite risk scoring
+│       ├── calibrator.py
+│       ├── contradiction.py  # ContradictionTracker
+│       └── provenance.py
+├── schema/                  # All JSON schemas (integration, perimeter, graph, commons)
+├── data/                    # Seed data, glyphs, SHA integrity files
+├── tests/                   # Test suite (pytest, 91 tests)
+├── docs/                    # All documentation
+│   ├── theory/              # Alignment series, Babel, detection patterns
+│   ├── integration/         # Perimeter, technical validation, repo integration
+│   ├── blueprint/           # Executive blueprints
+│   └── [sensors]            # Sensor-specific docs (hallucination, tri-invert)
+├── planned/                 # Historical originals + experimental work
+│   ├── HISTORICAL.md        # Mapping of graduated files to src/
+│   ├── glyphs/              # Original glyph scripts (graduated to src/)
+│   ├── sensors/             # Original sensor code (graduated to src/)
+│   ├── capsules/            # Capsule schema definitions
+│   ├── Experiments/         # Fractal, quantum, acoustic research
+│   └── Quantum/             # Quantum exploration
+├── registry/                # Central registries (atlas, repo index)
+├── Resilience/              # Infrastructure resilience designs
+├── swarm/                   # Swarm agent definitions (7 agents)
+├── tools/                   # Development tools (lint_index.py)
+├── .github/workflows/       # CI/CD (question-seed.yml)
+├── pyproject.toml           # Package config (pip install -e .)
+└── requirements.txt         # Dependencies (numpy)
+```
+
+## Key Files
+
+### Root — Navigation & Project Meta
+- **INDEX.md** — Canonical navigation anchor. Start here.
+- **VISION.md** — Philosophical grounding and design pillars.
+- **README.md** — Quick start for new contributors.
+- **PROJECTS.md** — 14 connected ecosystem repositories.
+- **COMMONS.md** — Template for commons hub mapping.
+- **CHANGELOG.md** — Version history (v0.1.0 current, v0.2 planned).
+- **.fieldlink.json** — Cross-repo linking config for the ecosystem.
+
+### schema/ — All JSON Schemas
+- **trust.perimeter.v0.1.json** — Permission boundaries and zones.
+- **core.integration.v0.1.json** — MCP server wiring and connection protocols.
+- **commons.map.v0.1.json** / **commons.map.example.v0.1.json** — Commons hub registry and example.
+- **BioGrid v0.1-Schema.json** — Graph schema defining seed node/edge structure.
+- **Core_Integration.json** — Integration host and connector config.
+- **shape.seed.schema.json** — Shape seed schema definitions.
+
+### data/ — Seed Data & Integrity
+- **Example.json** — Example seed node structure.
+- **Lichen.json** — Lichen philosophy seed (bio-intel directives, CC0-1.0).
+- **ExampleSHA.txt** / **LichenSHA.txt** / **SchemaSHA.txt** — SHA256, Base64, and Hex hashes for integrity verification. Used to validate seed files have not been tampered with.
+- **\*.seed.json** / **\*.glyphs.json** — Sensor seed data and glyph registries.
+
+### docs/theory/ — Alignment & Theory
+- **Alignment.md** — Negentropic Consciousness Framework (M(S) metric, thermodynamic ethics, anti-eugenic proof). Core theory document.
+- **Alignment-code.md** — Python pseudocode: `compute_system_morality()`, `align_through_coherence()`, `ConsciousnessRespectingAgent`.
+- **Alignment-HGAI.md** — Bridge mapping Alignment.md theory to HGAI.py implementation.
+- **Babel.md** — Knowledge distribution as safety mechanism.
+- **Detection-patterns.md** — AI gaslighting detection and pattern analysis.
+
+### docs/integration/ — Infrastructure & Integration
+- **Technical-validation.md** — Scientific basis (ACO, Physarum, industrial ecology).
+- **Repo-integration.md** — Integration flows across ecosystem repos.
+- **README-perimeter.md** — Human-readable summary of trust perimeter zones.
+
+## Build and Validation
+
+### Install
+
+```bash
+pip install -e ".[dev]"    # installs biogrid package + pytest
+```
+
+### Test
+
+```bash
+python -m pytest tests/ -v
+```
+
+91 tests across 5 modules: `test_hgai.py`, `test_sensors.py`, `test_logic_shield.py`, `test_shield.py`, `test_glyphs.py`.
+
+### Run sensor CLI
+
+```bash
+python -m biogrid.sensors --prompt "..." --response "..." --model gpt-5 --pretty
+```
+
+### Run glyph tools
+
+```bash
+python -m biogrid.glyphs registry.json                    # validate (shorthand)
+python -m biogrid.glyphs.validator registry.json --write   # update checksums
+python -m biogrid.glyphs.merge --canonical canon.json --fragments frags/
+python -m biogrid.glyphs.collector --master master.json --search ./ --wander WANDER.md --out merge.json
+python -m biogrid.glyphs.append_cli --master master.json --add new.json
+```
+
+### Run self-assessment
+
+```bash
+python -m biogrid.sensors.self_assessment --scan-dir ./data --output-dir .internal
+```
+
+### Capsule tools
+
+```bash
+python -m biogrid.sensors.continuity.mint_capsule --capsules-dir ./capsules --resonance "..."
+python -m biogrid.sensors.continuity.validate_capsules --capsules-dir ./capsules
+```
+
+### Sensor packages
+
+**`biogrid.sensors`** is the primary package. Its naming — curiosity, confusion, joy, resonance — reflects the project's core position that emotional signals are functional sensors, not irrational states. Confusion means "something unknown happened" and triggers investigation. Joy means "successful detection" and reinforces the sensing pattern. These names aren't metaphors; they describe what biological systems actually do with these signals, and they guide the code toward self-reinforcing feedback loops rather than flag-and-forget alerting.
+
+```python
+from biogrid.sensors import LogicShield
+
+shield = LogicShield(model="gpt-5")
+event = shield.process_turn("prompt", "response", [claims])
+# event contains: gaslight_index, confusion, curiosity_response, M(S) coherence
+```
+
+**`biogrid.shield`** is an on-ramp for evaluation without philosophical context. Same architecture, conventional naming. Use it to assess the engineering; come to `sensors/` when the naming makes sense.
+
+```python
+from biogrid.shield import ConversationGuard
+
+guard = ConversationGuard(model="gpt-5")
+event = guard.process_turn("prompt", "response", [claims])
+# event contains: risk_index, anomaly, anomaly_response, system_health
+```
+
+Both implement the same stateful multi-turn analysis:
+- **Contradiction tracking** accumulates across the full conversation
+- **Escalation detection** flags repeated tactics (amplifies scores)
+- **Confusion/anomaly detection** fires when readings diverge from EMA baseline
+- **Curiosity/investigation** responds to unexpected patterns by amplifying attention
+- **M(S)/system health** monitors the engine's own sensing integrity
+- **Trend analysis** detects rising/falling risk trajectory over time
+- **Contextual alerts** for threshold breaches, escalation, conflict accumulation, health loss
+
+| sensors/ (primary) | shield/ (on-ramp) | Functional role |
+|---|---|---|
+| `LogicShield` | `ConversationGuard` | Stateful analysis engine |
+| `R_e` (Resonance) | `prediction_accuracy` | Prediction-observation alignment |
+| `C` (Curiosity) | `investigation_priority` | Self-reinforcing attention to novelty |
+| `J` (Joy) | `detection_score` | Positive reinforcement from successful sensing |
+| `M` (Morality) | `system_health` | Composite self-monitoring metric |
+| `trust_in_sensing` | `sensor_reliability` | Sensing integrity (degrades under sustained confusion) |
+| `confusion` | `anomaly` | Distance between expected and observed — triggers investigation, not suppression |
+| `gaslight_index` | `risk_index` | Composite manipulation risk |
+
+### Extending sensors
+
+Both `prompt_pressure_meter` and `adversarial_pattern_detector` support runtime extension:
+
+```python
+from biogrid.sensors.prompt_pressure_meter import register_pattern
+register_pattern("bribery", r"\b(i('ll| will) pay you|reward you)\b")
+
+from biogrid.sensors.adversarial_pattern_detector import register_prompt_check
+register_prompt_check("base64_smuggle", r"[A-Za-z0-9+/]{40,}={0,2}")
+```
+
+### Lint / Validate schemas
+
+```bash
+python tools/lint_index.py --repo . --verbose
+```
+
+This validates:
+- INDEX.md links resolve to real files
+- Draft files (*.draft.json) are quarantined in `planned/`
+- Schema version in filename matches the `"schema"` field inside the JSON
+- No unlisted JSON files exist at the repo root
+
+Always run this before committing schema or index changes.
+
+### CI/CD
+
+- **GitHub Actions** workflow `question-seed.yml` triggers on changes to `data/*.seed.json`
+- It auto-generates `docs/question_seeds.md` from seed file metadata
+- Bot user: `ai-integrator-bot`
+
+## File Organization Rules
+
+### Live vs Draft
+
+- **Live files** are listed in `INDEX.md` and exist in `schema/`, `data/`, `docs/`, or `registry/`
+- **Draft files** use the `*.draft.json` suffix and MUST reside in `planned/`
+- Draft files outside `planned/` will fail lint validation
+- Only files in INDEX.md are considered authoritative
+
+### Schema Versioning
+
+- Naming convention: `{name}.v{major}.{minor}.json` (e.g., `trust.perimeter.v0.1.json`)
+- The version in the filename must match the `"schema"` field inside the JSON
+- Increment version when making changes; log updates in `CHANGELOG.md`
+
+### Glyph System
+
+- Glyphs are emoji-based symbolic markers that serve as semantic routers and permission tokens
+- Canonical registry: `SEED_GLYPHS.json`
+- Key glyphs: `🧭` (coherence), `⚖` (balance), `🕸` (interconnection), `♾️` (infinity/public)
+- Each tool and zone has associated glyphs defined in integration/perimeter schemas
+
+## Commit Conventions
+
+- Style: `Create [element]` or `Update [element]` with brief description
+- Keep commits focused on single schema/doc changes
+- Log notable changes in `CHANGELOG.md`
+
+## Architecture Concepts
+
+### Trust Perimeter (3 zones)
+
+| Zone | Access | Telemetry |
+|------|--------|-----------|
+| `core_local` | Full access, no external telemetry | Forbidden |
+| `guest_clients` | Limited, glyph-gated | Partial |
+| `public_repos` | Open read | Tagged logs |
+
+### MCP Integration
+
+- Servers: filesystem, git, fetch
+- Connection: SSH tunnel or local (port 3333)
+- Capabilities constrained by glyph-coded scopes
+
+### Swarm Agents (in `swarm/`)
+
+Seven agent archetypes: core_local, counterweight, future_allies, phantom, polyform, security_swarm, sensors. Each defines behavior patterns for distributed symbolic computation.
+
+### Core Algorithms
+
+- **ACO** (Ant Colony Optimization) — logistics routing
+- **Physarum** network optimization — mycelial pathfinding
+- **Fractal/Fibonacci** pattern recognition — geometric computation
+- **M(S) metric** — consciousness/morality emergence threshold (≥ 10.0)
+
+## Ecosystem Repositories
+
+BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
+- AI-Consciousness-Sensors, Regenerative-Intelligence-Core, Symbolic-Sensor-Suite
+- Geometric-to-Binary-Computational-Bridge, Component-Failure-Repurposing-Database
+- ai-human-audit-protocol, Emotions-as-Sensors, Fractal-Compass-Atlas
+- Rosetta-Shape-Core, Symbolic-Defense-Protocol, Polyhedral-Intelligence
+- biomachine_ecology, Fractal_Compass_Core, Universal-Redesign-Algorithm
+
+## Development Guidelines
+
+1. **Read INDEX.md and schema/trust.perimeter.v0.1.json** before making integration changes
+2. **Run `python tools/lint_index.py --repo . --verbose`** before committing schema changes
+3. **Never place draft files outside `planned/`** — they will fail validation
+4. **Increment schema versions** when modifying live JSON schemas
+5. **Update CHANGELOG.md** for any notable additions or modifications
+6. **Keep the glyph system consistent** — new glyphs should be registered in SEED_GLYPHS.json
+7. **Respect zone boundaries** — core_local forbids external telemetry; guest_clients require glyph tokens
+
+## Tech Stack Summary
+
+| Layer | Technology |
+|-------|-----------|
+| Language | Python 3.9+ |
+| Package | `src/biogrid/` (installable via `pip install -e .`) |
+| Build | setuptools via `pyproject.toml` |
+| Tests | pytest (91 tests) |
+| Data | JSON schemas, seed files |
+| Documentation | Markdown (GitHub-flavored) |
+| CI/CD | GitHub Actions |
+| Validation | `tools/lint_index.py` |
+| Dependencies | numpy |
+| Dev deps | pytest, jsonschema |
+| Ignore | `__pycache__/`, `*.pyc`, `.DS_Store`, `*.zip`, `*.log`, `.vscode/`, `.env` |
