@@ -11,6 +11,25 @@
       "sensors/**",
       "atlas/shapes.json"
     ],
-    "role": "sensors|protocols|shapes|hub"
+    "role": "sensors|protocols|shapes|hub",
+    "peers": [
+      {
+        "repo": "https://github.com/JinnZ2/Rosetta-Shape-Core",
+        "name": "Rosetta-Shape-Core",
+        "role": "shapes",
+        "direction": "bidirectional",
+        "exports_to_peer": [
+          "registry/atlas.glyphs.json",
+          "data/*.glyphs.json",
+          "schema/shape.seed.schema.json"
+        ],
+        "imports_from_peer": [
+          "atlas/shapes.json",
+          "shapes/*.json"
+        ],
+        "shared_interface": "atlas.shapes.json",
+        "glyph_gate": "⬟↔️📐"
+      }
+    ]
   }
 }
