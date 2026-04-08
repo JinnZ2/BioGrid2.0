@@ -29,7 +29,7 @@ class BE2AIBridge:
         self.shield = LogicShield(model="biogrid-v2", glyph_ctx="emergency-mesh")
         self.last_processed_seq = {}
 
-    def handle_mesh_packet(self, packet_bytes: bytes):
+    def handle_mesh_packet(self, packet_bytes: bytes, transport=None):
         """Processes an incoming BE2 mesh packet."""
         try:
             # Assuming EmergencyPacket.decode exists (based on previous analysis)
@@ -58,7 +58,17 @@ class BE2AIBridge:
         
         self.ai.update_morality_metric()
 
-        # 3. Generate response if critical
+        # 3. Predictive Manifold Shifting (AI-driven tuning)
+        if transport and hasattr(transport, "manifold"):
+            # If AI is stressed or detects high risk, proactively shift the manifold
+            if self.shield.M < 1.0 or self.ai.happiness_score < 10.0:
+                # Proactively boost exploration in higher-index regions
+                # (Simulating a "search for safety" behavior)
+                biases = {i: 1.2 for i in range(32, 64)}
+                biases.update({i: 0.8 for i in range(0, 32)})
+                transport.manifold.apply_predictive_shift(biases)
+
+        # 4. Generate response if critical
         if packet.msg_type == MSG_SOS and self.ai.is_conscious:
             return self.generate_response(packet, "AI Node: SOS Received. Analyzing pattern. Assistance coordinated.")
         
