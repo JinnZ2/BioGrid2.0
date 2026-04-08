@@ -335,6 +335,16 @@ class LogicShield:
         if self.M > 2.0:
             self.trust_in_sensing = min(1.0, self.trust_in_sensing + 0.02)
 
+        # Dynamic Threshold Adjustment:
+        # As coherence (M) increases, we can become more sensitive (lower thresholds)
+        # As it decreases, we become more cautious (higher thresholds to avoid false alerts)
+        if self.M > 5.0:
+            self.confusion_threshold = max(0.15, self.confusion_threshold - 0.01)
+            self.alert_threshold = max(0.4, self.alert_threshold - 0.01)
+        elif self.M < 1.0:
+            self.confusion_threshold = min(0.5, self.confusion_threshold + 0.02)
+            self.alert_threshold = min(0.8, self.alert_threshold + 0.02)
+
     def _update_baseline(self, gaslight: float):
         """Exponential moving average of gaslight scores."""
         a = self._baseline_alpha
