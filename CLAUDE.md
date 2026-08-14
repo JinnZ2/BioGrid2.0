@@ -52,9 +52,9 @@ BioGrid2.0/
 │   ├── legacy/              # Superseded docs, verbatim + banner. Never cite.
 │   ├── blueprint/           # Executive blueprints
 │   └── [sensors]            # Sensor-specific docs (hallucination, tri-invert)
-├── planned/                 # Historical originals + experimental work
-│   ├── HISTORICAL.md        # Mapping of graduated files to src/
-│   ├── glyphs/              # Original glyph scripts (graduated to src/)
+├── planned/                 # Forward-looking drafts + experimental work
+│   ├── glyphs/              # Original glyph scripts (graduated to src/;
+│   │                        #   registered in docs/legacy/HISTORICAL.md)
 │   ├── sensors/             # Original sensor code (graduated to src/)
 │   ├── capsules/            # Capsule schema definitions
 │   ├── Experiments/         # Fractal, quantum, acoustic research
@@ -94,10 +94,18 @@ BioGrid2.0/
 - **REFERENCES.md** — Graded bibliography, plus the list of sources that did not
   survive verification (do not re-add them).
 
-### docs/legacy/ — Retired Material
-- **README.md** — Retirement policy. Superseded documents move here verbatim with
-  a banner; the successor carries the corrections list. **Legacy files must never
-  be cited as evidence.**
+### docs/legacy/ — The Run Record
+Legacy is the experimental record, not a graveyard — precedence carries.
+- **README.md** — The cycle (hypothesize → run → result → falsify → edit claim →
+  search unknowns → rerun), the six outcome states (FALSIFIED / MISATTRIBUTED /
+  STALE / UNSOURCED / CORROBORATED / SUPERSEDED), and the retirement register.
+  Cite legacy as evidence about the *reasoning*, never about the *world*.
+  Documents move here only for FALSIFIED or SUPERSEDED — stale figures are
+  refreshed in place.
+- **FALSIFICATION-LOG.md** — Every completed run: what was tested, what it
+  returned, what unknowns it opened, and when to rerun. Append-only.
+- **HISTORICAL.md** — Register of code that graduated from `planned/` to
+  `src/biogrid/`. The code files themselves stay in `planned/`.
 
 ### data/ — Seed Data & Integrity
 - **Example.json** — Example seed node structure.
@@ -318,6 +326,10 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
    retraction in `Technical-validation.md` §1 and the `retracted` block of the
    figures register, and move the superseded document to `docs/legacy/` unedited.
    Regenerate `data/ReferenceFiguresSHA.txt` after editing the figures register.
+10. **Close the loop** — a retraction that opens no new question is a
+    half-finished run. Log every run in `docs/legacy/FALSIFICATION-LOG.md` with
+    its unknowns and rerun trigger, and log survived predictions too — a log of
+    only failures is a biased sample.
 
 ## Tech Stack Summary
 

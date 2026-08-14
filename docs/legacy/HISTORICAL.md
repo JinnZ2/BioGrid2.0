@@ -1,3 +1,18 @@
+> [!NOTE]
+> **LEGACY REGISTER — relocated 2026-08-14.**
+> This file was in `planned/`, but [`planned/PLANNED.md`](../../planned/PLANNED.md)
+> defines that folder as *"read-only future context"* on a draft→release path.
+> A record of code that has already graduated points the other way in time, so
+> the register now lives here. See [`README.md`](./README.md).
+>
+> **The code files themselves have not moved.** They stay at `planned/glyphs/`
+> and `planned/sensors/` because their sibling `INDEX.md` files use relative
+> paths, nothing imports them, and they already carry the "Do Not Edit" marking
+> below. They are legacy *by reference* — precedence intact, location unchanged.
+> Relocating them is a live option if the churn is ever worth it.
+
+---
+
 # Historical Source — Do Not Edit
 
 The Python code in `planned/glyphs/` and `planned/sensors/` has been

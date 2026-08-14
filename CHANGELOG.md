@@ -5,6 +5,38 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) principl
 
 ---
 
+## [0.2.1] - 2026-08-14
+### Added
+- `docs/legacy/FALSIFICATION-LOG.md` — append-only record of every completed run
+  against a BioGrid claim: what was tested, what it returned, which unknowns it
+  opened (U1–U5), and the rerun trigger. Includes the first **corroborated** run,
+  because a log of only failures is a biased sample.
+- Third state (**Falsified**) added to `planned/Experiments/VALIDITY.md`, which
+  previously tracked validated/speculative and had nowhere to put a claim that
+  was checked and failed.
+
+### Changed
+- `docs/legacy/README.md` rewritten: legacy is the **run record**, not a
+  graveyard. The blanket "never cite legacy as evidence" rule was too blunt and
+  discarded the precedent — split into "never as evidence about the world,
+  always as evidence about the reasoning."
+- Six outcome states defined (FALSIFIED / MISATTRIBUTED / STALE / UNSOURCED /
+  CORROBORATED / SUPERSEDED). Documents retire only for FALSIFIED or SUPERSEDED;
+  stale figures are refreshed in place rather than hidden behind a retirement.
+- Run 001 reclassified the 15 v1 corrections by state: 6 falsified,
+  3 misattributed, 4 stale, 2 unsourced. **Eleven of fifteen trace to citing
+  something other than the primary source** — the dominant failure mode is
+  citation discipline, not research depth.
+- `Resilience/The-line-redesign.md` — dated status addendum (Sept 2025
+  suspension, pause past 2030, <300k residents, ~$16bn cancellation costs). The
+  document's thesis was tested by events and **held**; figures were stale, so it
+  is refreshed in place and logged as corroborated, not retired.
+- `planned/HISTORICAL.md` → `docs/legacy/HISTORICAL.md`. A record of already-
+  graduated code was filed in a folder its own `PLANNED.md` defines as
+  future-only context. The code files stay where they are — legacy by reference.
+
+---
+
 ## [0.2.0] - 2026-08-14
 ### Added
 - `docs/integration/Technical-validation.md` (v2) — rebuilt evidence base with an

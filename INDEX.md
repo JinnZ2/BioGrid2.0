@@ -66,10 +66,16 @@ Every AI agent or human collaborator should start here before traversing deeper.
   Consolidated graded bibliography, including the list of sources that did not
   survive verification.
 
-### Legacy
+### Legacy — the run record
 - [legacy/README.md](./docs/legacy/README.md)
-  Retirement policy and register of superseded documents. Legacy material is kept
-  verbatim for provenance and **must not be cited as evidence**.
+  The cycle (hypothesize → run → result → falsify → edit → search unknowns →
+  rerun), outcome states, and the register of retired documents. Legacy is kept
+  verbatim: cite it as evidence about the *reasoning*, never about the *world*.
+
+- [legacy/FALSIFICATION-LOG.md](./docs/legacy/FALSIFICATION-LOG.md)
+  Every completed run and what it returned — failures, survived predictions, the
+  unknowns each opened, and rerun triggers. **Start here when auditing this
+  project's reliability.**
 
 ### Theory
 - [Alignment.md](./docs/theory/Alignment.md)

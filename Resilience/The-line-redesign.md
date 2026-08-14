@@ -34,6 +34,26 @@ The original Line project (170km linear city, 9 million residents, completion by
 - Current status: Mostly halted, scaled back to 2.4km
 - Core issues: Fighting natural processes, forcing timelines incompatible with physics, treating time as irrelevant
 
+> **Status addendum — verified 2026-08-14.** The figures above are as written in
+> November 2024 and are left unedited, because the prediction they support was
+> tested by events and **held**. What has changed since:
+>
+> - Construction was **suspended in September 2025** after roughly 2.4 km of
+>   foundation work — the scale-back this document anticipated.
+> - Major work is **paused until after 2030**; 2045 is now cited as a possible
+>   full-completion date, and NEOM has been restructured around industrial,
+>   energy, and AI uses rather than the linear-city vision.
+> - Occupancy expectations have fallen from 9 million to **fewer than 300,000
+>   residents by the end of the decade**.
+> - Roughly **$16 billion** in termination and cancellation costs has been
+>   reported on suspended contracts.
+>
+> This document's thesis — that continuous acceleration against natural process
+> rates forces an eventual, expensive deceleration — is the part that survived.
+> Logged as a corroborated run in
+> [`docs/legacy/FALSIFICATION-LOG.md`](../docs/legacy/FALSIFICATION-LOG.md)
+> (Run 002). Rerun trigger: any NEOM restructuring announcement, or 2030.
+
 ## Core Insight
 
 **Time is not just a measurement container - it’s an active engineering variable.**
