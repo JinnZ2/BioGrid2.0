@@ -34,11 +34,31 @@ JinnZ2
 
 ##  What's Included
 
-- `docs/framework/bio-grid-universal-framework.md` — Core problem-solving methodology
-- `docs/blueprint/bio-grid-seed.md` — Compressed seed/hex vision snapshot
+- `INDEX.md` — Canonical navigation anchor. Start here.
+- `docs/integration/Technical-validation.md` — **Graded evidence base (v2, 2026-08)**
+- `docs/science/METHODS.md` — Method register: what to use per subsystem, today
+- `docs/science/REFERENCES.md` — Graded bibliography, including failed citations
+- `data/reference.figures.v0.1.json` — Machine-readable figures with sources and dates
+- `docs/blueprint/BioIntelligenceSeed.md` — Compressed seed/vision snapshot
+- `schema/` — Trust perimeter, integration, commons, and graph schemas
+- `src/biogrid/` — Installable Python package (`pip install -e ".[dev]"`)
+- `docs/legacy/` — Superseded documents, kept verbatim for provenance
 - `LICENSE` — MIT license (free to use, build, adapt)
-- `.gitignore` — Ignore temp/dev files
-- Project scaffolding for others to build on
+
+##  Evidence Policy
+
+BioGrid 2.0 tells people to build physical things, so its claims have to be
+checkable. Every externally-sourced number in this repo carries an **evidence
+grade** (A/B/C/D), a source, and a retrieval date, and lives in
+[`data/reference.figures.v0.1.json`](./data/reference.figures.v0.1.json).
+
+**No design decision may rest on a grade C or D claim alone.** When a claim is
+found to be wrong, it is not quietly edited — it is retracted in writing, with
+the retraction kept visible in
+[`Technical-validation.md`](./docs/integration/Technical-validation.md) §1, and
+the superseded document moves to [`docs/legacy/`](./docs/legacy/README.md)
+unchanged. Fifteen claims from the v1 evidence document did not survive
+verification in the 2026 review. They are all listed there.
 
 ##  Why It Exists
 
@@ -59,9 +79,22 @@ Engineers, researchers, builders, and decision-makers ready to:
 
 ##  Quick Start
 
-1. Read `bio-grid-universal-framework.md` to understand the logic system
-2. Review `bio-grid-seed.md` to see the ultra-compressed encoded vision
-3. Fork, download, or clone — and build
+1. Read [`INDEX.md`](./INDEX.md) — the navigation anchor for everything else
+2. Read [`docs/integration/Technical-validation.md`](./docs/integration/Technical-validation.md)
+   — what the evidence actually supports, and what it doesn't
+3. Read [`docs/science/METHODS.md`](./docs/science/METHODS.md) — which methods to
+   use per subsystem as of 2026
+4. Review [`docs/blueprint/BioIntelligenceSeed.md`](./docs/blueprint/BioIntelligenceSeed.md)
+   for the compressed encoded vision
+5. Install and run the tooling:
+
+```bash
+pip install -e ".[dev]"
+python -m pytest tests/ -v
+python tools/lint_index.py --repo . --verbose
+```
+
+6. Fork, download, or clone — and build
 
 ---
 

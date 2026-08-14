@@ -47,7 +47,9 @@ BioGrid2.0/
 ├── tests/                   # Test suite (pytest, 91 tests)
 ├── docs/                    # All documentation
 │   ├── theory/              # Alignment series, Babel, detection patterns
-│   ├── integration/         # Perimeter, technical validation, repo integration
+│   ├── integration/         # Perimeter, technical validation (v2), repo integration
+│   ├── science/             # METHODS.md (method register), REFERENCES.md (bibliography)
+│   ├── legacy/              # Superseded docs, verbatim + banner. Never cite.
 │   ├── blueprint/           # Executive blueprints
 │   └── [sensors]            # Sensor-specific docs (hallucination, tri-invert)
 ├── planned/                 # Historical originals + experimental work
@@ -85,6 +87,18 @@ BioGrid2.0/
 - **Core_Integration.json** — Integration host and connector config.
 - **shape.seed.schema.json** — Shape seed schema definitions.
 
+### docs/science/ — Methods & Evidence
+- **METHODS.md** — Method register per subsystem: ADOPT / KEEP / BOUND / WATCH /
+  RETIRE, with a routing interface contract for `swarm/` agents and concrete
+  bounded improvements for the sensors package.
+- **REFERENCES.md** — Graded bibliography, plus the list of sources that did not
+  survive verification (do not re-add them).
+
+### docs/legacy/ — Retired Material
+- **README.md** — Retirement policy. Superseded documents move here verbatim with
+  a banner; the successor carries the corrections list. **Legacy files must never
+  be cited as evidence.**
+
 ### data/ — Seed Data & Integrity
 - **Example.json** — Example seed node structure.
 - **Lichen.json** — Lichen philosophy seed (bio-intel directives, CC0-1.0).
@@ -99,7 +113,9 @@ BioGrid2.0/
 - **Detection-patterns.md** — AI gaslighting detection and pattern analysis.
 
 ### docs/integration/ — Infrastructure & Integration
-- **Technical-validation.md** — Scientific basis (ACO, Physarum, industrial ecology).
+- **Technical-validation.md** — Graded evidence base, v2 (2026-08). Scientific
+  basis with A/B/C/D grades, retrieval dates, the §1 corrections list against v1,
+  and falsifiable predictions in §6.
 - **Repo-integration.md** — Integration flows across ecosystem repos.
 - **README-perimeter.md** — Human-readable summary of trust perimeter zones.
 
@@ -295,6 +311,13 @@ BioGrid 2.0 is part of a 14-repo ecosystem (see `PROJECTS.md`):
 5. **Update CHANGELOG.md** for any notable additions or modifications
 6. **Keep the glyph system consistent** — new glyphs should be registered in SEED_GLYPHS.json
 7. **Respect zone boundaries** — core_local forbids external telemetry; guest_clients require glyph tokens
+8. **Grade every external claim** — any new externally-sourced number goes into
+   `data/reference.figures.v0.1.json` with an evidence grade, source, and `as_of`
+   date. No design decision may rest on a grade C or D claim alone.
+9. **Retract, don't overwrite** — when a claim is found wrong, record the
+   retraction in `Technical-validation.md` §1 and the `retracted` block of the
+   figures register, and move the superseded document to `docs/legacy/` unedited.
+   Regenerate `data/ReferenceFiguresSHA.txt` after editing the figures register.
 
 ## Tech Stack Summary
 
