@@ -9,7 +9,24 @@ Date: 2025-09-04
 - **Project**: Repository / module name  
 - **Validated**: Physics/math consistency confirmed  
 - **Speculative**: Symbolic truth, awaiting experimental or theoretical confirmation  
+- **Falsified**: Tested and found wrong — record what broke and what replaced it  
 - **Notes**: Dense context (glyph anchors, experimental plan, references)
+
+> **Added 2026-08-14 — the third state.** This ledger tracked *validated* and
+> *speculative* but had nowhere to put a claim that was checked and failed, so a
+> failed check had no home and could quietly disappear. **Falsified** closes the
+> loop: hypothesize → run → result → falsify → edit the claim → search unknowns
+> → rerun.
+>
+> A speculative entry that gets tested moves to validated *or* falsified — never
+> back to silence. Falsified entries stay in the ledger with their replacement,
+> because the run is the evidence that the work was checked at all.
+>
+> Repo-wide runs are logged in
+> [`docs/legacy/FALSIFICATION-LOG.md`](../../docs/legacy/FALSIFICATION-LOG.md);
+> the retirement policy is [`docs/legacy/README.md`](../../docs/legacy/README.md).
+> This ledger covers the experimental tracks; that log covers the documented
+> claims. Same cycle, two scopes.
 
 ---
 

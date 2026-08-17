@@ -36,6 +36,11 @@ Every AI agent or human collaborator should start here before traversing deeper.
 - [Lichen.json](./data/Lichen.json)
   Lichen philosophy seed — bio-intel directives, autonomy, mutual value (CC0-1.0).
 
+- [reference.figures.v0.1.json](./data/reference.figures.v0.1.json)
+  Machine-readable register of every externally-sourced quantitative claim, with
+  evidence grade, source, and retrieval date — plus the retraction list. **Read
+  figures from here, not from prose.**
+
 ---
 
 ## Documentation
@@ -45,10 +50,32 @@ Every AI agent or human collaborator should start here before traversing deeper.
   Human-readable summary of the trust perimeter zones.
 
 - [Technical-validation.md](./docs/integration/Technical-validation.md)
-  Scientific basis (ACO, Physarum, industrial ecology).
+  **Evidence base, v2 (2026-08).** Graded scientific basis — industrial symbiosis,
+  distributed energy, bio-derived materials, bio-inspired optimisation — plus the
+  corrections list against the v1 document and the open falsifiable predictions.
 
 - [Repo-integration.md](./docs/integration/Repo-integration.md)
   Integration flows across ecosystem repos.
+
+### Science
+- [METHODS.md](./docs/science/METHODS.md)
+  Method register: what a competent engineer would choose today per subsystem,
+  and what BioGrid currently does. ADOPT / KEEP / BOUND / WATCH / RETIRE.
+
+- [REFERENCES.md](./docs/science/REFERENCES.md)
+  Consolidated graded bibliography, including the list of sources that did not
+  survive verification.
+
+### Legacy — the run record
+- [legacy/README.md](./docs/legacy/README.md)
+  The cycle (hypothesize → run → result → falsify → edit → search unknowns →
+  rerun), outcome states, and the register of retired documents. Legacy is kept
+  verbatim: cite it as evidence about the *reasoning*, never about the *world*.
+
+- [legacy/FALSIFICATION-LOG.md](./docs/legacy/FALSIFICATION-LOG.md)
+  Every completed run and what it returned — failures, survived predictions, the
+  unknowns each opened, and rerun triggers. **Start here when auditing this
+  project's reliability.**
 
 ### Theory
 - [Alignment.md](./docs/theory/Alignment.md)

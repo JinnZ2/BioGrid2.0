@@ -1,0 +1,10 @@
+SHA256:
+6c3c6248be395edccf1d30fb3b9606c060fa618de7c52b44f7f36a31131c3afe
+
+Note:
+Integrity hash for reference.figures.v0.1.json (bytes as committed).
+Regenerate after any edit:
+  python3 -c "import hashlib,pathlib;print(hashlib.sha256(pathlib.Path('data/reference.figures.v0.1.json').read_bytes()).hexdigest())"
+
+Base64/Hex encodings are omitted for this file: unlike the seed files, it is a
+human-maintained register rather than a transportable seed payload.

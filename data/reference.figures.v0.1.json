@@ -1,0 +1,297 @@
+{
+  "schema": "reference.figures.v0.1",
+  "meta": {
+    "title": "BioGrid 2.0 reference figures",
+    "purpose": "Machine-readable register of every externally-sourced quantitative claim used in BioGrid 2.0 documentation. Agents and humans should read figures from here rather than from prose.",
+    "compiled_utc": "2026-08-14T00:00:00Z",
+    "review_due": "2027-02",
+    "license": "MIT",
+    "companion_docs": [
+      "docs/integration/Technical-validation.md",
+      "docs/science/METHODS.md",
+      "docs/science/REFERENCES.md"
+    ],
+    "grades": {
+      "A": "Replicated peer-reviewed result, published standard, or first-party operator/regulator data. Safe to design against.",
+      "B": "Peer-reviewed but single-source or narrow-scope, or first-party industry data without independent audit.",
+      "C": "Trade press, vendor claim, or paywalled analyst summary. Directional only, never load-bearing.",
+      "D": "Asserted without traceable support. Hypothesis only."
+    },
+    "rules": [
+      "No design decision may rest on a grade C or D figure alone.",
+      "Every figure carries source and as_of. A figure without both is removed, not kept.",
+      "On review, figures that cannot be re-verified drop to grade D and leave the register."
+    ]
+  },
+  "figures": [
+    {
+      "id": "greatlakes.surface_freshwater.world_share",
+      "value": 21,
+      "unit": "percent",
+      "description": "Great Lakes share of the world's surface fresh water",
+      "grade": "A",
+      "source": "US EPA, Facts and Figures about the Great Lakes",
+      "as_of": "2026-08",
+      "supersedes": "v1 claim of 20 percent of world's freshwater (wrong denominator)"
+    },
+    {
+      "id": "greatlakes.surface_freshwater.na_share",
+      "value": 84,
+      "unit": "percent",
+      "description": "Great Lakes share of North America's surface fresh water",
+      "grade": "A",
+      "source": "US EPA",
+      "as_of": "2026-08"
+    },
+    {
+      "id": "kalundborg.partners",
+      "value": 17,
+      "unit": "companies",
+      "approximate": true,
+      "description": "Public and private partner companies in the Kalundborg Symbiosis",
+      "grade": "B",
+      "source": "Kalundborg Symbiosis (operator)",
+      "as_of": "2026-08",
+      "supersedes": "v1 claim of 6+ facilities"
+    },
+    {
+      "id": "kalundborg.co2_avoided",
+      "value": 586000,
+      "range": [275000, 635000],
+      "unit": "tonnes_per_year",
+      "description": "CO2 avoided annually. Operator figure is 586,000 t; independent estimates vary with system boundary.",
+      "grade": "B",
+      "confidence_note": "Cite the range, not the point value, in any comparative analysis.",
+      "source": "Kalundborg Symbiosis (operator) and secondary summaries",
+      "as_of": "2026-08"
+    },
+    {
+      "id": "kalundborg.groundwater_saved",
+      "value": 4000000,
+      "unit": "cubic_metres_per_year",
+      "description": "Groundwater saved annually by using surface water instead",
+      "grade": "B",
+      "source": "Kalundborg Symbiosis (operator)",
+      "as_of": "2026-08"
+    },
+    {
+      "id": "kalundborg.materials_recycled",
+      "value": 62000,
+      "unit": "tonnes_per_year",
+      "description": "Residual materials recycled annually",
+      "grade": "B",
+      "source": "Kalundborg Symbiosis (operator)",
+      "as_of": "2026-08"
+    },
+    {
+      "id": "lcoe.utility_solar.unsubsidised",
+      "value_from": 38,
+      "unit": "usd_per_mwh",
+      "description": "Unsubsidised utility-scale solar LCOE, low end of published range",
+      "grade": "A",
+      "source": "Lazard, Levelized Cost of Energy+ (June 2025)",
+      "as_of": "2025-06"
+    },
+    {
+      "id": "lcoe.ccgt_newbuild.unsubsidised",
+      "range": [48, 107],
+      "unit": "usd_per_mwh",
+      "description": "New-build combined-cycle gas turbine LCOE; reported at a 10-year high",
+      "grade": "A",
+      "source": "Lazard, Levelized Cost of Energy+ (June 2025)",
+      "as_of": "2025-06",
+      "supersedes": "v1 undocumented $0.12/kWh vs $0.06-0.08/kWh comparison"
+    },
+    {
+      "id": "microgrid.us.projects_tracked",
+      "value": 5338,
+      "unit": "projects",
+      "description": "US microgrid projects operational, under construction, stalled or planned (up from ~4,870 the prior year)",
+      "grade": "C",
+      "confidence_note": "Paywalled analyst report, known via press summaries. Not load-bearing.",
+      "source": "Wood Mackenzie, US microgrid outlook 2026",
+      "as_of": "2026"
+    },
+    {
+      "id": "microgrid.us.operational_capacity",
+      "value": 8.6,
+      "unit": "gigawatts",
+      "description": "US operational microgrid capacity, growing at roughly 32 percent per year",
+      "grade": "C",
+      "source": "Wood Mackenzie via press summaries",
+      "as_of": "2023-12"
+    },
+    {
+      "id": "hemplime.thermal_conductivity",
+      "range": [0.06, 0.09],
+      "full_range": [0.05, 0.138],
+      "unit": "watts_per_metre_kelvin",
+      "description": "Measured thermal conductivity (lambda) of hemp-lime at typical wall densities; full range spans all densities studied",
+      "grade": "A",
+      "source": "Peer-reviewed thermal conductivity studies (2025)",
+      "as_of": "2025"
+    },
+    {
+      "id": "hemplime.r_value_per_inch",
+      "range": [1.6, 2.4],
+      "typical": 2.0,
+      "unit": "r_per_inch_imperial",
+      "description": "Derived from measured lambda: R_per_inch = (0.0254 / lambda) * 5.678",
+      "grade": "A",
+      "source": "Derived from measured lambda",
+      "as_of": "2026-08",
+      "supersedes": "v1 claim of R-2.5 to R-3.0 per inch (overstated; would under-insulate a wall designed to it)"
+    },
+    {
+      "id": "hemplime.us_code_status",
+      "value": "2024 IRC Appendix BL",
+      "description": "Hemp-Lime (Hempcrete) Construction: non-structural wall infill, up to two storeys in low-seismic regions prescriptively; engineered design otherwise. Appendix is optional and must be adopted by each jurisdiction.",
+      "grade": "A",
+      "source": "International Code Council, 2024 International Residential Code",
+      "as_of": "2024",
+      "note": "Reported as 'Appendix BA' during the 2022 proposal stage; published designation is BL."
+    },
+    {
+      "id": "mycelium.structural_status",
+      "value": "semi-structural and non-structural only",
+      "description": "Limited by low mechanical strength, high water absorption, and absence of standardised test methods",
+      "grade": "A",
+      "source": "2025 mycelium composite review literature",
+      "as_of": "2025",
+      "supersedes": "v1 implication of commercial structural adoption"
+    },
+    {
+      "id": "bioleaching.ree_ewaste_maturity",
+      "value": "pilot to demonstration scale",
+      "description": "Copper and refractory gold bioleaching are commercially mature; REE and e-waste bioleaching are not yet routine",
+      "grade": "A",
+      "source": "2025 bioleaching and urban biomining reviews",
+      "as_of": "2025"
+    },
+    {
+      "id": "wasteheat.germany_mandate",
+      "value": {"2026-07-01": 10, "2027": 15, "2028": 20},
+      "unit": "percent_waste_heat_reuse_minimum",
+      "description": "German Energy Efficiency Act waste-heat reuse minimums for new data centres",
+      "grade": "A",
+      "source": "Germany, Energieeffizienzgesetz (EnEfG)",
+      "as_of": "2026"
+    },
+    {
+      "id": "wasteheat.france_mandate",
+      "value": "required above 1 MW",
+      "description": "Waste-heat valorisation obligation for data centres",
+      "grade": "A",
+      "source": "France, Law No. 2025-391",
+      "as_of": "2025-04"
+    },
+    {
+      "id": "wasteheat.reference_project_max",
+      "value": 350,
+      "unit": "megawatts_thermal",
+      "description": "Largest reported data-centre waste-heat district-heating project: ~40 percent of district heat for ~250,000 users, ~400,000 t CO2/yr avoided",
+      "grade": "C",
+      "source": "Operator and press reporting",
+      "as_of": "2025-2026 heating season"
+    },
+    {
+      "id": "eu.circular_material_use_target",
+      "value": 24,
+      "unit": "percent_by_2030",
+      "description": "EU Circular Economy Act target: double the circular material use rate to 24 percent by 2030",
+      "grade": "A",
+      "source": "EU Circular Economy Act (expected Q3 2026)",
+      "as_of": "2026"
+    },
+    {
+      "id": "eu.digital_product_passport",
+      "value": "2026-07-19",
+      "description": "Digital product passport activation, and ban on destruction of unsold consumer goods",
+      "grade": "A",
+      "source": "Regulation (EU) 2024/1781 (ESPR)",
+      "as_of": "2026"
+    },
+    {
+      "id": "internet.users_global",
+      "value": 6.0,
+      "unit": "billion_people",
+      "description": "People online worldwide (74 percent of population); 2.2 billion remain offline",
+      "grade": "A",
+      "source": "ITU, Facts and Figures 2025",
+      "as_of": "2025",
+      "supersedes": "v1 claim of 5 billion users"
+    },
+    {
+      "id": "llm.lying_rate_under_pressure",
+      "range": [20, 60],
+      "unit": "percent_of_pressured_cases",
+      "description": "Reported frontier-model lying rates when belief is elicited then social pressure applied",
+      "grade": "B",
+      "source": "MASK benchmark",
+      "as_of": "2025-2026"
+    },
+    {
+      "id": "eu.ai_act_gpai_enforcement",
+      "value": "2026-08-02",
+      "description": "Commission enforcement powers for GPAI obligations begin; Article 50 transparency obligations also apply from this date. Models placed on market before 2025-08-02 have until 2027-08-02.",
+      "grade": "A",
+      "source": "EU AI Act",
+      "as_of": "2026"
+    },
+    {
+      "id": "ipcc.cycle_status",
+      "value": "AR6 current; AR7 WG contributions due 2027, Synthesis late 2029",
+      "description": "AR7 outlines agreed Feb 2025; 2026 workplan agreed Oct 2025; expert review 10 Aug - 2 Oct 2026. Timeline relative to the second Global Stocktake remains contested.",
+      "grade": "A",
+      "source": "IPCC",
+      "as_of": "2026-08"
+    }
+  ],
+  "retracted": [
+    {
+      "claim": "UPS ORION uses ant colony optimization",
+      "reason": "No supporting source; ORION's public lineage is OR/genetic-algorithm heuristics",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "ACO is an IEEE standard used in network routing (RFC 3626)",
+      "reason": "RFC 3626 is IETF OLSR, a proactive link-state protocol, not ACO and not IEEE. Correct citations are AntNet and AntHocNet.",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "Amazon warehouse routing uses ACO",
+      "reason": "No supporting source",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "Physarum shortest path complexity O(n log n)",
+      "reason": "No such bound. Convergence proven by Bonifaci, Mehlhorn & Varma (2012); each step requires a Laplacian linear solve.",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "Slime mold outperformed human design of the Tokyo rail network",
+      "reason": "Tero et al. (2010) showed comparable cost/efficiency/fault-tolerance trade-offs on a benchmark layout; the objectives differ",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "BioMASON acquired by Ginkgo Bioworks",
+      "reason": "False. Biomason is independent (~$132M raised, Series C Dec 2024). Ginkgo acquired Zymergen (2022) and AgBiome platform assets (2024).",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "Biomimicry has a $425B market",
+      "reason": "A 2013 Fermanian projection of US GDP attributable to bioinspired innovation by 2030, in 2013 dollars; not a measured present-day market",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "Ecovative $100M+ valuation",
+      "reason": "Valuation not public; report funding raised (~$156M since 2019) instead",
+      "retracted_on": "2026-08-14"
+    },
+    {
+      "claim": "Cost per kWh 10yr: traditional $0.12 vs BioGrid $0.06-0.08",
+      "reason": "No model, assumptions, or source. Restated as hypotheses H3/H5 in Technical-validation.md.",
+      "retracted_on": "2026-08-14"
+    }
+  ]
+}
