@@ -1,3 +1,6 @@
+> Before reading or editing anything here, read READ_ME_THIS_WAY.md.
+> Mismatches, dead ends and odd names in this repo are kept on purpose.
+
 #  BioGrid 2.0: Nature-Inspired Infrastructure for the Great Lakes Region
 
 ## 🔧 What is BioGrid 2.0?
