@@ -5,7 +5,7 @@
     "purpose": "Machine-readable register of every externally-sourced quantitative claim used in BioGrid 2.0 documentation. Agents and humans should read figures from here rather than from prose.",
     "compiled_utc": "2026-08-14T00:00:00Z",
     "review_due": "2027-02",
-    "license": "MIT",
+    "license": "CC0-1.0",
     "companion_docs": [
       "docs/integration/Technical-validation.md",
       "docs/science/METHODS.md",

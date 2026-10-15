@@ -1,5 +1,5 @@
 SHA256:
-6c3c6248be395edccf1d30fb3b9606c060fa618de7c52b44f7f36a31131c3afe
+d535127b3dddd21306cb58057e6ab19eb1d6a789338cb22f8f530bf8a0f12d9f
 
 Note:
 Integrity hash for reference.figures.v0.1.json (bytes as committed).

@@ -4,7 +4,7 @@
 
 *Collaborative framework applying temporal engineering, natural process integration, and energy-conserving design to Saudi Arabia’s failed Line megaproject*
 
-**License:** MIT  
+**Current repository license:** CC0 1.0 Universal for JinnZ2-owned work; third-party or upstream material retains its stated terms. The historical MIT statement and legal text below are retained as specimens; see `LICENSE_HISTORY.md`.
 **Status:** Theoretical framework for others to build upon  
 **Date:** November 2024
 
@@ -1252,6 +1252,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the documentation.
 
 THE DOCUMENTATION IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+> Note 2026-10-15: The preceding MIT declaration and legal text are preserved as a historical specimen. JinnZ2 relicensed JinnZ2-owned work in this repository to CC0 1.0 Universal on 2026-10-15; any third-party or upstream material retains its stated terms.
 
 -----
 

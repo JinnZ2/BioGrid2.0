@@ -5,7 +5,7 @@
 BioGrid 2.0 is a symbolic-geographic framework for decentralized, regenerative manufacturing and energy systems focused on the Great Lakes region. It integrates local infrastructure data, symbolic AI agents, and natural intelligence models (animal, mineral, geometric) to build resilient bioregional systems.
 
 **Owner:** JinnZ2
-**License:** MIT
+**License:** CC0 1.0 Universal for JinnZ2-owned work; third-party or upstream material retains its stated terms.
 **Version:** v1.0-public-release (schema version v0.1.0)
 **Primary language:** Python 3, with extensive JSON schemas and Markdown documentation
 
@@ -134,6 +134,22 @@ Legacy is the experimental record, not a graveyard — precedence carries.
 ```bash
 pip install -e ".[dev]"    # installs biogrid package + pytest
 ```
+
+
+<!-- clone-refspec-note v1.1 -->
+## Cloning and pushing
+Shallow clones are single-branch by default.
+Before pushing any branch other than the default
+branch, run:
+
+    git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+    git fetch --depth 1
+
+Or clone with: git clone --depth 1 --no-single-branch <url>
+Without this, the first push of a new branch
+fails the tracking-ref check even when the
+commit landed.
+<!-- /clone-refspec-note v1.1 -->
 
 ### Test
 

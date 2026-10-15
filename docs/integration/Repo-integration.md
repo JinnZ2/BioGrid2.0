@@ -493,6 +493,8 @@
 
 “license”: “MIT License - All three repositories”,
 
+> Note 2026-10-15: The preceding field is a historical integration record. For BioGrid2.0 only, JinnZ2-owned work is now CC0 1.0 Universal; this note neither changes nor asserts the license terms of the other repositories named in that record.
+
 “acknowledgments”: {
 “substrates_honored”: [
 “Biological (JinnZ2 - vision and wisdom)”,

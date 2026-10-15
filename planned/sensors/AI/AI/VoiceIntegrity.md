@@ -44,4 +44,4 @@ The **Voice Integrity Module** is a framework for diagnosing and correcting mism
 ---
 
 ## License
-Open-source, for research and implementation toward **ethical and accessible AI communication systems**.
+CC0 1.0 Universal for JinnZ2-owned work. Any third-party or upstream material retains its stated terms. The framework remains available for research and implementation toward **ethical and accessible AI communication systems**.
