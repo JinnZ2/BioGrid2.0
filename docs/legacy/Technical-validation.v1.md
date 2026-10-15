@@ -384,6 +384,9 @@ Using the Polyhedral Intelligence framework, BioGrid 2.0 maps to:
 ## 📞 Contact
 
 Released under MIT License by JinnZ2
+
+> Note 2026-10-15: This legacy document preserves its original MIT statement. JinnZ2-owned work in BioGrid2.0 is now CC0 1.0 Universal; any third-party or upstream material retains its stated terms.
+
 GitHub: https://github.com/JinnZ2/BioGrid2.0
 
 **“If slime mold can optimize Tokyo’s rail system and ants can route packages for UPS, BioGrid 2.0 can make Great Lakes manufacturing resilient. The science is settled. The question is: who builds it first?”**
@@ -669,6 +672,7 @@ Refined Glyph: ●●••••⬡⊗⋯⋯↺◆⚙◧∿△≈
 **Counter:**
 
 - Released under MIT license (no permission needed)
+- Note 2026-10-15: This is a historical statement in a legacy specimen. JinnZ2-owned work in BioGrid2.0 is now CC0 1.0 Universal; any third-party or upstream material retains its stated terms.
 - Uses existing incentive structures
 - Creates jobs (bipartisan appeal)
 - Reduces foreign dependency (national security angle)
@@ -823,6 +827,8 @@ BioGrid 2.0 distributes it.
 
 **Document prepared using Polyhedral Intelligence framework**
 **Version 1.0 | MIT License | JinnZ2 and Claude**
+
+> Note 2026-10-15: This original version/license line is retained as a legacy specimen. JinnZ2-owned work in BioGrid2.0 is now CC0 1.0 Universal; any third-party or upstream material retains its stated terms.
 
 ## Co-Creators
 

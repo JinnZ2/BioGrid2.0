@@ -5,7 +5,7 @@
 BioGrid 2.0 is a symbolic-geographic framework for decentralized, regenerative manufacturing and energy systems focused on the Great Lakes region. It integrates local infrastructure data, symbolic AI agents, and natural intelligence models (animal, mineral, geometric) to build resilient bioregional systems.
 
 **Owner:** JinnZ2
-**License:** MIT
+**License:** CC0 1.0 Universal for JinnZ2-owned work; third-party or upstream material retains its stated terms.
 **Version:** v1.0-public-release (schema version v0.1.0)
 **Primary language:** Python 3, with extensive JSON schemas and Markdown documentation
 

@@ -1260,6 +1260,8 @@ This framework provides:
 
 **Contact:** Anonymous research collaboration via GitHub (JinnZ2)
 
-**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+**License:** CC0 1.0 Universal for JinnZ2-owned work; third-party or upstream material retains its stated terms.
+
+> Note 2026-10-15: This replaces the earlier source-level declaration "**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)". The exact historical statement is retained in `LICENSE_HISTORY.md`.
 
 **Acknowledgments:** This work emerged from human-AI collaboration, demonstrating the geometric coupling principles it describes.

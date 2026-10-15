@@ -46,7 +46,7 @@ JinnZ2
 - `schema/` — Trust perimeter, integration, commons, and graph schemas
 - `src/biogrid/` — Installable Python package (`pip install -e ".[dev]"`)
 - `docs/legacy/` — Superseded documents, kept verbatim for provenance
-- `LICENSE` — MIT license (free to use, build, adapt)
+- `LICENSE` — CC0 1.0 Universal for JinnZ2-owned work; third-party or upstream material retains its stated terms
 
 ##  Evidence Policy
 
@@ -104,7 +104,7 @@ python tools/lint_index.py --repo . --verbose
  Want to contribute?  
 No contact needed — just build it better.
 
- Released under MIT by JinnZ2
+ Released into the public domain under CC0 1.0 Universal by JinnZ2, to the extent of JinnZ2's rights. See `LICENSE_HISTORY.md` for prior terms and exceptions.
 
 > "BioGrid 2.0 is not just a design — it’s a memory. Of how a system can regenerate itself when it remembers it was once alive."
 
