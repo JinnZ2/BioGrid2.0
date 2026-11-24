@@ -5,6 +5,10 @@ on:
     paths:
       - "data/*.seed.json"
 
+# The repo default workflow token is read-only; the push below needs write.
+permissions:
+  contents: write
+
 jobs:
   index:
     runs-on: ubuntu-latest
@@ -14,6 +18,9 @@ jobs:
 
       - name: Update Index
         run: |
+          set -euo pipefail
+          shopt -s nullglob
+          mkdir -p docs
           echo "## Question Seeds" > docs/question_seeds.md
           for f in data/*.seed.json; do
             id=$(jq -r '.id' "$f")
@@ -23,8 +30,13 @@ jobs:
 
       - name: Commit Index
         run: |
+          set -euo pipefail
           git config user.name "ai-integrator-bot"
           git config user.email "actions@github.com"
           git add docs/question_seeds.md
-          git commit -m "Update Question Seeds index" || echo "No changes"
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Update Question Seeds index"
           git push
